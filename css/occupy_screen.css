@@ -1,0 +1,44 @@
+/* occupy.net occupy_screen.css */
+
+@import url(http://fonts.googleapis.com/css?family=Didact+Gothic);
+
+#navBar {
+background-color: black;
+height: 36px;
+}
+
+#title {
+margin-top: 10%;
+margin-bottom:10%;
+text-align: center;
+}
+
+.products {}
+.products ul { list-style:none; }
+.products ul li {
+display:inline;
+font-family: 'Didact Gothic', sans-serif; 
+font-size: 24px;
+margin-right: 24px;
+}
+
+.products ul li:last-child { margin:0; }
+
+.products ul li a,
+.products ul li a:link,
+.products ul li a:visited {
+color:#ccc;
+letter-spacing: 2px;
+text-decoration: none;
+text-transform: uppercase;
+}
+.products ul li a:hover {}
+
+.products ul li.active a,
+.products ul li.active a:link,
+.products ul li.active a:visited { color:black; }
+
+.products ul li.active a:hover { border-bottom:1px black dotted; }
+
+#footer { width:100%; text-align:center; color:#ccc; font-size:10px; }
+#footer a { color:#999; }
