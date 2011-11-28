@@ -27,18 +27,18 @@ margin-right: 24px;
 .products ul li a,
 .products ul li a:link,
 .products ul li a:visited {
-color:#ccc;
+color:#000;
 letter-spacing: 2px;
 text-decoration: none;
 text-transform: uppercase;
 }
-.products ul li a:hover {}
+.products ul li a:hover { border-bottom:1px black dotted; }
 
-.products ul li.active a,
-.products ul li.active a:link,
-.products ul li.active a:visited { color:black; }
+.products ul li.inactive a,
+.products ul li.inactive a:link,
+.products ul li.inactive a:visited { color:#ccc; }
 
-.products ul li.active a:hover { border-bottom:1px black dotted; }
+.products ul li.inactive a:hover { border-bottom:none; }
 
 #footer { width:100%; text-align:center; color:#ccc; font-size:10px; }
 #footer a { color:#999; }
