@@ -9,6 +9,29 @@
 	<link rel="stylesheet" href="css/occupy_screen.css" type="text/css" media="screen, projection">
 	<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
 	<!--[if lt IE 8]><link rel="stylesheet" href="../blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+
+<style>
+  input.search{
+  background:url(img/occupy_search_button.png) no-repeat left top;
+  border:none;
+  cursor:pointer;
+  height:32px; 
+  vertical-align:top;
+  width:33px;
+  }
+
+  input.search:hover{
+  background-position:left bottom;
+  }
+  
+  #searchInput { 
+	margin: 0;
+	height: 30px;
+	padding: 0 10px;
+	width: 400px;
+  }
+</style>
+
 </head>
 <body>
 	<div id="navBar">
@@ -24,11 +47,19 @@
 					<li><a href="http://map.occupy.net">Map</a></li>
 					<li><a href="http://wiki.occupy.net">Wiki</a></li>
 					<li><a href="http://notes.occupy.net">Notes</a></li>
+					<li><a href="http://forum.occupy.net">Forum</a></li>
 					<li class="inactive"><a>Chat</a></li>
 					<li class="inactive"><a>Lists</a></li>
-					<li class="inactive"><a>Forum</a></li>
 				</ul>
 			</div>
+			
+			<!-- the search box -->
+			<form action="https://duckduckgo.com/" method="get" target="_blank"
+			      enctype="multipart/form-data" id="searchBox">
+			  <input type="text" name="q" placeholder="Search the web securly" id="searchInput"><input type="submit" value="" class="search">
+
+			</form>
+
 		</div>
 	</div>
 	<div id="footer">Brought to you by the <a href="http://www.nycga.net/groups/internet" target="_blank">NYC General Assembly Tech Ops group</a></div>

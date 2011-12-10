@@ -2,6 +2,30 @@
 
 @import url(http://fonts.googleapis.com/css?family=Didact+Gothic);
 
+/* Global
+-------------------------------------------------------------- */
+
+a:link     { }
+a:visited     {  }
+a:focus,
+a:hover     {  }
+
+.noClear {clear:none;}
+.inline {display:inline !important;}
+.alignleft, .al {text-align: left;}
+.aligncenter, .ac {text-align: center;}
+.alignright, .ar {text-align: right;}
+.justify, .aj {text-align:justify;}
+
+.bold, .b 		{ font-weight:bold; }
+.italic, .i 		{ font-style: italic; }
+.upperCase, .uc 	{ text-transform: uppercase; }
+.lowerCase, .lc 	{ text-transform: lowercase; }
+.titleCase, .tc 	{ text-transform: capitalize; }
+
+/* Navigation
+-------------------------------------------------------------- */
+
 #navBar {
 background-color: black;
 height: 36px;
@@ -12,6 +36,9 @@ margin-top: 10%;
 margin-bottom:10%;
 text-align: center;
 }
+
+/* Products
+-------------------------------------------------------------- */
 
 .products {}
 .products ul { list-style:none; }
@@ -39,6 +66,9 @@ text-transform: uppercase;
 .products ul li.inactive a:visited { color:#ccc; }
 
 .products ul li.inactive a:hover { border-bottom:none; }
+
+/* Footer
+-------------------------------------------------------------- */
 
 #footer { width:100%; text-align:center; color:#ccc; font-size:10px; }
 #footer a { color:#999; }
