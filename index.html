@@ -11,6 +11,9 @@
 	<!--[if lt IE 8]><link rel="stylesheet" href="../blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
 
 <style>
+	
+  #searchBox { margin-bottom:10px; }
+
   input.search{
   background:url(img/occupy_search_button.png) no-repeat left top;
   border:none;
@@ -28,40 +31,190 @@
 	margin: 0;
 	height: 30px;
 	padding: 0 10px;
-	width: 400px;
+	width: 475px;
   }
 </style>
 
 </head>
 <body>
 	<div id="navBar">
-		<div class="container">
-			
+		<div class="">
+			<ul id="headNav">
+				<li class="logo"><span id="subLogo" class="white"></span>Occupy<span class="white">net</span></li>
+				<li><a href="http://www.occupy.net/">Home</a></li>
+				<li><a href="http://wiki.occupy.net/">Wiki</a></li>
+				<li><a href="http://collaborate.occupy.net/">Collaborate</a></li>
+				<li><a href="http://news.occupy.net/">News</a></li>
+				<li><a href="http://notes.occupy.net/">Notes</a></li>
+				<li><a href="http://map.occupy.net/">Map</a></li>
+				<li class="right"><a href="http://occupywallstreet.net" target="_blank">#occupywallstreet</a></li>
+			</ul>
 		</div>
 	</div>
 	<div id="title">
-		<img src="img/occupy.jpg" />
-		<div>
+		<div class="logo"><span id="subLogo" class="black"></span>Occupy<span class="black">net</span></div>
+		<div class="container">
 			<div class="products">
 				<ul>
-					<li><a href="http://map.occupy.net">Map</a></li>
-					<li><a href="http://wiki.occupy.net">Wiki</a></li>
-					<li><a href="http://notes.occupy.net">Notes</a></li>
-					<li class="inactive"><a>Forum</a></li>
-					<li class="inactive"><a>Chat</a></li>
-					<li class="inactive"><a>Lists</a></li>
+					<li>
+						<a href="http://map.occupy.net">Map</a>
+						<div class="product_details">
+							<h2 class="title bottom">
+								MAP.OCCUPY.NET <sup class="project_status beta">beta</sup>
+							</h2>
+							<p class="bottom">
+								<a href="http://map.occupy.net">Launch</a> &bull;
+								<a href="http://wiki.occupy.net/wiki/Occupy.net_Maps" target="_blank">Details (Wiki)</a> &bull;
+								<a href="https://www.pivotaltracker.com/projects/417395">Tasks</a> &bull;
+								<a href="https://github.com/FLOSolutions/Ushahidi-ows" target="_blank">Code (GitHub)</a>
+							</p>
+							<h3 class="description">#OccupyMap project is based on the open-source <a href="http://ushahidi.com/" taget="_blank">Ushahidi</a> platform. Individuals can submit stories via web form, email, tweet (#occupymap), and hopefully soon SMS so their location-specific incidents/occupations/emergencies appear on the map in real time.</h3>
+						</div>
+					</li>
+					<li><a href="http://wiki.occupy.net">Wiki</a>
+						<div class="product_details">
+							<h2 class="title bottom">
+								WIKI.OCCUPY.NET <sup class="project_status beta">beta</sup>
+							</h2>
+							<p class="bottom">
+								<a href="http://wiki.occupy.net">Launch</a> &bull;
+								<a href="http://wiki.occupy.net/wiki/Occupy.net_Wiki" target="_blank">Details (Wiki)</a> &bull;
+								<a href="http://collaborate.occupy.net/projects/9">Tasks</a>
+							</p>
+							<h3 class="description">This wiki is for documenting the #occupy movement</h3>
+						</div>
+					</li>
+					<li><a href="http://notes.occupy.net">Notes</a>
+						<div class="product_details">
+							<h2 class="title bottom">
+								NOTES.OCCUPY.NET <sup class="project_status beta">beta</sup>
+							</h2>
+							<p class="bottom">
+								<a href="http://notes.occupy.net">Launch</a> &bull;
+								<a href="https://github.com/FLOSolutions/etherpad-lite" target="_blank">Code (GitHub)</a>
+							</p>
+							<h3 class="description">Simply create a new note pad, share the link, and you can collectively edit a document. Private links, editable and non-editable embeds, plus a edit time line are available.</h3>
+						</div>
+					</li>
+					<li><a href="http://collaborate.occupy.net">collaborate</a>
+						<div class="product_details">
+							<h2 class="title bottom">
+								COLLABORATE.OCCUPY.NET <sup class="project_status beta">beta</sup>
+							</h2>
+							<p class="bottom">
+								<a href="http://collaborate.occupy.net">Launch</a> &bull;
+								<a href="http://collaborate.occupy.net/projects/10">Tasks</a> &bull;
+								<a href="https://github.com/FLOSolutions/bettermeans" target="_blank">Code (GitHub)</a>
+							</p>
+						</div>
+					</li>
+					<li><a href="http://projects.occupy.net">projects</a>
+						<div class="product_details">
+							<h2 class="title bottom">
+								PROJECTS.OCCUPY.NET <sup class="project_status beta">beta</sup>
+							</h2>
+							<p class="bottom">
+								<a href="http://projects.occupy.net">Launch</a> &bull;
+								<a href="http://collaborate.occupy.net/projects/14" target="_blank">Tasks</a>
+							</p>
+							<h3 class="description">Project manager ticketing system Redmine.</h3>
+						</div>
+					</li>
+					<li><a>Search</a>
+						<div class="product_details">
+							<h2 class="title bottom">
+								SEARCH THE WEB
+							</h2>
+							<form action="https://duckduckgo.com/" method="get" target="_blank"
+								  enctype="multipart/form-data" id="searchBox">
+							  <input type="text" name="q" placeholder="Search the web securely" id="searchInput"><input type="submit" value="" class="search"><br />Search with: <input type="radio" checked="checked" /> <a href="https://duckduckgo.com/" target="_blank">DuckDuckGo.com</a>
+
+							</form>
+							
+							<h3 class="description">Other search engines track you and sell that information to advertisers.</h3>
+						</div>
+					</li>
+					<li><a href="http://schedule.occupy.net">schedule</a>
+						<div class="product_details">
+							<h2 class="title bottom">
+								SCHEDULE.OCCUPY.NET <sup class="project_status beta">beta</sup>
+							</h2>
+							<p class="bottom">
+								<a href="http://schedule.occupy.net">Launch</a> &bull;
+								<a href="http://collaborate.occupy.net/projects/16" target="_blank">Tasks</a> &bull;
+								<a href="https://github.com/FLOSolutions/Ushahidi-ows" target="_blank">Code (GitHub)</a>
+							</p>
+							<h3 class="description">Need to get a bunch of people together? Figure out the best date and time with schedule.occupy.net</h3>
+						</div>
+					</li>
+					<li><a href="http://sprintboard.occupy.net">sprintboard</a>
+						<div class="product_details">
+							<h2 class="title bottom">
+								SPRINTBOARD.OCCUPY.NET <sup class="project_status beta">beta</sup>
+							</h2>
+							<p class="bottom">
+								<a href="http://sprintboard.occupy.net">Launch</a>
+							</p>
+						</div>
+					</li>
+					<li><a href="http://news.occupy.net">News</a>
+						<div class="product_details">
+							<h2 class="title bottom">
+								NEWS.OCCUPY.NET <sup class="project_status beta">beta</sup>
+							</h2>
+							<p class="bottom">
+								<a href="http://news.occupy.net">Launch</a> &bull;
+								<a href="http://wiki.occupy.net/wiki/Occupy.net_News" target="_blank">Details (Wiki)</a> &bull;
+								<a href="http://collaborate.occupy.net/projects/6" target="_blank">Tasks</a>
+							</p>
+							<h3 class="description">#OccupyNews aggregates content from feeds relevant to the #occupy movement and provides features that enable people to easily browse, tag and organize content items, create channels, and output their own feeds.</h3>
+						</div>
+					</li>
+					<li class="inactive"><a>Forum</a>
+						<div class="product_details">
+							<h2 class="title bottom">
+								FORUM.OCCUPY.NET <sup class="project_status alpha">Alpha</sup>
+							</h2>
+							<p class="bottom">
+								<a href="http://forum.occupy.net">Launch</a> &bull;
+								<a href="http://wiki.occupy.net/wiki/Occupy.net_Forums" target="_blank">Details (Wiki)</a> &bull;
+								<a href="http://collaborate.occupy.net/projects/12" target="_blank">Tasks</a> &bull;
+								<a href="https://github.com/FLOSolutions/vanilla-multisite-plugin" target="_blank">Code (GitHub)</a>
+							</p>
+							<h3 class="description">Hosts discussions concerning the organizing and capacity building of the #occupy movement.</h3>
+						</div>
+					</li>
+					<li class="inactive"><a>Chat</a>
+						<div class="product_details">
+							<h2 class="title bottom">
+								CHAT.OCCUPY.NET <sup class="project_status idea">Idea</sup>
+							</h2>
+							<p class="bottom">
+								<a href="" target="_blank">Details (Wiki)</a> &bull;
+								<a href="">Tasks</a> &bull;
+								<a href="https://github.com/FLOSolutions/Ushahidi-ows" target="_blank">Code (GitHub)</a>
+							</p>
+							<h3 class="description">Real time hosted chat for the #occupy movement.</h3>
+						</div>
+					</li>
+					<li class="inactive"><a>Lists</a>
+						<div class="product_details">
+							<h2 class="title bottom">
+								LISTS.OCCUPY.NET <sup class="project_status idea">Idea</sup>
+							</h2>
+							<p class="bottom">
+								<a href="" target="_blank">Details (Wiki)</a> &bull;
+								<a href="">Tasks</a> &bull;
+								<a href="https://github.com/FLOSolutions/Ushahidi-ows" target="_blank">Code (GitHub)</a>
+							</p>
+							<h3 class="description">Mailing lists for the #occupy movement.</h3>
+						</div>
+					</li>
 				</ul>
 			</div>
-			
-			<!-- the search box
-			<form action="https://duckduckgo.com/" method="get" target="_blank"
-			      enctype="multipart/form-data" id="searchBox">
-			  <input type="text" name="q" placeholder="Search the web securely" id="searchInput"><input type="submit" value="" class="search">
-
-			</form> -->
 
 		</div>
 	</div>
-	<div id="footer">Brought to you by the <a href="http://www.nycga.net/groups/internet" target="_blank">NYC General Assembly Tech Ops group</a></div>
+	<div id="footer">Brought to you by the <a href="http://www.nycga.net/groups/tech" target="_blank">NYC General Assembly Tech Ops group</a></div>
 </body>
 </html>

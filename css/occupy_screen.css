@@ -1,6 +1,17 @@
 /* occupy.net occupy_screen.css */
 
 @import url(http://fonts.googleapis.com/css?family=Didact+Gothic);
+@font-face {
+    font-family: 'OSPDIN';
+    src: url('../fonts/osp-din-webfont.eot');
+    src: url('../fonts/osp-din-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/osp-din-webfont.woff') format('woff'),
+         url('../fonts/osp-din-webfont.ttf') format('truetype'),
+         url('../fonts/osp-din-webfont.svg#OSPDIN') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 /* Global
 -------------------------------------------------------------- */
@@ -23,37 +34,64 @@ a:hover     {  }
 .lowerCase, .lc 	{ text-transform: lowercase; }
 .titleCase, .tc 	{ text-transform: capitalize; }
 
+.logo {
+color:#FC0;
+font-family:OSPDIN,sans-serif;
+text-transform: uppercase;
+}
+
+.logo .black { color:#000; }
+.logo .white { color:#FFF; }
+
 /* Navigation
 -------------------------------------------------------------- */
 
 #navBar {
 background-color: black;
-height: 36px;
+height:36px;
 }
 
+#headNav { list-style:none; margin:0; padding:0; }
+
+#headNav li { float:left; font-family: 'Didact Gothic',sans-serif; padding:10px; height:16px; text-transform:uppercase; letter-spacing: 2px; }
+#headNav .logo { font-size: 24px; font-family:OSPDIN,sans-serif; padding:0 10px; height:auto; }
+
+#headNav li a,
+#headNav li a:link,
+#headNav li a:visited { color:#AAA; font-family:inherit; text-decoration:none; }
+
+#headNav li a:hover { color:#EEE; }
+
 #title {
-margin-top: 10%;
-margin-bottom:10%;
+height:400px;
+margin-top: 30px;
+margin-bottom:30px;
 text-align: center;
+}
+
+#title .logo {
+font-size: 100px;
+text-align:center;
+text-shadow: 1px 1px 5px #CCC;
 }
 
 /* Products
 -------------------------------------------------------------- */
 
-.products {}
+.products { position:relative; }
 .products ul { list-style:none; }
-.products ul li {
+.products ul > li {
 display:inline;
 font-family: 'Didact Gothic', sans-serif; 
-font-size: 24px;
-margin-right: 24px;
+font-size: 12px;
+padding:0 6px;
 }
 
-.products ul li:last-child { margin:0; }
+.products ul > li:last-child { margin:0; }
 
-.products ul li a,
-.products ul li a:link,
-.products ul li a:visited {
+.products ul > li > a,
+.products ul > li > a:link,
+.products ul > li > a:visited {
 color:#000;
 letter-spacing: 2px;
 text-decoration: none;
@@ -61,11 +99,50 @@ text-transform: uppercase;
 }
 .products ul li a:hover { border-bottom:1px black dotted; }
 
-.products ul li.inactive a,
-.products ul li.inactive a:link,
-.products ul li.inactive a:visited { color:#ccc; }
+/* sub menu display */
 
-.products ul li.inactive a:hover { border-bottom:none; }
+.product_details { display:none; }
+.products ul li:hover .product_details { display:block; }
+
+/* Sub Navigation ---------------------- */
+
+.products .product_details { 
+left: 0;
+padding: 10px;
+position: absolute;
+text-align: center;
+width: 100%;
+}
+
+.products .product_details .title {  }
+.products .product_details .description { width:500px; margin:0 auto; text-align:left; border-left: 10px solid #FC0; padding:10px; line-height:1.5; }
+.products .product_details a { text-decoration:none; }
+
+.products .product_details li{
+font-size:10px;
+margin-right:10px;
+}
+
+.products .product_details li:last-child { margin:0; }
+
+.products .product_details li a,
+.products .product_details li a:link,
+.products .product_details li a:visited {
+color:#000;
+letter-spacing: 2px;
+text-decoration: none;
+text-transform: uppercase;
+}
+.products .product_details li a:hover { border-bottom:1px black dotted; }
+
+/* inactive Navigation ---------------------- */
+
+
+.products ul li.inactive > a,
+.products ul li.inactive > a:link,
+.products ul li.inactive > a:visited { color:#AAA; }
+
+.products ul li.inactive > a:hover { border-bottom:none; }
 
 /* Footer
 -------------------------------------------------------------- */
