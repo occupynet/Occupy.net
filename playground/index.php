@@ -43,7 +43,7 @@
 	</div>
 	
   <header>
-		<iframe src="http://localhost/FLO/Occupy.net/nav/occupynet.html#NewsWire" frameborder="0" style="width:100%;height:36px;"></iframe>
+		<iframe src="http://www.Occupy.net/nav/occupynet.html#NewsWire" frameborder="0" style="width:100%;height:36px;"></iframe>
   </header>
 	
   <div id="main" role="main">
