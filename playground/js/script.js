@@ -76,7 +76,7 @@ var rssReader = {
 				mainTitle.appendChild(feedDesc);
 				
 				// add meta data to main container
-        container.appendChild(mainTitle);
+        //container.appendChild(mainTitle);
 
         // creating list of elements
         var mainList = document.createElement('ul');
@@ -167,6 +167,41 @@ var rssReader = {
 window.onload = function() {
     rssReader.init('post_results');
 }
+
+$(document).ready(function() {
+	
+	var currentWidth = $('#main').outerWidth() - $('#newsNav').outerWidth() - 300;
+	
+	$('#mainContent .lt-col').width(currentWidth);
+	
+	$(window).resize(function() {
+		$('#mainContent .lt-col').css('width','');
+	});
+	
+	$('#newsNav a').click(function() {
+	
+		var rss_url = $(this).attr('rss_url');
+		var rss_title = $(this).attr('rss_title');
+		var rss_desc = $(this).attr('rss_desc');
+		var loadingHTML = '<div class="loading_rss"><img alt="Loading..." src="img/loading.gif" /></div>';
+		var currentWidth = $('#post_results_main').outerWidth();
+		
+		$('#newsNav a').removeClass('active');
+		$(this).addClass('active');
+		
+		$('#mainContent .lt-col').width(currentWidth);
+		$('#post_results_main').attr('rss_url',rss_url);
+		$('#post_results_main').html(loadingHTML);
+		
+		$('#mainContent .headline .rssTitle').html(rss_title);
+		$('#mainContent .headline .rssDesc').html(rss_desc);
+		
+		rssReader.init('post_results');
+		
+		
+		return false;
+	});
+});
 
 
 

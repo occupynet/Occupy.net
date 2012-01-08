@@ -94,19 +94,6 @@ sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: b
 sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 
-@import url(http://fonts.googleapis.com/css?family=Didact+Gothic);
-@font-face {
-    font-family: 'OSPDIN';
-    src: url('http://www.occupy.net/fonts/osp-din-webfont.eot');
-    src: url('http://www.occupy.net/fonts/osp-din-webfont.eot?#iefix') format('embedded-opentype'),
-         url('http://www.occupy.net/fonts/osp-din-webfont.woff') format('woff'),
-         url('http://www.occupy.net/fonts/osp-din-webfont.ttf') format('truetype'),
-         url('http://www.occupy.net/fonts/osp-din-webfont.svg#OSPDIN') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
 
 /* =============================================================================
    Lists
@@ -219,26 +206,43 @@ td { vertical-align: top; }
    Author: Drew Hornbein
    ========================================================================== */
 	
-	body { background-color:#EEE; position:relative; }
+	.sidebar-left { float:left; width:200px; }
+	.sidebar-left  .feedList { list-style:none; margin:0; padding:0; }
 	
-	header { background-color:#FCFCFC; border-bottom:1px dotted #EEE; color:#BBB; font-size:12px; padding:4px; text-shadow: 1px 1px 0 #EFEFEF; width:100%; }
+	#newsNav a ,
+	#newsNav a:link,
+	#newsNav a:visited { border-left: 5px solid white; color:#444; font-size: 14px; padding-left:5px; text-decoration:none; }
 	
-	#main {  }
+	#newsNav a:hover,
+	#newsNav a.active { border-color:#FC0; }
 	
-	.post_results { font-size:0.8em; border-width:0 1px; border-style:none solid; border-color:#000 #F5F5F5 #000 #E1E1E1; float:left; width:300px;}
-	.post_results .loading_rss { background-color:#FCFCFC; padding:20px 0; text-align:center; }
-	.post_results .feedTitle { background-color:#FCFCFC; padding:10px 15px; }
-	.post_results .feedTitle .feedTitleLink { color:black; font-family: 'OSPDIN'; font-size:36px; text-decoration:none; text-transform:uppercase; }
-	.post_results .feedTitle .feedTitleLink:hover { color:#FC0; }
-	.post_results .feedTitle p { display:none; }
+	#newsNav h3,
+	#newsNav h4 { font-style: italic; margin:0; }
+	#newsNav :first-child { margin-top:0; }
+	
+	#mainContent { margin-left:220px; }
+	
+	#mainContent .lt_col { width:100%; }
+	#mainContent .rt-col { width:300px; }
+	#mainContent .col-space { width:20px; }
+	
+	#main { margin:10px; font-family: 'Lora', serif; }
+	
+	.headline { border-bottom:5px solid #DDD; }
+	.headline .rssTitle { font-size:42px; font-family:'Raleway'; }
+	.headline .rssDesc { margin-bottom:10px; }
+	
+	.post_results { }
+	.post_results .loading_rss { padding:20px 0; text-align:center; }
 	
 	.post_results > ul { list-style:none; margin:0; padding:0;}
-	.post_results > ul > li { border-bottom: 4px solid #ddd; border-top:1px solid #DADADA; padding:10px 20px; }
-	.post_results > ul > li:hover { background-color:#E5E5E5; }
+	.post_results > ul > li { border-top:1px solid #DADADA; padding:10px 0; }
+	.post_results > ul > li:first-child { border-top:5px solid #DADADA; }
+	.post_results > ul > li:hover {  }
 	
-	.post_results .title { color:black; font-family: 'Didact Gothic',sans-serif; font-weight:bold; font-size:16px; padding-bottom:1px; text-decoration:none; }
-	.post_results .title:hover { color:#FC0; }
-	.post_results .date { color:#AAA; font-size:0.95em; margin-top:4px; }
+	.post_results .title { color:black; font-weight:bold; padding-bottom:1px; text-decoration:none; }
+	.post_results .title:hover { color:#CCC; }
+	.post_results .date { color:#888; font-size:0.95em; margin-top:4px; }
 	
 	.post_results .desc {}
 		.post_results .desc h1 { font-size:1.2em; font-weight:bold; }
@@ -247,7 +251,7 @@ td { vertical-align: top; }
 		.post_results .desc h4 { font-size:1em; font-weight:bold; }
 		.post_results .desc h5 { font-size:1em; font-weight:normal; }
 		.post_results .desc h6 { font-size:1em; font-weight:normal; }
-		.post_results .desc img { width:100%; height:auto;}
+		.post_results .desc img { width:100%; max-width:400px; height:auto;}
 	.post_results .loc {
 	background-color: #DDD;
 	color: #444;
@@ -259,19 +263,18 @@ td { vertical-align: top; }
 	border-radius: 5px;
 	}
 	.post_results .loc:hover { background-color:#444; color:#FC0; }
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
+	#extraContent h3,
+	#extraContent h4 { font-style: italic; }
+	
+	#extraContent :first-child { margin-top:0; }
+	
+	#extraContent .post_results { font-size: 12px; }
+	#extraContent .title { font-weight:normal; }
+	#extraContent .loc,
+	#extraContent .desc { display:none; }
+	
+	footer { color:#666; font-family: 'Lora', serif; text-align:center; padding:20px; }
 
 /* ==|== media queries ======================================================
    PLACEHOLDER Media Queries for Responsive Design.
