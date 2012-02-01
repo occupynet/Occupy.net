@@ -69,84 +69,89 @@ margin-bottom:30px;
 text-align: center;
 }
 
-#title .logo {
-font-size: 100px;
-text-align:center;
-text-shadow: 1px 1px 5px #CCC;
-}
+
+#subLogo {margin: 0; font-size: 100px; color: #FFCC00; text-shadow: 0px 1px 2px #CCC; line-height: 1em; letter-spacing: 1px;} 
+#subLogo .domain {margin-left: -8px; color: #000;}
+
+#tagline {font-size: 18px; color: #AAA; margin: -.5em 0 1em; text-shadow: none; font-weight: normal; letter-spacing: 1px;  line-height: 1em;}
+
+
+/* Content
+-------------------------------------------------------------- */
+
+.intro p {text-align: left; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; margin-top: 1em; margin-bottom: 2em;}
+
 
 /* Products
 -------------------------------------------------------------- */
 
-.products { position:relative; }
+.products { position:relative; clear: both;}
 .products ul { list-style:none; margin:0; padding:0; }
 .products ul > li {
-display:inline;
-font-family: 'Didact Gothic', sans-serif; 
-font-size: 12px;
-padding:0;
+display:inline-block;
+width: 230px;
+background: #F2F2F2;
+text-align: left;
+margin: 0 0 10px;
+padding: 0;
+float: left;
+height: 54px;
 }
+.products ul > li:hover {cursor: pointer; background: #E2E2E2;}
 
-.products ul > li:last-child { margin:0; }
-
-.products ul > li > a,
-.products ul > li > a:link,
-.products ul > li > a:visited {
-color:#000;
+.product_name a,
+.product_name a:link,
+.product_name a:visited {
+font-size: 36px; 
+color:#FFCC00;
 letter-spacing: 2px;
-padding:4px 6px;
+padding: 4px 10px;
 text-decoration: none;
 text-transform: uppercase;
 }
-.products ul > li > a:hover { background-color:#FC0; }
+.product_name a:hover {color: #000;}
 
-/* sub menu display */
 
-.product_details { display:none; }
-.products ul li:hover .product_details { display:block; }
+/* Subsections ---------------------- */
 
-/* Sub Navigation ---------------------- */
+.product_name {font-family: OSPDIN, sans-serif; margin: 0; }
+.product_status {display: inline-block; float: right; color: #CCC; font-size: 14px; margin:0; padding: 7px 7px 0 0; text-transform: uppercase; letter-spacing: 1px;}
 
-.products .product_details { 
-left: 0;
-padding: 10px;
-position: absolute;
-text-align: center;
-width: 100%;
-}
+.product_details {display:none; padding: 0 10px 10px;}
+.product_details a { text-decoration:none; }
 
-.products .product_details .title {  }
-.products .product_details .description { width:500px; margin:0 auto; text-align:left; padding:10px; line-height:1.5; }
-.products .product_details a { text-decoration:none; }
-
-.products .product_details li{
-font-size:10px;
-margin-right:10px;
-}
-
-.products .product_details li:last-child { margin:0; }
-
-.products .product_details li a,
-.products .product_details li a:link,
-.products .product_details li a:visited {
+.product_details li {font-size:10px; margin-right:10px;}
+.product_details li:last-child { margin:0; }
+.product_details li a,
+.product_details li a:link,
+.product_details li a:visited {
 color:#000;
 letter-spacing: 2px;
 text-decoration: none;
 text-transform: uppercase;
 }
-.products .product_details li a:hover { border-bottom:1px black dotted; }
+.product_details li a:hover { border-bottom:1px black dotted; }
 
-/* inactive Navigation ---------------------- */
+.product_url {font-size: 18px; font-family: OSPDIN, sans-serif; font-weight: normal; text-transform: uppercase; letter-spacing: 1px; color: #AAA; margin-top: -9px; margin-bottom: 0; }
+.product_text {font-size: 12px; color: #000; margin: 5px 0 8px; font-family: 'Didact Gothic',sans-serif; }
+.product_nav {font-size: 11px; margin: 0; line-height: 1em; }
+.product_nav a {display: inline-block; margin-right: 7px;}
 
 
-.products ul li.inactive > a,
-.products ul li.inactive > a:link,
-.products ul li.inactive > a:visited { color:#AAA; }
 
-.products ul li.inactive > a:hover { border-bottom:none; background-color:#FFF; }
+  
+/* Inactive Products ---------------------- */
+
+.product_name.inactive > a,
+.product_name.inactive > a:link,
+.product_name.inactive > a:visited { color:#AAA; }
+
+.product_name.inactive > a:hover { border-bottom:none; }
+
 
 /* Footer
 -------------------------------------------------------------- */
 
-#footer { width:100%; text-align:center; color:#ccc; font-size:10px; }
-#footer a { color:#999; }
+#footer {width:100%; text-align:center; color:#ccc; font-size:10px; text-transform: uppercase; letter-spacing: 1px; position: absolute; bottom: 0; left: 0; text-align: left; clear: both;}
+.footer_nav {padding: 15px 15px; }
+#footer a { color:#999; text-decoration: none; }
