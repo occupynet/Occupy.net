@@ -1,0 +1,578 @@
+/* much love to the HTML5 ✰ Boilerplate */
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; /* make IE8+ match webkit box model!!! */
+}
+
+
+/* LOAD WEB FONTS */
+
+@font-face {
+    font-family: 'LeagueGothicRegular';
+    src: url('../fonts/League_Gothic-webfont.eot');
+    src: url('../fonts/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/League_Gothic-webfont.woff') format('woff'),
+         url('../fonts/League_Gothic-webfont.ttf') format('truetype'),
+         url('../fonts/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PTSansRegular';
+    src: url('../fonts/PTS55F-webfont.eot');
+    src: url('../fonts/PTS55F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/PTS55F-webfont.woff') format('woff'),
+         url('../fonts/PTS55F-webfont.ttf') format('truetype'),
+         url('../fonts/PTS55F-webfont.svg#PTSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PTSansBold';
+    src: url('../fonts/PTS75F-webfont.eot');
+    src: url('../fonts/PTS75F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/PTS75F-webfont.woff') format('woff'),
+         url('../fonts/PTS75F-webfont.ttf') format('truetype'),
+         url('../fonts/PTS75F-webfont.svg#PTSansBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PTSansItalic';
+    src: url('../fonts/PTS56F-webfont.eot');
+    src: url('../fonts/PTS56F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/PTS56F-webfont.woff') format('woff'),
+         url('../fonts/PTS56F-webfont.ttf') format('truetype'),
+         url('../fonts/PTS56F-webfont.svg#PTSansItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PTSansBoldItalic';
+    src: url('../fonts/PTS76F-webfont.eot');
+    src: url('../fonts/PTS76F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/PTS76F-webfont.woff') format('woff'),
+         url('../fonts/PTS76F-webfont.ttf') format('truetype'),
+         url('../fonts/PTS76F-webfont.svg#PTSansBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* additional narrow options
+@font-face {
+    font-family: 'PTSansNarrowRegular';
+    src: url('../fonts/PTN57F-webfont.eot');
+    src: url('../fonts/PTN57F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/PTN57F-webfont.woff') format('woff'),
+         url('../fonts/PTN57F-webfont.ttf') format('truetype'),
+         url('../fonts/PTN57F-webfont.svg#PTSansNarrowRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'PTSansNarrowBold';
+    src: url('../fonts/PTN77F-webfont.eot');
+    src: url('../fonts/PTN77F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/PTN77F-webfont.woff') format('woff'),
+         url('../fonts/PTN77F-webfont.ttf') format('truetype'),
+         url('../fonts/PTN77F-webfont.svg#PTSansNarrowBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+*/
+
+
+/* Start: Recommended Isotope styles */
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:         top, left, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* End: Recommended Isotope styles */
+
+
+
+/* disable CSS transitions for containers with infinite scrolling*/
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+     -moz-transition: none;
+      -ms-transition: none;
+       -o-transition: none;
+          transition: none;
+}
+
+
+/**** Base styles ****/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+
+/* global styles */
+
+
+body {
+  background: #FFF;
+  color: #333;
+  padding: 0 0 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, pre, dl {
+  	margin-bottom: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #333; 
+	font-weight: normal; 
+	line-height: 1.05em; 
+	font-family: 'LeagueGothicRegular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif; 
+	text-transform: uppercase;
+}
+
+h1 {font-size: 36px;}
+h2 {font-size: 36px;}
+h3 {font-size: 25px;}
+h4 {font-size: 22px;}
+h5 {font-size: 18px;}
+h6 {font-size: 16px;}
+p  {font: 14px/1em 'PTSansRegular', 'Lucida Grande', sans-serif;}
+
+
+b, strong  {font-family: 'PTSansBold', 'Lucida Grande', sans-serif; font-weight: normal;}
+i, em  {font-family: 'PTSansItalic', 'Lucida Grande', sans-serif; font-style: normal; }
+
+ul, ol {
+  margin-left: 1.5em;
+}
+
+a,
+a code {
+  color: #FB4;
+  text-decoration: none;
+}
+
+a:hover,
+a:hover code { 
+  color: #4BF; 
+}
+
+a:active,
+a:active code {
+  color: #1FB;
+  background: black;
+}
+
+a img { border: none; }
+
+blockquote {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  border-left: 1px solid #333;
+  font-style: italic;
+}
+
+/**** Isotope styles ****/
+
+/* required for containers to inherit vertical size from window */
+html, body {
+  height: 100%;
+}
+
+#content {
+  margin: 20px 5%;
+  height: 100%;
+}
+
+#container {
+  border: 1px solid #666;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+footer {
+  font-size: 12px;
+  padding: 10px 0;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+
+
+/**** Nav bar ****/
+
+#options {
+  margin-top: 20px;
+}
+
+#options ul {
+  margin: 0;
+  list-style: none;
+}
+
+#options li {
+  float: left;
+  margin-bottom: 0.2em;
+  text-transform: uppercase;
+	font-family: 'LeagueGothicRegular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif; 
+	font-size: 18px;
+}
+
+#options li a {
+  display: block;
+  padding: 5px 10px;
+  background-color: #FFCC00;
+  color: #333;
+}
+
+#options li a:hover {
+  background-color: #555;
+  color: #FFCC00;
+}
+
+#options li a:active {
+  background-color: #333;
+  color: #FFCC00;
+}
+
+#options li a {
+  border-left:  2px solid #FFF;
+}
+
+#options li:first-child a {
+  border-left: none;
+}
+
+#options li a.selected {
+  background-color: #333;
+  text-shadow: none;
+  color: #FFCC00;
+}
+
+/* Combination filter options*/
+
+
+#options .option-logo {
+	float: left;
+}
+#options .option-logo h1 {
+	margin-top: 10px;
+	margin-bottom: 0;
+	letter-spacing: 1px;
+}
+.occupy {
+	color: #FFCC00; 
+}
+#options .option-combo {
+  display: inline-block;
+  float: right;
+  margin-left: 40px;
+  margin-top: 13px;
+}
+
+#options .option-combo ul {
+  display: inline-block;
+}
+
+#options .option-combo h3 {
+  line-height: 34px;
+  margin-bottom: 0;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+.option-def dl dt,
+.option-def dl dd {
+  float: left;
+  padding: 0 1.2em;;
+  background: #161616;
+  line-height: 36px;
+  height: 36px;
+}
+
+.option-def dl.header dt,
+.option-def dl.header dd {
+  background: #444;
+}
+
+.option-def dl .option-type {
+  font-size: 13px;
+  color: #AAA;
+  font-style: italic;
+}
+
+.option-def dl dd {
+  border-left: 1px solid #222;
+}
+
+
+/* all elements */
+
+.element {
+  width: 110px;
+  height: 110px;
+  margin: 5px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  background: #CCC;
+  color: #333;
+}
+
+.element:hover {background: #26A6DD; color: white; cursor: pointer;}
+.element:hover * {color: white;}
+
+
+.element * {
+  /* position: absolute;  don't understand why this is default */
+  margin: 0 10px;
+}
+
+.element * * {
+  margin: 0;
+}
+
+.variable-sizes .element.width2 { width: 230px; }
+.variable-sizes .element.height2 { height: 230px; }
+.variable-sizes .element.width2.height2 {font-size: 2.0em;}
+
+.element.large,
+.variable-sizes .element.large,
+.variable-sizes .element.large.width2.height2 {
+  font-size: 3.0em;
+  width: 350px;
+  height: 350px;
+  z-index: 100;
+}
+
+.clickable .element:hover {
+  cursor: pointer;
+}
+
+
+.clickable .element:hover h2 {
+  color: white;
+}
+
+
+
+/* projects */
+
+.project .icon {
+  margin: 7px;
+  float: right;
+  height: 40px;
+  width: 40px;
+}
+
+.project .title {
+  clear: both;
+  margin-bottom: 2px;
+}
+
+.status {
+  color: #888;
+}
+
+
+/* events */
+
+#eventsLoading {
+	height: 16px;
+	width: 110px;
+	margin: 10px 0;
+}
+#eventsLoading.done {
+	display: none;
+	height: 0;
+	width: 0;
+}
+
+.event {
+	background: #FFF; 
+	border: 1px solid #CCC;
+}
+
+.event .title {
+	color: #FFCC00;
+	margin-top: 10px;
+	margin-bottom: 2px;
+}
+
+
+
+/* campaigns */
+
+.campaign { 
+	background: #FFCC00;
+}
+
+.campaign .title {
+	margin-top: 36px;
+	margin-bottom: 2px;
+}
+.campaign .date {
+	color: #FFF;
+	letter-spacing: 1px;
+}
+
+
+/* news */
+
+.news { 
+	background: #333;
+}
+
+.news .title {
+	margin-top: 10px;
+	color: #FFF;
+	height: 2.1em;
+	overflow: hidden;
+	width: 200px;
+}
+.news .date {
+	margin-top: 5px;
+	color: #999;
+}
+.news p {
+	margin-top: 5px;
+	margin-bottom: 10px;
+	color: #FFF;
+}
+
+#feed3 img {
+max-width: 230px;
+margin-left: -10px;
+}
+
+
+/* wiki */
+
+.wiki {
+	background: #FFF;
+	border: 1px solid #BBB;
+}
+.wiki img {
+	margin: 0;
+}
+.wiki .pretitle {
+	color: #BBB;
+	margin: 5px 10px 2px;
+}
+.wiki .title {
+}
+
+
+
+/**** Infinite Scroll ****/
+
+#infscr-loading {
+  position: fixed;
+  text-align: center;
+  bottom: 30px;
+  left: 42%;
+  z-index: 100;
+  background: white;
+  background: hsla( 0, 0%, 100%, 0.9 );
+  padding: 20px;
+  color: #222;
+  font-size: 15px;
+  font-weight: bold;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+}
+
+
+
+/* The Magnificent Clearfix: nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
