@@ -32,13 +32,13 @@
 	  </ul>
 	</div>
 	<div class="option-combo">
-	  <h3>Show:</h3>
+	  <h3>Show me:</h3>
 	  <ul id="filter" class="option-set clearfix" data-option-key="filter">
-	    <li><a href="#show-all" data-option-value="*" class="selected">all</a></li>
+	    <li><a href="#show-all" data-option-value="*" class="selected">everything</a></li>
 	    <li><a href="#events" data-option-value=".event, .campaign">events</a></li>
 	    <li><a href="#knowledge" data-option-value=".wiki, .info">knowledge</a></li>
 	    <li><a href="#news" data-option-value=".news, .photo, .directory">news</a></li>
-	    <li><a href="#opportunities" data-option-value=".classified">opportunities</a></li>
+	    <li><a href="#opportunities" data-option-value=".jobs">opportunities</a></li>
 	    <li><a href="#tools" data-option-value=".project">tools</a></li>
 	  </ul>
 	</div>
@@ -46,20 +46,9 @@
 
 
 <div id="container" class="super-list variable-sizes clearfix">
-	
-	<div class="info" data-number="1">
-		<h5 class="title">Welcome</h5>
-		<p class="text">Occupy.net provides people with software tools that align with the values of the #occupy movement. All of the tools offered through Occupy.net are free/libre/open source: part of the global information commons, maintained by communities, not corporations.<br><br>Would you like to provide or help maintain an open source tool for this network?</p>
-	</div>
-	
-	<div class="info" data-number="2">
-		<h5 class="title">What is Occupy?</h5>
-		<p class="text">It's more than just peaceful assemblies. When we occupy a space, or a topic, we spotlight it. We encourage people to investigate, understand, act, and change something.<br><br>What do you want to occupy?<br><br><b>Coming up: Occupy May Day</b></p>
-	</div>
 
+	<div id="eventsLoading" data-number="1"></div>
 	
-	
-
 	<div id="feed1" class="clearfix"></div>
 	<div id="feed2" class="clearfix"></div>
 	<div id="feed3" class="clearfix"></div>
@@ -67,71 +56,95 @@
 	<div id="feed5" class="clearfix"></div>
 	<div id="feed6" class="clearfix"></div>
 	<div id="feed7" class="clearfix"></div>
-	<div id="feed8" class="clearfix"></div>
   
-	<div class="project" data-number="10">
+	<div class="element project alpha">
 		<img class="icon" src="img/icons/wiki.png">
 		<h3 class="title">Wiki</h3>
 		<h5 class="status">alpha</h5>
 	</div>
-	<div class="project" data-number="11">
+	<div class="element project alpha">
 		<img class="icon" src="img/icons/map.png">
 		<h3 class="title">Map</h3>
 		<h5 class="status">alpha</h5>
 	</div>
-	<div class="project" data-number="12">
+	<div class="element project alpha">
 		<img class="icon" src="img/icons/notes.png">
 		<h3 class="title">Notes</h3>
 		<h5 class="status">alpha</h5>
 	</div>
-	<div class="project" data-number="13">
+	<div class="element project alpha">
 		<img class="icon" src="img/icons/events.png">
 		<h3 class="title">Events</h3>
 		<h5 class="status">alpha</h5>
 	</div>
-	<div class="project" data-number="14">
+	<div class="element project alpha">
 		<img class="icon" src="img/icons/campaigns.png">
 		<h3 class="title">Campaigns</h3>
 		<h5 class="status">alpha</h5>
 	</div>
-	<div class="project" data-number="15">
+	<div class="element project alpha">
 		<img class="icon" src="img/icons/forum.png">
 		<h3 class="title">Forum</h3>
 		<h5 class="status">alpha</h5>
 	</div>
-	<div class="project" data-number="16">
+	<div class="element project alpha">
 		<img class="icon" src="img/icons/ideas.png">
 		<h3 class="title">Ideas</h3>
 		<h5 class="status">alpha</h5>
 	</div>
-	<div class="project" data-number="17">
+	<div class="element project alpha">
 		<img class="icon" src="img/icons/lists.png">
 		<h3 class="title">Lists</h3>
 		<h5 class="status">alpha</h5>
 	</div>
-	<div class="project" data-number="18">
+	<div class="element project alpha" data-number="9">
 		<img class="icon" src="img/icons/news.png">
 		<h3 class="title">News</h3>
 		<h5 class="status">alpha</h5>
 	</div>
-	<div class="project"  data-number="19">
+	<div class="element project alpha"  data-number="8">
 		<img class="icon" src="img/icons/classifieds.png">
 		<h3 class="title">Classifieds</h3>
 		<h5 class="status">alpha</h5>
 	</div>
-	<div class="project" data-number="20">
+	<div class="element project beta" data-number="7">
 		<img class="icon" src="img/icons/directory.png">
 		<h3 class="title">Directory</h3>
 		<h5 class="status">alpha</h5>
 	</div>
-	<div class="project" data-number="21">
+	<div class="element project alpha" data-number="6">
 		<img class="icon" src="img/icons/search.png">
 		<h3 class="title">Search</h3>
 		<h5 class="status">alpha</h5>
 	</div>
 	
 	
+	<div class="element campaign" data-number="3">
+		<h3 class="title">Occupy 311</h3>
+		<h5 class="date">ongoing</h5>
+	</div>
+	<div class="element campaign" data-number="4">
+		<h3 class="title">May Day</h3>
+		<h5 class="date">Tue, May 1</h5>
+	</div>
 	
+	
+	<div class="element wiki" data-number="1">
+		<h6 class="pretitle">Learn more about</h6>
+		<h3 class="title">May Day</h3>
+		<img src="img/topics/mayday.jpg">
+	</div>
+	
+	<div class="element info" data-number="5">
+		<h5 class="title">Welcome</h5>
+		<p class="text">Occupy.net provides people with software tools that align with the values of the #occupy movement. All of the tools offered through Occupy.net are free/libre/open source: part of the global information commons, maintained by communities, not corporations.<br><br>
+If you'd like to provide or help maintain an open source tool for this network, please <b>tell us about yourself.</b></p>
+	</div>
+	
+	<div class="element info" data-number="2">
+		<h5 class="title">What is Occupy?</h5>
+		<p class="text">It's more than just peaceful assemblies. When we occupy a space, or a topic, we spotlight it. We encourage people to investigate, understand, act, and change something.<br><br>What do you want to occupy?<br><br>Coming up: <b>Occupy May Day</b></p>
+	</div>
 	
 </div>
 
@@ -285,212 +298,53 @@ $(function(){
     });
 
 
-	// RSS FEED 
 
-	$.fn.rssfeed = function(url, options, fn) {	
 	
-		// Set plugin defaults
-		var defaults = {
-			limit: 10,
-			category: 'news',
-			header: false,
-			titletag: 'h4',
-			date: true,
-			content: true,
-			snippet: false,
-			media: true,
-			showerror: true,
-			errormsg: '',
-			key: null,
-			ssl: false,
-			linktarget: '_self'
-		};  
-		var options = $.extend(defaults, options); 
-		
-		// Functions
-		return this.each(function(i, e) {
-			var $e = $(e);
-			var s = '';
+	// FEEDS
 
-			// Check for SSL protocol
-			if (options.ssl) s = 's';
-						
-			// Check for valid url
-			if(url == null) return false;
-			
-			// Create Google Feed API address
-			var api = "http"+ s +"://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=?&q=" + encodeURIComponent(url);
-			if (options.limit != null) api += "&num=" + options.limit;
-			if (options.key != null) api += "&key=" + options.key;
-			api += "&output=json_xml"
+  // get RSS feed data
+  $.getJSON('http://classifieds.occupy.net/rss/all/')
+    .error( ajaxError )
+    .success(function( data ){
 
-			// Send request
-			$.getJSON(api, function(data){
-				
-				// Check for error
-				if (data.responseStatus == 200) {
-	
-					// Process the feeds
-					_process(e, data.responseData, options);
+      // proceed only if we have data
+      if ( !data || !data.length ) {
+        ajaxError();
+        return;
+      }
+      var items = [],
+          item, datum;
 
-					// Optional user callback function
-					if ($.isFunction(fn)) fn.call(this,$e);
-					
-				} else {
-
-					// Handle error if required
-					if (options.showerror)
-						if (options.errormsg != '') {
-							var msg = options.errormsg;
-						} else {
-							var msg = data.responseDetails;
-						};
-						$(e).html('<div class="rssError"><p>'+ msg +'</p></div>');
-				};
-			});				
-		});
-	};
-	
-	// Function to create HTML result
-	var _process = function(e, data, options) {
-
-		// Get JSON feed data
-		var feeds = data.feed;
-		if (!feeds) {
-			return false;
-		}
-		var html = '';	
-		
-		// Get XML data for media (parseXML not used as requires 1.5+)
-		if (options.media) {
-			var xml = getXMLDocument(data.xmlString);
-			var xmlEntries = xml.getElementsByTagName('item');
-		}
-					
-		// Add feeds
-		for (var i=0; i<feeds.entries.length; i++) {
-			
-			// Get individual feed
-			var entry = feeds.entries[i];
-			var pubDate;
-
-			// Format published date
-			if (entry.publishedDate) {
-				var entryDate = new Date(entry.publishedDate);
-				var pubDate = entryDate.toLocaleDateString() + ' ' + entryDate.toLocaleTimeString();
-			}
-			
-			// Add feed divs
-			html += '<div class="element ' + options.category + '" title="News from '+ feeds.title +'">' + '<h4 class="title">'+ entry.title +'</h4>'
-			if (options.date && pubDate) html += '<p class="date">'+ pubDate +'</p>'
-			if (options.content) {
-			
-				// Use feed snippet if available and optioned
-				if (options.snippet && entry.contentSnippet != '') {
-					var content = entry.contentSnippet;
-				} else {
-					var content = entry.content;
-				}
-				
-				html += '<p class="text">'+ content +'</p>'
-			}
-			
-			// Add any media
-			if (options.media && xmlEntries.length > 0) {
-				var xmlMedia = xmlEntries[i].getElementsByTagName('enclosure');
-				if (xmlMedia.length > 0) {
-					html += '<div class="rssMedia"><div>Media files</div><ul>'
-					for (var m=0; m<xmlMedia.length; m++) {
-						var xmlUrl = xmlMedia[m].getAttribute("url");
-						var xmlType = xmlMedia[m].getAttribute("type");
-						var xmlSize = xmlMedia[m].getAttribute("length");
-						html += '<li><a href="'+ xmlUrl +'" title="Download this media">'+ xmlUrl.split('/').pop() +'</a> ('+ xmlType +', '+ formatFilesize(xmlSize) +')</li>';
-					}
-					html += '</ul></div>'
-				}
-				html += '</div>';
-			}
-			
-		}
-		
-		$(e).append(html);
-
-		// Apply target to links
-		$('a',e).attr('target',options.linktarget);
-	};
-	
-	function formatFilesize(bytes) {
-		var s = ['bytes', 'kb', 'MB', 'GB', 'TB', 'PB'];
-		var e = Math.floor(Math.log(bytes)/Math.log(1024));
-		return (bytes/Math.pow(1024, Math.floor(e))).toFixed(2)+" "+s[e];
-	}
-
-	function getXMLDocument(string) {
-		var browser = navigator.appName;
-		var xml;
-		if (browser == 'Microsoft Internet Explorer') {
-			xml = new ActiveXObject('Microsoft.XMLDOM');
-			xml.async = 'false'
-			xml.loadXML(string);
-		} else {
-			xml = (new DOMParser()).parseFromString(string, 'text/xml');
-		}
-		return xml;
-	}
-
-	$(document).ready(function () {
-	  $('#feed1').rssfeed('http://classifieds.occupy.net/rss/all/', {
-	    limit: 3,
-	    category: 'classified', 
-	    date: false,
-	    content: false,
-	    header: false
-	  });
-	  $('#feed2').rssfeed('http://feeds.feedburner.com/interoccupy', {
-	    limit: 3, 
-	    category: 'news', 
-	    header: false
-	  });
-	  $('#feed3').rssfeed('http://wearethe99percent.tumblr.com/rss', {
-	    limit: 3,
-	    date: false, 
-	    category: 'photo', 
-	    header: false
-	  });
-	  $('#feed4').rssfeed('http://newswire.occupy.net/channel/368/rss.xml', {
-	    limit: 3,
-	    date: false, 
-	    category: 'news', 
-	    header: false
-	  });
-	  $('#feed5').rssfeed('http://wiki.occupy.net/wiki/Special:NewsFeed?feed=rss&categories=Featured', {
-	    limit: 2,
-	    date: false, 
-	    category: 'wiki',
-	    content: false, 
-	    header: false
-	  });
-	  $('#feed6').rssfeed('http://directory.occupy.net/occupations/added.rss', {
-	    limit: 3,
-	    date: false, 
-	    category: 'directory',
-	    content: false, 
-	    header: false
-	  });
-	  $('#feed7').rssfeed('http://map.occupy.net/feed/', {
-	    limit: 3,
-	    date: false, 
-	    category: 'map', 
-	    header: false
-	  });
-	  $('#feed8').rssfeed('http://campaigns.occupy.net/feed/', {
-	    limit: 3,
-	    date: true, 
-	    category: 'campaign',
-	    content: false, 
-	    header: false
-	  });
-	});
+      for ( var i=0, len = data.length; i<10; i++ ) {
+        datum = data[i];
+        item = '<div class="element feed">'
+          + '<h3 class="title">' + datum.event_name + '</h3>'
+          + '<h5 class="date">' + datum.event_start_date + '</h5>'
+          + '</div>';
+        items.push( item );
+      }
+    
+      var $items = $( items.join('') )
+        .addClass('example');
+        
+      // set random number for each item
+      $items.each(function(){
+        $(this).attr('data-number', ~~( Math.random() * 100 + 15 ));
+      });
+    
+      $items.imagesLoaded(function(){
+        $eventsTitle.removeClass('loading').text('');
+        $events.addClass('done').text('');
+        $container.append( $items );
+        $items.each(function(){
+          var $this = $(this),
+              itemHeight = Math.ceil( $this.height() / 120 ) * 120 - 10;
+          $this.height( itemHeight );
+        });
+        $container.isotope( 'insert', $items );
+      });
+    
+    });
   
 });
 </script>
