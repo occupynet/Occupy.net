@@ -118,10 +118,55 @@
 		<h3 class="title">Search</h3>
 		<h5 class="status">alpha</h5>
 	</div>
-	
-	
-	
-	
+</div>
+
+
+<div id="feeds" style="display:none">
+  <!--use semantic markup to define your feeds as data 
+  jquery $("#feeds").find(".feed") turns this html into
+  var feeds  = [{
+    'url': 'http://feeds....',
+    'type': 'news',
+  },
+  {
+    'url': 'http://map.occupy.net',
+    'type': 'map',
+  }
+  ]
+and so on - an array of objects with "url" and "type" attributes  
+  -->
+  <div class="feed">
+    <div class="url">http://feeds.feedburner.com/interoccupy</div>
+    <div class="type">news</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://classifieds.occupy.net/rss/all/</div>
+    <div class="type">classified</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://wearethe99percent.tumblr.com/rss</div>
+    <div class="type">photo</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://wiki.occupy.net/wiki/Special:NewsFeed?feed=rss&categories=Featured</div>
+    <div class="type">wiki</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://directory.occupy.net/occupations/added.rss</div>
+    <div class="type">directory</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://map.occupy.net/feed/</div>
+    <div class="type">map</div>
+  </div>  
+  <div class="feed">
+    <div class="url">http://campaigns.occupy.net/feed/</div>
+    <div class="type">campaign</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://newswire.occupy.net/channel/368/rss.xml</div>
+    <div class="type">news</div>
+  </div>
 </div>
 
 
@@ -134,66 +179,37 @@
 
 <!-- feed reader -->
 <script type="text/javascript">
-
-
-google.load("feeds", "1");
-
+var $container = $('#container');
+var feeds = google.load("feeds", "1");
 google.setOnLoadCallback(function() {
   $(function() {
+ 
   
-  var feeds = new Array(
-	'http://feeds.feedburner.com/interoccupy',
-	'http://classifieds.occupy.net/rss/all/',
-	'http://wearethe99percent.tumblr.com/rss',
-	'http://wiki.occupy.net/wiki/Special:NewsFeed?feed=rss&categories=Featured',
-	'http://directory.occupy.net/occupations/added.rss',
-	'http://map.occupy.net/feed/',
-	'http://campaigns.occupy.net/feed/',
-	'http://newswire.occupy.net/channel/368/rss.xml'
-  );
-  
-  var types = new Array(
-	'news',
-	'classified',
-	'photo',
-	'wiki',
-	'directory',
-	'map',
-	'campaign',
-	'news'
-  );
-  
-  var posts = new Array(
-	3,3,5,2,3,3,3,5
-  );
-  
-  var total = feeds.length;
-    
-  for (var j = 0; j < total; j++) {
-
-	  var feed = new google.feeds.Feed(feeds[j]);
-	  var num = posts[j];
-	  var type = types[j];
-	  
+  //grab your data from the html (semantic markup)
+  $("#feeds").find(".feed").each(function(j,e){
+    //extract url from html
+    var url = $(e).find(".url").html();
+	  var feed = new google.feeds.Feed(url);
+	  var num = 3;
+    //extract type from html
+	  var type = $(e).find(".type").html();
 	  feed.setNumEntries(num);
-	  
 	  feed.load(function(result) {
-	  
 	    if (!result.error) {
 	      var container = document.getElementById("container");
-	      
 	      for (var i = 0; i < result.feed.entries.length; i++) {
 	        var entry = result.feed.entries[i];
 	
 	        var div = document.createElement("div");
-	        div.className = type;
-
+	        $(div).addClass(type);
+	        $(div).addClass("feed-item");
 	        var title = div.appendChild(document.createElement("h3"));
 	        title.className = "title";
 	        title.appendChild(document.createTextNode(entry.title));
 	
 	        var date = div.appendChild(document.createElement("p"));
-	        date.className = "date";
+	        $(date).addClass("date");
+	        
 			var entryDate = new Date(entry.publishedDate);
 			var pubDate = entryDate.toLocaleDateString();
 	        date.appendChild(document.createTextNode(pubDate));
@@ -204,24 +220,26 @@ google.setOnLoadCallback(function() {
 	        
 	        container.appendChild(div);
 	      };
-	      
 	    };
-	  });
-	  	  
-	};
+	    $container.isotope('insert',$(".feed-item"))
+    
+  	
 	  
+	  });
+    
+  })
+
+	  	  
+
+	  //endfor
   });
 });
 
 
 //ISOTOPE 
-
-$(function(){
-
-  var $container = $('#container');
-
-	// adding 'insert' here includes the feeds but breaks the sort
-  $container.isotope('insert',{
+$(document).ready(function(){
+  // adding 'insert' here includes the feeds but breaks the sort
+  $container.isotope({
     masonry: {
       columnWidth: 120
     },
@@ -241,6 +259,9 @@ $(function(){
     sortBy: 'number'
   });
 
+ //$container.isotope('insert',$(".feed-items"));
+
+
   var $optionSets = $('#options .option-set'),
       $optionLinks = $optionSets.find('a');
 
@@ -250,14 +271,15 @@ $(function(){
     if ( $this.hasClass('selected') ) {
       return false;
     }
+    //toggle "selected classes"
     var $optionSet = $this.parents('.option-set');
     $optionSet.find('.selected').removeClass('selected');
     $this.addClass('selected');
 
     // make option object dynamically, i.e. { filter: '.my-filter-class' }
     var options = {},
-        key = $optionSet.attr('data-option-key'),
-        value = $this.attr('data-option-value');
+      key = $optionSet.attr('data-option-key'),
+      value = $this.attr('data-option-value');
     // parse 'false' as false boolean
     value = value === 'false' ? false : value;
     options[ key ] = value;
@@ -268,11 +290,13 @@ $(function(){
       // otherwise, apply new options
       $container.isotope( options );
     }
-    
+
     return false;
   });
 
-});
+  
+})
+
 </script>
 
 
