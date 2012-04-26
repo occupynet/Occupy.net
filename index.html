@@ -26,7 +26,7 @@
 	<div class="option-combo">
 	  <h3>Sort by:</h3>
 	  <ul id="sort" class="option-set clearfix" data-option-key="sortBy">
-	    <li><a href="#mixed" data-option-value="number" class="selected">mixed</a></li>
+	    <li><a href="#mixed" data-option-value="random" class="selected">mixed</a></li>
 	    <li><a href="#original" data-option-value="date">date</a></li>
 	    <li><a href="#alphabetical" data-option-value="alphabetical">name</a></li>
 	  </ul>
@@ -35,26 +35,25 @@
 	  <h3>Show:</h3>
 	  <ul id="filter" class="option-set clearfix" data-option-key="filter">
 	    <li><a href="#show-all" data-option-value="*" class="selected">all</a></li>
-	    <li><a href="#events" data-option-value=".event, .campaign">events</a></li>
-	    <li><a href="#knowledge" data-option-value=".wiki, .info">knowledge</a></li>
-	    <li><a href="#news" data-option-value=".news, .photo, .directory">news</a></li>
-	    <li><a href="#opportunities" data-option-value=".classified">opportunities</a></li>
+	    <li><a href="#knowledge" data-option-value=".wiki, .info, .welcome">knowledge</a></li>
+	    <li><a href="#news" data-option-value=".news, .photo, .directory, .map">news</a></li>
+	    <li><a href="#opportunities" data-option-value=".classified, .event, .campaign">opportunities</a></li>
 	    <li><a href="#tools" data-option-value=".project">tools</a></li>
 	  </ul>
 	</div>
 </section>
 
 
-<div id="container" class="clearfix">
+<div id="container">
 	
-	<div class="info" data-number="1">
-		<h5 class="title">Welcome</h5>
-		<p class="text">Occupy.net provides people with software tools that align with the values of the #occupy movement. All of the tools offered through Occupy.net are free/libre/open source: part of the global information commons, maintained by communities, not corporations.<br><br>Would you like to provide or help maintain an open source tool for this network?</p>
+	<div class="welcome" data-number="1">
+		<p class="title">Welcome!</p>
+		<p class="text">Occupy.net provides people with software tools that align with the values of the #occupy movement. All of the tools offered here are free/libre/open source: part of the global information commons, maintained by communities, not corporations.<br><br>Would you like to help?</p>
 	</div>
 	
-	<div class="info" data-number="5">
-		<h5 class="title">What is Occupy?</h5>
-		<p class="text">It's more than just peaceful assemblies. When we occupy a space, or a topic, we spotlight it. We encourage people to investigate, understand, act, and change something.<br><br>What do you want to occupy?<br><br><b>Coming up: Occupy May Day</b></p>
+	<div class="welcome" data-number="20">
+		<p class="title">What is Occupy?</p>
+		<p class="text">It's more than just peaceful assemblies. When we occupy a space, or a topic, we spotlight it. We encourage people to investigate, understand, act, and change something.<br><br>What do you want to occupy?</p>
 	</div>
 
 	  
@@ -111,7 +110,7 @@
 	<div class="project" data-number="20">
 		<img class="icon" src="img/icons/directory.png">
 		<h3 class="title">Directory</h3>
-		<h5 class="status">alpha</h5>
+		<h5 class="status">beta</h5>
 	</div>
 	<div class="project" data-number="21" data-full="inline1">
 		<img class="icon" src="img/icons/search.png">
@@ -136,36 +135,61 @@
 and so on - an array of objects with "url" and "type" attributes  
   -->
   <div class="feed">
-    <div class="url">http://feeds.feedburner.com/interoccupy</div>
+    <div class="url">http://newswire.occupy.net/channel/368/rss.xml</div>
     <div class="type">news</div>
+    <div class="num">5</div>
   </div>
   <div class="feed">
     <div class="url">http://classifieds.occupy.net/rss/all/</div>
     <div class="type">classified</div>
+    <div class="num">5</div>
   </div>
   <div class="feed">
     <div class="url">http://wearethe99percent.tumblr.com/rss</div>
     <div class="type">photo</div>
+    <div class="num">5</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://feeds.feedburner.com/OccupyDesign</div>
+    <div class="type">thumbnail</div>
+    <div class="num">5</div>
+  </div>
+  <!-- error in feed
+  <div class="feed">
+    <div class="url">http://occuprint.org/feed</div>
+    <div class="type">thumbnail</div>
+    <div class="num">5</div>
+  </div>
+  -->
+  <div class="feed">
+    <div class="url">http://howtocamp.takethesquare.net/feed/</div>
+    <div class="type">info</div>
+    <div class="num">5</div>
   </div>
   <div class="feed">
     <div class="url">http://wiki.occupy.net/wiki/Special:NewsFeed?feed=rss&categories=Featured</div>
     <div class="type">wiki</div>
+    <div class="num">1</div>
   </div>
   <div class="feed">
     <div class="url">http://directory.occupy.net/occupations/added.rss</div>
     <div class="type">directory</div>
+    <div class="num">5</div>
   </div>
   <div class="feed">
     <div class="url">http://map.occupy.net/feed/</div>
     <div class="type">map</div>
+    <div class="num">5</div>
   </div>  
   <div class="feed">
     <div class="url">http://campaigns.occupy.net/feed/</div>
     <div class="type">campaign</div>
+    <div class="num">5</div>
   </div>
   <div class="feed">
-    <div class="url">http://newswire.occupy.net/channel/368/rss.xml</div>
+    <div class="url">http://feeds.feedburner.com/interoccupy</div>
     <div class="type">news</div>
+    <div class="num">5</div>
   </div>
 </div>
 
@@ -190,7 +214,8 @@ google.setOnLoadCallback(function() {
     //extract url from html
     var url = $(e).find(".url").html();
 	  var feed = new google.feeds.Feed(url);
-	  var num = 3;
+    //extract number of posts to display from html
+	  var num = $(e).find(".num").html();
     //extract type from html
 	  var type = $(e).find(".type").html();
 	  feed.setNumEntries(num);
@@ -238,7 +263,6 @@ google.setOnLoadCallback(function() {
 
 //ISOTOPE 
 $(document).ready(function(){
-  // adding 'insert' here includes the feeds but breaks the sort
   $container.isotope({
     masonry: {
       columnWidth: 120
@@ -256,10 +280,8 @@ $(document).ready(function(){
         return itemText.text();
       }
     },
-    sortBy: 'number'
+    sortBy: 'random'
   });
-
- //$container.isotope('insert',$(".feed-items"));
 
 
   var $optionSets = $('#options .option-set'),
@@ -316,7 +338,7 @@ window.onload = function() {
         player:     "html",
         height:     400,
         width:      600,
-        content:    '<div id="layer">Welcome to my website!</div>'
+        content:    '<div id="layer">[import feed content]</div>'
     });
 
 };
@@ -325,7 +347,10 @@ window.onload = function() {
 
 
 <footer>
-  Brought to you by <a href="http://nycga.net">Occupy Tech</a>
+	<span>Brought to you by <a href="http://tech.occupy.net" target="_blank">Occupy Tech</a></span>
+	<a href="https://github.com/occupynet/" target="_blank">Code</a>
+	<a href="http://forum.occupy.net" target="_blank">Help</a> 
+  
 </footer>
 
 </section> <!-- #content -->

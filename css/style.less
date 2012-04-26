@@ -91,6 +91,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .PTSansRegular {font-family: 'PTSansRegular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif; font-weight: normal;}
 .PTSansBold {font-family: 'PTSansBold', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif; font-weight: normal;}
 .PTSansItalic {font-family: 'PTSansItalic', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif; font-style: normal;}
+.PTSansBoldItalic {font-family: 'PTSansBoldItalic', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif; font-weight: normal; font-style: normal;}
 
 
 
@@ -302,13 +303,27 @@ html, body {
   border: 1px solid #666;
   padding: 5px;
   margin-top: 5px;
+  /* undo reset of box model, so isotope height is correct: */
+  -moz-box-sizing: content-box; 
+  -webkit-box-sizing: content-box; 
+  -ms-box-sizing: content-box; 
+  box-sizing: content-box; 
 }
 
 footer {
   font-size: 12px;
   padding: 10px 0;
-  text-align: right;
   text-transform: uppercase;
+  a {
+  	margin-right: 10px;
+  }
+  span {
+  	float: right;
+  	a {
+  		.PTSansBold;
+  		margin-right: 0;
+  	}
+  }
 }
 
 
@@ -485,12 +500,21 @@ footer {
 	.height1;
 	.width2;
 	background: #FFF; 
-	border: 1px solid #CCC;
+	border: 1px dashed #BBB;
 	padding: 10px;
 	.title {
-		color: #FFCC00;
+		font-family: 'PTSansBold';
+		letter-spacing: 0;
+		font-size: 18px;
+		line-height: 1.2em;
+		text-transform: none;
 		margin: 2px 0 2px;
+		height: 64px;
+		overflow: hidden;
 	}
+	.date, .description {
+		display: none;	
+	} 
 	&:before {
 		content: "Help wanted! ";
 	}
@@ -519,8 +543,9 @@ footer {
 	.title {
 		margin-top: 10px;
 		margin-bottom: 2px;
+		font-size: 21px;
 		line-height: 21px;
-		height: 62px;
+		height: 63px;
 		overflow: hidden;
 	}
 	.date {
@@ -530,6 +555,9 @@ footer {
 		line-height: 1em;
 		height: 32px;
 		overflow: hidden;
+	}
+	.description {
+		display: none;
 	}
 }
 
@@ -555,20 +583,34 @@ footer {
 		margin-bottom: 10px;
 		color: #FFF;
 	}
+	ul {
+		margin: 0 25px;
+		display: none;
+	}
+	a {
+		color: #FFF;
+	}
 	iframe, img {
 		width: 100%;
 		height: auto;
 	}
 }
 
-.info {
+.welcome {
 	.element;
 	.height2;
 	.width2;
 	background: #FFF;
 	border: 1px solid #BBB;
 	.title {
-		margin: 10px 10px 5px;
+		.PTSansBoldItalic;
+		margin: 10px 10px 8px;
+		font-size: 16px;
+	}
+	.text {
+		.PTSansItalic;
+		font-size: 15px;
+		line-height: 1.2em;
 	}
 }
 
@@ -578,12 +620,12 @@ footer {
 	.width2;
 	background: #333;
 	&:hover {
-		border: 2px solid @cyan;
+		border: 4px solid @cyan;
 	}
 	* {
 		margin: 0;
 	}
-	.title {
+	.title, .date {
 		display: none;
 	}
 	iframe, img {
@@ -592,17 +634,43 @@ footer {
 	}	
 }
 
+.thumbnail {
+	.element;
+	.height1;
+	.width1;
+	background: @gray4;
+	&:hover {
+		border: 0;
+		background: @cyan;
+	}
+	* {
+		margin: 0;
+	}
+	.title, .date {
+		display: none;
+	}
+	iframe, img {
+		width: 100%;
+		height: auto;
+	}	
+}
+
 .directory {
 	.element;
 	.height1;
 	.width1;
-	background: #666;
+	background: #FFF;
+	border: 1px solid #CCC;
+	padding: 10px;
 	.title {
+		color: #FC0;
+		margin: 1px 0;
+	}
+	&:hover .title {
 		color: #FFF;
-		margin: 10px;
-		&:before {
-			content: "New: ";
-		}
+	}
+	&:before {
+		content: "NEW:";
 	}
 	p, .text, div, span {
 		display: none;
@@ -613,11 +681,12 @@ footer {
 	.element;
 	.height1;
 	.width1;
-	background: #333;
+	background: #666;
 	.title {
 		color: #FFF;
 		margin: 10px;
-		height: 88px;
+		font-size: 21px;
+		height: 84px;
 		overflow: hidden;
 	}
 	p, .text, div, span {
@@ -639,6 +708,21 @@ footer {
 	* {
 		margin: 0;
 	}
+}
+
+.info {
+	.element;
+	.height2;
+	.width2;
+	background: #FFF;
+	border: 1px solid #BBB;
+	.title {
+		margin: 10px 10px 0;
+	}
+	.date {
+		margin: 5px 10px;
+		opacity: .4;
+	}	
 }
 
 

@@ -163,6 +163,11 @@ section {
   font-family: 'PTSansItalic', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
   font-style: normal;
 }
+.PTSansBoldItalic {
+  font-family: 'PTSansBoldItalic', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
 /*------ GLOBAL --------*/
 body {
   margin: 0;
@@ -402,12 +407,28 @@ body {
   border: 1px solid #666;
   padding: 5px;
   margin-top: 5px;
+  /* undo reset of box model, so isotope height is correct: */
+
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  box-sizing: content-box;
 }
 footer {
   font-size: 12px;
   padding: 10px 0;
-  text-align: right;
   text-transform: uppercase;
+}
+footer a {
+  margin-right: 10px;
+}
+footer span {
+  float: right;
+}
+footer span a {
+  font-family: 'PTSansBold', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+  font-weight: normal;
+  margin-right: 0;
 }
 /*------  NAV BAR --------*/
 #options {
@@ -611,7 +632,7 @@ footer {
   height: 110px;
   width: 230px;
   background: #FFF;
-  border: 1px solid #CCC;
+  border: 1px dashed #BBB;
   padding: 10px;
 }
 .classified * {
@@ -629,8 +650,18 @@ footer {
   color: white;
 }
 .classified .title {
-  color: #FFCC00;
+  font-family: 'PTSansBold';
+  letter-spacing: 0;
+  font-size: 18px;
+  line-height: 1.2em;
+  text-transform: none;
   margin: 2px 0 2px;
+  height: 64px;
+  overflow: hidden;
+}
+.classified .date,
+.classified .description {
+  display: none;
 }
 .classified:before {
   content: "Help wanted! ";
@@ -696,8 +727,9 @@ footer {
 .campaign .title {
   margin-top: 10px;
   margin-bottom: 2px;
+  font-size: 21px;
   line-height: 21px;
-  height: 62px;
+  height: 63px;
   overflow: hidden;
 }
 .campaign .date {
@@ -710,6 +742,9 @@ footer {
   line-height: 1em;
   height: 32px;
   overflow: hidden;
+}
+.campaign .description {
+  display: none;
 }
 .news {
   margin: 5px;
@@ -752,12 +787,19 @@ footer {
   margin-bottom: 10px;
   color: #FFF;
 }
+.news ul {
+  margin: 0 25px;
+  display: none;
+}
+.news a {
+  color: #FFF;
+}
 .news iframe,
 .news img {
   width: 100%;
   height: auto;
 }
-.info {
+.welcome {
   margin: 5px;
   float: left;
   overflow: hidden;
@@ -769,22 +811,32 @@ footer {
   background: #FFF;
   border: 1px solid #BBB;
 }
-.info * {
+.welcome * {
   margin: 0 10px;
 }
-.info * * {
+.welcome * * {
   margin: 0;
 }
-.info:hover {
+.welcome:hover {
   background: #26A6DD;
   color: white;
   cursor: pointer;
 }
-.info:hover * {
+.welcome:hover * {
   color: white;
 }
-.info .title {
-  margin: 10px 10px 5px;
+.welcome .title {
+  font-family: 'PTSansBoldItalic', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  margin: 10px 10px 8px;
+  font-size: 16px;
+}
+.welcome .text {
+  font-family: 'PTSansItalic', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.2em;
 }
 .photo {
   margin: 5px;
@@ -812,18 +864,60 @@ footer {
   color: white;
 }
 .photo:hover {
-  border: 2px solid #00aeef;
+  border: 4px solid #00aeef;
 }
 .photo * {
   margin: 0;
 }
-.photo .title {
+.photo .title,
+.photo .date {
   display: none;
 }
 .photo iframe,
 .photo img {
   height: 100%;
   width: auto;
+}
+.thumbnail {
+  margin: 5px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  background: #FFF;
+  color: #333;
+  height: 110px;
+  width: 110px;
+  background: #eeeeee;
+}
+.thumbnail * {
+  margin: 0 10px;
+}
+.thumbnail * * {
+  margin: 0;
+}
+.thumbnail:hover {
+  background: #26A6DD;
+  color: white;
+  cursor: pointer;
+}
+.thumbnail:hover * {
+  color: white;
+}
+.thumbnail:hover {
+  border: 0;
+  background: #00aeef;
+}
+.thumbnail * {
+  margin: 0;
+}
+.thumbnail .title,
+.thumbnail .date {
+  display: none;
+}
+.thumbnail iframe,
+.thumbnail img {
+  width: 100%;
+  height: auto;
 }
 .directory {
   margin: 5px;
@@ -834,7 +928,9 @@ footer {
   color: #333;
   height: 110px;
   width: 110px;
-  background: #666;
+  background: #FFF;
+  border: 1px solid #CCC;
+  padding: 10px;
 }
 .directory * {
   margin: 0 10px;
@@ -851,11 +947,14 @@ footer {
   color: white;
 }
 .directory .title {
-  color: #FFF;
-  margin: 10px;
+  color: #FC0;
+  margin: 1px 0;
 }
-.directory .title:before {
-  content: "New: ";
+.directory:hover .title {
+  color: #FFF;
+}
+.directory:before {
+  content: "NEW:";
 }
 .directory p,
 .directory .text,
@@ -872,7 +971,7 @@ footer {
   color: #333;
   height: 110px;
   width: 110px;
-  background: #333;
+  background: #666;
 }
 .map * {
   margin: 0 10px;
@@ -891,7 +990,8 @@ footer {
 .map .title {
   color: #FFF;
   margin: 10px;
-  height: 88px;
+  font-size: 21px;
+  height: 84px;
   overflow: hidden;
 }
 .map p,
@@ -932,6 +1032,39 @@ footer {
 }
 .wiki * {
   margin: 0;
+}
+.info {
+  margin: 5px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  background: #FFF;
+  color: #333;
+  height: 230px;
+  width: 230px;
+  background: #FFF;
+  border: 1px solid #BBB;
+}
+.info * {
+  margin: 0 10px;
+}
+.info * * {
+  margin: 0;
+}
+.info:hover {
+  background: #26A6DD;
+  color: white;
+  cursor: pointer;
+}
+.info:hover * {
+  color: white;
+}
+.info .title {
+  margin: 10px 10px 0;
+}
+.info .date {
+  margin: 5px 10px;
+  opacity: .4;
 }
 /*------  SHADOW BOX --------*/
 #sb-title-inner,
