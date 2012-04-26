@@ -201,20 +201,29 @@ google.setOnLoadCallback(function() {
 	        var entry = result.feed.entries[i];
 	
 	        var div = document.createElement("div");
+	        
+	        // Construct contents of new <div> element for this item.
 	        $(div).addClass(type);
 	        $(div).addClass("feed-item");
+	        
+	        // <div><h3 class="title">...</h3></div>
 	        var title = div.appendChild(document.createElement("h3"));
 	        title.className = "title";
 	        title.appendChild(document.createTextNode(entry.title));
 	
+	        // <div> ... <p class="date">...</p></div>
 	        var date = div.appendChild(document.createElement("p"));
 	        $(date).addClass("date");
 	        
-			var entryDate = new Date(entry.publishedDate);
-			var pubDate = entryDate.toLocaleDateString();
+		var entryDate = new Date(entry.publishedDate);
+		var pubDate = entryDate.toLocaleDateString();
 	        date.appendChild(document.createTextNode(pubDate));
 	
-	        var description = div.appendChild(document.createElement("p"));
+	        // <div> ... <div class="description"> ... </div> </div>
+	        // This needs to be a <div> because the item content may include
+	        // block-level HTML tags, and hence cannot fit inside a <p>
+	        
+	        var description = div.appendChild(document.createElement("div"));
 	        description.className = "description";
 	        description.innerHTML = entry.content;
 	        
