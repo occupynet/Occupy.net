@@ -26,9 +26,9 @@
 	<div class="option-combo">
 	  <h3>Sort by:</h3>
 	  <ul id="sort" class="option-set clearfix" data-option-key="sortBy">
-	    <li><a href="#mixed" data-option-value="random" class="selected">mixed</a></li>
-	    <li><a href="#date" data-option-value="date">date</a></li>
+	    <li><a href="#date" data-option-value="date" class="selected">date</a></li>
 	    <li><a href="#alphabetical" data-option-value="alphabetical">name</a></li>
+	    <li><a href="#mixed" data-option-value="random">random</a></li>
 	  </ul>
 	</div>
 	<div class="option-combo">
@@ -217,7 +217,8 @@ google.setOnLoadCallback(function() {
     //extract url from html
     var url = $(e).find(".url").html();
 	  var feed = new google.feeds.Feed(url);
-	  var num = 3;
+    //extract number of posts to show from html
+    var num = $(e).find(".num").html();
     //extract type from html
 	  var type = $(e).find(".type").html();
 	  feed.setNumEntries(num);
@@ -295,7 +296,7 @@ $(document).ready(function(){
         return itemText.text();
       }
     },
-    sortBy: 'random'
+    sortBy: 'date'
   });
 
 
