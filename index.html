@@ -246,13 +246,13 @@ google.setOnLoadCallback(function() {
 		var pubDate = entryDate.toLocaleDateString();
 	        date.appendChild(document.createTextNode(pubDate));
 	
-	        // <div> ... <div class="description"> ... </div> </div>
+	        // <div> ... <div class="content"> ... </div> </div>
 	        // This needs to be a <div> because the item content may include
 	        // block-level HTML tags, and hence cannot fit inside a <p>
 	        
-	        var description = div.appendChild(document.createElement("div"));
-	        description.className = "description";
-	        description.innerHTML = entry.content;
+	        var content = div.appendChild(document.createElement("div"));
+	        content.className = "content";
+	        content.innerHTML = entry.content;
 	        
 	        var divInDOM = container.appendChild(div);
 	        

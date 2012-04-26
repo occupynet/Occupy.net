@@ -771,9 +771,11 @@ footer span a {
 .news:hover * {
   color: white;
 }
+.news * {
+  color: #FFF;
+}
 .news .title {
   margin-top: 10px;
-  color: #FFF;
   height: 2em;
   overflow: hidden;
   width: 200px;
@@ -782,10 +784,9 @@ footer span a {
   margin-top: 5px;
   opacity: .5;
 }
-.news p {
+.news .content {
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #FFF;
 }
 .news ul {
   margin: 0 25px;
