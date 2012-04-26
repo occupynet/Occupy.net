@@ -182,6 +182,9 @@ and so on - an array of objects with "url" and "type" attributes
 var $container = $('#container');
 var feeds = google.load("feeds", "1");
 google.setOnLoadCallback(function() {
+  // First, set up click on tile => Shadowbox for pre-existing static tiles
+  $('#container div').click( activateTile );
+
   $(function() {
  
   
@@ -227,7 +230,10 @@ google.setOnLoadCallback(function() {
 	        description.className = "description";
 	        description.innerHTML = entry.content;
 	        
-	        container.appendChild(div);
+	        var divInDOM = container.appendChild(div);
+	        
+	        // Clicking this sends the tile to the Shadowbox
+	        $(divInDOM).click( activateTile );
 	      };
 	    };
 	    $container.isotope('insert',$(".feed-item"))
@@ -319,16 +325,34 @@ Shadowbox.init({
     skipSetup: true
 });
 
-window.onload = function() {
+function activateTile () {
+	var tile = $(this);
+	
+	// By default, we will display the contents of this <div> in the
+	// lightbox.
+	var player = 'html'; // Default
+	var content = '<div id="layer">' + tile.html() + '</div>'; // Default
+	
+	// We can use HTML classes to determine what exactly we should be
+	// feeding to Shadowbox.
 
-    Shadowbox.setup("#container div", {
-        player:     "html",
-        height:     400,
-        width:      600,
-        content:    '<div id="layer">Welcome to my website!</div>'
-    });
+	// if (tile.is('.photo')) {
+	//	content = ...
+	//	player = ...
+	// } else if (tile.is('.info')) {
+	// 	...
+	// } else if (tile.is('.project')) {
+	//	...
+	// } /* if */
+	
+	Shadowbox.open({
+	content: content,
+	player: player,
+	height: 400,
+	width: 600
+	});
+}
 
-};
 </script>
 
 
