@@ -328,6 +328,19 @@ footer {
 
 
 
+/*------  GENERAL STYLES --------*/
+
+.btn {
+	.League;
+	background-color: #FFCC00;
+	color: #333;
+	&:hover {
+		background-color: #555;
+		color: #FFCC00;
+		text-decoration: none;
+	}
+}
+
 /*------  NAV BAR --------*/
 
 #options {
@@ -729,6 +742,34 @@ footer {
 
 /*------  SHADOW BOX --------*/
 
+.sb-display,
+.sb-display-inline {display: none;}
+
+#layer {
+	background: #FFF;
+	padding: 10px;
+	* {color: #333;}
+
+	.sb-display {display: block;}
+	.sb-display-inline {display: inline;}
+
+	.launch {
+		.btn;
+		font-size:28px;
+		float: right;
+		line-height:1.5;
+		padding: 0 10px;
+	}
+	.icon {float: left;}
+	.title {margin-top:0;}
+	.status {margin-top:0;}
+	.description {
+		margin-top:10px;
+		p {margin-bottom:10px;}
+		iframe {width:100%;}
+	}
+}
+
 #sb-title-inner,#sb-info-inner,#sb-loading-inner,div.sb-message{font-family:'PTSansRegular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif; font-weight:normal; color:#333; }
 #sb-container{position:fixed; margin:0; padding:0; top:0; left:0; z-index:999; text-align:left; visibility:hidden; display:none; }
 #sb-overlay{position:relative; height:100%; width:100%; }
@@ -760,7 +801,3 @@ footer {
 div.sb-message{font-size:12px; padding:10px; text-align:center; }
 div.sb-message a:link,div.sb-message a:visited{color:#fff; text-decoration:underline; }
 
-#layer {
-	background: #FFF;
-	* {color: #333;}
-}
