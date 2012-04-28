@@ -96,8 +96,7 @@ section {
   display: block;
 }
 /* j.mp/bestclearfix */
-.clearfix:before,
-.clearfix:after {
+.clearfix:before, .clearfix:after {
   content: "\0020";
   display: block;
   height: 0;
@@ -179,6 +178,13 @@ body {
   font-size: 13px;
   line-height: 1.3em;
 }
+hr {
+  background-color: #ccc;
+  border: none;
+  clear: both;
+  width: 100%;
+  height: 1px;
+}
 /*------ TYPOGRAPHY --------*/
 h1,
 h2,
@@ -206,8 +212,7 @@ td {
   font-weight: normal;
   line-height: 1.1em;
 }
-i,
-em {
+i, em {
   font-family: 'PTSansItalic', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
   font-style: normal;
 }
@@ -249,8 +254,7 @@ dd {
 td {
   line-height: 1.3em;
 }
-ul,
-ol {
+ul, ol {
   margin-left: 1.5em;
 }
 blockquote {
@@ -279,21 +283,34 @@ blockquote {
   height: 350px;
   z-index: 100;
 }
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+.hor_list {
+  list-style: none;
+}
+.hor_list li {
+  float: left;
+  margin-right: 5px;
+}
+.hor_list li:last-child {
+  margin-right: 0;
+}
 /*------ LINKS + BUTTONS --------*/
-a,
-a:active,
-a:visited {
+a, a:active, a:visited {
   text-decoration: none;
   color: #333333;
 }
-a img,
-a:active img,
-a:visited img {
+a img, a:active img, a:visited img {
   border: none;
 }
-a:hover,
-a:active:hover,
-a:visited:hover {
+a:hover, a:active:hover, a:visited:hover {
   text-decoration: underline;
 }
 input[type="submit"],
@@ -352,8 +369,7 @@ input[type="file"]:hover {
   z-index: 1;
 }
 /**** Isotope CSS3 transitions ****/
-.isotope,
-.isotope .isotope-item {
+.isotope, .isotope .isotope-item {
   -webkit-transition-duration: 0.8s;
   -moz-transition-duration: 0.8s;
   -ms-transition-duration: 0.8s;
@@ -375,9 +391,7 @@ input[type="file"]:hover {
   transition-property: transform, opacity;
 }
 /**** disabling Isotope CSS3 transitions ****/
-.isotope.no-transition,
-.isotope.no-transition .isotope-item,
-.isotope .isotope-item.no-transition {
+.isotope.no-transition, .isotope.no-transition .isotope-item, .isotope .isotope-item.no-transition {
   -webkit-transition-duration: 0s;
   -moz-transition-duration: 0s;
   -ms-transition-duration: 0s;
@@ -394,9 +408,22 @@ input[type="file"]:hover {
 }
 /*------ End recommended Isotope styles --------*/
 /*------  PAGE STYLES --------*/
+#loader {
+  background-color: white;
+  display: block;
+  height: 10000px;
+  padding: 50px 0 0 68px;
+  position: fixed;
+  width: 10000px;
+  z-index: 1000;
+}
+/* this should be temporary! */
+#onav_wrapper {
+  position: relative;
+  z-index: 999;
+}
 /* required for containers to inherit vertical size from window */
-html,
-body {
+html, body {
   height: 100%;
 }
 #content {
@@ -509,16 +536,14 @@ footer span a {
   float: left;
   margin: 3px 5px 0 0;
 }
-.option-def dl dt,
-.option-def dl dd {
+.option-def dl dt, .option-def dl dd {
   float: left;
   padding: 0 1.2em;
   background: #161616;
   line-height: 36px;
   height: 36px;
 }
-.option-def dl.header dt,
-.option-def dl.header dd {
+.option-def dl.header dt, .option-def dl.header dd {
   background: #444;
 }
 .option-def dl .option-type {
@@ -676,8 +701,7 @@ footer span a {
   height: 64px;
   overflow: hidden;
 }
-.classified .date,
-.classified .description {
+.classified .date, .classified .description {
   display: none;
 }
 .classified:before {
@@ -812,8 +836,7 @@ footer span a {
 .news a {
   color: #FFF;
 }
-.news iframe,
-.news img {
+.news iframe, .news img {
   width: 100%;
   height: auto;
 }
@@ -887,12 +910,10 @@ footer span a {
 .photo * {
   margin: 0;
 }
-.photo .title,
-.photo .date {
+.photo .title, .photo .date {
   display: none;
 }
-.photo iframe,
-.photo img {
+.photo iframe, .photo img {
   height: 100%;
   width: auto;
 }
@@ -928,12 +949,10 @@ footer span a {
 .thumbnail * {
   margin: 0;
 }
-.thumbnail .title,
-.thumbnail .date {
+.thumbnail .title, .thumbnail .date {
   display: none;
 }
-.thumbnail iframe,
-.thumbnail img {
+.thumbnail iframe, .thumbnail img {
   width: 100%;
   height: auto;
 }
@@ -1085,8 +1104,7 @@ footer span a {
   opacity: .4;
 }
 /*------  SHADOW BOX --------*/
-.sb-display,
-.sb-display-inline {
+.sb-display, .sb-display-inline {
   display: none;
 }
 #layer {
@@ -1104,8 +1122,14 @@ footer span a {
 }
 #layer .content {
   display: block;
-  width: 400px;
   margin-left: 180px;
+  margin-top: 10px;
+}
+#layer .content p {
+  margin-bottom: 10px;
+}
+#layer .content iframe {
+  width: 100%;
 }
 #layer .launch {
   font-family: 'LeagueGothicRegular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
@@ -1133,14 +1157,30 @@ footer span a {
 #layer .status {
   margin-top: 0;
 }
-#layer .description {
-  margin-top: 10px;
+#layer .links ul {
+  list-style: none;
+  margin: 5px 0;
 }
-#layer .description p {
-  margin-bottom: 10px;
+#layer .links ul li {
+  float: left;
+  margin-right: 5px;
 }
-#layer .description iframe {
-  width: 100%;
+#layer .links ul li:last-child {
+  margin-right: 0;
+}
+#layer .links ul a {
+  font-family: 'LeagueGothicRegular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: normal;
+  background-color: #FFCC00;
+  color: #333;
+  padding: 0 5px;
+}
+#layer .links ul a:hover {
+  background-color: #555;
+  color: #FFCC00;
+  text-decoration: none;
 }
 #sb-title-inner,
 #sb-info-inner,
@@ -1211,27 +1251,23 @@ div.sb-message {
   padding-left: 34px;
   display: inline-block;
 }
-#sb-body,
-#sb-loading {
+#sb-body, #sb-loading {
   background-color: #FFF;
 }
-#sb-title,
-#sb-info {
+#sb-title, #sb-info {
   position: relative;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
-#sb-title,
-#sb-title-inner {
+#sb-title, #sb-title-inner {
   height: 26px;
   line-height: 26px;
 }
 #sb-title-inner {
   font-size: 16px;
 }
-#sb-info,
-#sb-info-inner {
+#sb-info, #sb-info-inner {
   height: 20px;
   line-height: 20px;
 }
@@ -1286,8 +1322,7 @@ div.sb-message {
   padding: 10px;
   text-align: center;
 }
-div.sb-message a:link,
-div.sb-message a:visited {
+div.sb-message a:link, div.sb-message a:visited {
   color: #fff;
   text-decoration: underline;
 }
