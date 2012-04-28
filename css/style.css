@@ -356,56 +356,30 @@ input[type="reset"]:hover,
 input[type="file"]:hover {
   background: #00aeef;
 }
-.url,
-.details,
-.code,
-.tasks {
+.buttonList {
+  list-style: none;
+  margin: 0;
+}
+.buttonList a {
   font-family: 'LeagueGothicRegular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: normal;
-  font-size: 18px;
-  color: #ffffff;
-  background: #333333;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: normal;
-  line-height: 1.3em;
-  border: 0;
-  padding: 3px 15px;
-  margin: 10px 10px 10px 0;
-  cursor: pointer;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  font-family: 'LeagueGothicRegular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: normal;
-  background-color: #FFCC00;
+  background-color: #ffcc00;
   color: #333333;
   height: 21px;
   font-size: 14px;
   line-height: 21px;
   padding: 0 8px;
-  margin: 0 0 2px 0;
+  margin: 0 0 3px 0;
   display: inline-block;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
 }
-.url:hover,
-.details:hover,
-.code:hover,
-.tasks:hover {
+.buttonList a:hover {
   background: #00aeef;
-}
-.url:hover,
-.details:hover,
-.code:hover,
-.tasks:hover {
-  background-color: #555;
-  color: #FFCC00;
+  color: #ffffff;
   text-decoration: none;
 }
 /*------ Recommended Isotope styles --------*/
@@ -526,20 +500,6 @@ footer span a {
   font-family: 'PTSansBold', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
   font-weight: normal;
   margin-right: 0;
-}
-/*------  GENERAL STYLES --------*/
-.btn {
-  font-family: 'LeagueGothicRegular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: normal;
-  background-color: #FFCC00;
-  color: #333333;
-}
-.btn:hover {
-  background-color: #555;
-  color: #FFCC00;
-  text-decoration: none;
 }
 /*------  NAV BAR --------*/
 #options {
@@ -701,16 +661,6 @@ footer span a {
 .project .content {
   display: none;
 }
-#eventsLoading {
-  height: 16px;
-  width: 110px;
-  margin: 10px 0;
-}
-#eventsLoading.done {
-  display: none;
-  height: 0;
-  width: 0;
-}
 .event {
   margin: 5px;
   float: left;
@@ -778,7 +728,7 @@ footer span a {
   overflow: hidden;
 }
 .classified .date,
-.classified .description {
+.classified .content {
   display: none;
 }
 .classified:before {
@@ -847,7 +797,7 @@ footer span a {
   margin-bottom: 2px;
   font-size: 21px;
   line-height: 21px;
-  height: 63px;
+  max-height: 63px;
   overflow: hidden;
 }
 .campaign .date {
@@ -861,7 +811,7 @@ footer span a {
   height: 32px;
   overflow: hidden;
 }
-.campaign .description {
+.campaign .content {
   display: none;
 }
 .news {
@@ -894,7 +844,7 @@ footer span a {
 }
 .news .title {
   margin-top: 10px;
-  height: 2em;
+  max-height: 2em;
   overflow: hidden;
   width: 200px;
 }
@@ -948,7 +898,7 @@ footer span a {
   font-family: 'PTSansBoldItalic', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
-  margin: 10px 10px 8px;
+  margin: 10px 0 8px;
   font-size: 16px;
 }
 .welcome .text {
@@ -956,6 +906,10 @@ footer span a {
   font-style: normal;
   font-size: 15px;
   line-height: 1.2em;
+  margin-bottom: 8px;
+}
+.welcome .content {
+  display: none;
 }
 .photo {
   margin: 5px;
@@ -1186,44 +1140,6 @@ footer span a {
   opacity: .4;
 }
 /*------  SHADOW BOX --------*/
-#layer {
-  background: #ffffff;
-}
-#layer * {
-  color: #333333;
-}
-#layer .specs {
-  float: left;
-  width: 150px;
-  margin: 20px;
-  zoom: 1;
-}
-#layer .specs .title {
-  margin: 5px;
-}
-#layer .specs .status {
-  opacity: .3;
-  font-size: 16px;
-  margin: 5px 5px 20px;
-}
-#layer .specs a {
-  margin: 0 4px 4px 0;
-}
-#layer .content {
-  display: block;
-  margin: 10px 10px 10px 0;
-  width: 490px;
-  height: 470px;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-#layer .content p {
-  margin-bottom: 1.4em;
-  line-height: 1.4em;
-}
-#layer .content iframe {
-  width: 100%;
-}
 #sb-title-inner,
 #sb-info-inner,
 #sb-loading-inner,
@@ -1373,4 +1289,126 @@ div.sb-message a:link,
 div.sb-message a:visited {
   color: #fff;
   text-decoration: underline;
+}
+/*------  SHADOW BOX CONTENT --------*/
+#layer {
+  background: #ffffff;
+  padding: 20px;
+}
+#layer .specs {
+  float: left;
+  width: 150px;
+  zoom: 1;
+}
+#layer .specs .icon {
+  float: left;
+  margin-right: 5px;
+}
+#layer .specs .title {
+  margin: 8px 0 4px;
+}
+#layer .specs .status {
+  opacity: .3;
+  font-size: 16px;
+  margin: 0 0 20px 45px;
+}
+#layer .specs .text {
+  font-family: 'PTSansItalic', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.2em;
+  margin: 0;
+  width: 100px;
+}
+#layer .specs .sb-hide {
+  display: none;
+}
+#layer .content {
+  color: #333333;
+  display: block;
+  margin-left: 160px;
+  width: 500px;
+  height: 460px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#layer .content p {
+  margin-bottom: 1.1em;
+  line-height: 1.4em;
+}
+#layer .content iframe {
+  width: 100%;
+}
+#layer .content a {
+  text-decoration: underline;
+}
+#layer .content a:hover {
+  color: #00aeef;
+}
+#searchBox {
+  width: 100%;
+  font-size: 11px;
+  color: #333333;
+}
+#searchBox input {
+  font-size: 12px;
+  margin: 0 3px 0 0;
+}
+#searchInput {
+  width: 340px;
+  height: 30px;
+  padding: 0 5px;
+  float: left;
+}
+#searchButton {
+  background: url(../img/occupy_search_button.png) no-repeat left top;
+  border: none;
+  cursor: pointer;
+  height: 32px;
+  width: 33px;
+  vertical-align: top;
+}
+#searchButton:hover {
+  background-position: left bottom;
+}
+/*------  CIVI FORM --------*/
+.civiLabel {
+  margin: 0;
+}
+#crm-container {
+  font-size: 14px;
+}
+#crm-container .crm-section {
+  margin-top: 5px;
+}
+#crm-container #editrow-first_name label,
+#crm-container #editrow-last_name label,
+#crm-container #editrow-email-3 label,
+#crm-container #editrow-city-3 label,
+#crm-container #editrow-country-3 label,
+#crm-container #editrow-state_province-3 label {
+  float: left;
+  width: 100px;
+  text-align: right;
+  margin-right: 5px;
+}
+#crm-container #editrow-custom_77 {
+  line-height: 1.5em;
+}
+#crm-container #editrow-custom_77 .label {
+  font-family: 'PTSansBold', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+  font-weight: normal;
+}
+#crm-container #editrow-custom_77 label {
+  margin-right: 10px;
+  white-space: nowrap;
+}
+#crm-container #editrow-custom_76 .label {
+  font-family: 'PTSansBold', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+  font-weight: normal;
+  margin: 12px 0 3px;
+}
+#crm-container textarea {
+  width: 100%;
+  border: 1px solid #cccccc;
 }

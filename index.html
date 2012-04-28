@@ -20,6 +20,7 @@
 </head>
 <body class="homepage">
 
+
 <div id="loader">
 	<img src="img/ajax-loader.gif">
 	<div class="option-logo">
@@ -28,7 +29,8 @@
 	<hr class="clear">
 	Loading...
 </div>
-  
+
+ 
 <script type="text/javascript" src="http://nav.occupy.net/occupynet_nav.js"></script>
 
 <section id="content">
@@ -62,13 +64,25 @@
 <div id="container" class="clearfix">
 	
 	<div class="welcome" data-number="1">
-		<p class="title">Welcome!</p>
-		<p class="text">Occupy.net provides people with software tools that align with the values of the #occupy movement. All of the tools offered here are free/libre/open source: part of the global information commons, maintained by communities, not corporations. <br><br>Would you like to help?</p>
+		<div class="specs">
+			<p class="title sb-hide">Welcome!</p>
+			<p class="text sb-hide">Occupy.net provides people with software tools that align with the values of the #occupy movement. All of the tools offered here are free/libre/open source: part of the global information commons, maintained by communities, not corporations.</p>
+			<p class="text">Would you like to help?</p>
+		</div>
+		<div class="content">
+			<iframe width="100%" height="100%" src="volunteer.html" frameborder="0" allowfullscreen></iframe>
+		</div>	
 	</div>
 	
 	<div class="welcome" data-number="20">
-		<p class="title">What is Occupy?</p>
-		<p class="text">It's more than just peaceful assemblies. When we occupy a space, or a topic, we spotlight it. We encourage people to investigate, understand, act, and change something. <br><br>What do you want to occupy?</p>
+		<div class="specs">
+			<p class="title sb-hide">What is Occupy?</p>
+			<p class="text sb-hide">It's more than just peaceful assemblies. When we occupy a space, or a topic, we spotlight it. We encourage people to investigate, understand, act, and change something.</p>
+			<p class="text">What do you want to occupy?</p>
+		</div>
+		<div class="content">
+			<iframe width="100%" height="100%" src="volunteer.html" frameborder="0" allowfullscreen></iframe>
+		</div>	
 	</div>
 
 	  
@@ -77,13 +91,15 @@
 			<img class="icon" src="img/icons/wiki.png">
 			<h3 class="title">Wiki</h3>
 			<h5 class="status">alpha</h5>
-			<a class="url" href="https://wiki.occupy.net" target="_blank">Launch site</a>
-			<a class="details" href="http://wiki.occupy.net/wiki/Occupy.net_Wiki" target="_blank">Get details</a>
-			<a class="tasks" href="http://collaborate.occupy.net/projects/9" target="_blank">Help out</a>
+			<ul class="buttonList">
+				<li><a class="url" href="https://wiki.occupy.net" target="_blank">Launch site</a></li>
+				<li><a class="details" href="http://wiki.occupy.net/wiki/Occupy.net_Wiki" target="_blank">Get details</a></li>
+				<li><a class="tasks" href="http://collaborate.occupy.net/projects/9" target="_blank">Help out</a></li>
+			</ul>
 		</div>
 		<div class="content">
-			<p>A collaboratively authored knowledge resource, powered by <a href="http://www.mediawiki.org/wiki/MediaWiki" target="_blank">MediaWiki</a>.</p>
-			<p>Collect resources, research and documentation; easily post text-based information to share with anyone (i.e. a VERY simple website).</p>
+			<p>A collaboratively authored knowledge resource, powered by <a href="http://www.mediawiki.org/wiki/MediaWiki" target="_blank">MediaWiki.</a></p>
+			<p>Collect resources, research and documentation; easily post text-based information to share with anyone.</p>
 		</div>
 	</div>
 	
@@ -92,15 +108,17 @@
 			<img class="icon" src="img/icons/map.png">
 			<h3 class="title">Map</h3>
 			<h5 class="status">beta</h5>
-			<a class="url" href="http://map.occupy.net" target="_blank">Launch site</a>
-			<a class="details" href="http://wiki.occupy.net/wiki/Occupy.net_Maps" target="_blank">Get details</a>
-			<a class="tasks" href="https://www.pivotaltracker.com/projects/417395" target="_blank">Help out</a>
-			<a class="code" href="https://github.com/FLOSolutions/Ushahidi-ows" target="_blank">Fork the code</a>
+			<ul class="buttonList">
+				<li><a class="url" href="http://map.occupy.net" target="_blank">Launch site</a></li>
+				<li><a class="details" href="http://wiki.occupy.net/wiki/Occupy.net_Maps" target="_blank">Get details</a></li>
+				<li><a class="tasks" href="https://www.pivotaltracker.com/projects/417395" target="_blank">Help out</a></li>
+				<li><a class="code" href="https://github.com/occupynet/OccupyMap" target="_blank">Fork the code</a></li>
+			</ul>
 		</div>
 		<div class="content">
-			<p>A collection of user-submitted video, photos, and alerts, powered by <a href="http://ushahidi.com/" target="_blank">Ushahidi</a>.</p>			
+			<p>A collection of user-submitted video, photos, and alerts, powered by <a href="http://ushahidi.com/" target="_blank">Ushahidi.</a></p>			
 			<p>Give people everywhere the power to engage in grassroots documentation for your project. Find out what’s happening nearby.</p>
-			<iframe width="420" height="315" src="http://www.youtube.com/embed/_nVcJyvXrfA?rel=0" frameborder="0" allowfullscreen></iframe>
+			<iframe width="500" height="339" src="http://www.youtube.com/embed/_nVcJyvXrfA?rel=0" frameborder="0" allowfullscreen></iframe>
 		</div>
 	</div>
 	
@@ -109,10 +127,15 @@
 			<img class="icon" src="img/icons/notes.png">
 			<h3 class="title">Notes</h3>
 			<h5 class="status">beta</h5>
-			<a class="url" href="https://notes.occupy.net">Launch</a>
+			<ul class="buttonList">
+				<li><a class="url" href="https://notes.occupy.net" target="_blank">Launch site</a></li>
+				<li><a class="details" href="http://wiki.occupy.net/wiki/Occupy.net_Notes" target="_blank">Get details</a></li>
+				<li><a class="code" href="https://github.com/occupynet/etherpad-lite" target="_blank">Fork the code</a></li>
+			</ul>
 		</div>
 		<div class="content">
-			<p></p>
+			<p>A group document editing tool, powered by <a target="_blank" href="http://etherpad.org/">Etherpad.</a></p>
+			<iframe width="500" height="339" src="http://www.youtube.com/embed/B69sx77dXIg?rel=0" frameborder="0" allowfullscreen></iframe>
 		</div>
 	</div>
 	
@@ -121,10 +144,13 @@
 			<img class="icon" src="img/icons/events.png">
 			<h3 class="title">Events</h3>
 			<h5 class="status">alpha</h5>
-			<a class="url" href="https://wiki.occupy.net">Launch</a>
+			<ul class="buttonList">
+				<li><a class="url" href="http://events.occupy.net" target="_blank">Launch site</a></li>
+				<li><a class="details" href="http://wiki.occupy.net/wiki/Occupy.net_Events" target="_blank">Get details</a></li>
+			</ul>
 		</div>
 		<div class="content">
-			<p></p>
+			<p>A calendar and directory of events pertaining to Occupy. Have your event posted to the calendar, and raise awareness for your events.</p>
 		</div>
 	</div>
 	
@@ -133,10 +159,14 @@
 			<img class="icon" src="img/icons/campaigns.png">
 			<h3 class="title">Campaigns</h3>
 			<h5 class="status">beta</h5>
-			<a class="url" href="https://campaigns.occupy.net">Launch</a>
+			<ul class="buttonList">
+				<li><a class="url" href="http://campaigns.occupy.net" target="_blank">Launch site</a></li>
+				<li><a class="details" href="http://wiki.occupy.net/wiki/Occupy.net_Campaigns" target="_blank">Get details</a></li>
+			</ul>
 		</div>
 		<div class="content">
-			<p></p>
+			<p>An easy website builder, with templates specifically designed for actions/campaigns, powered by <a href="http://wordpress.org">Wordpress.</a></p>
+			<p>Use a campaign site for outreach, email collection, and event announcements. Your campaign will be included in a global directory.</p>
 		</div>
 	</div>
 	
@@ -145,10 +175,16 @@
 			<img class="icon" src="img/icons/forum.png">
 			<h3 class="title">Forum</h3>
 			<h5 class="status">alpha</h5>
-			<a class="url" href="https://wiki.occupy.net">Launch</a>
+			<ul class="buttonList">
+				<li><a class="url" href="http://forum.occupy.net" target="_blank">Launch site</a></li>
+				<li><a class="details" href="http://wiki.occupy.net/wiki/Occupy.net_Forums" target="_blank">Get details</a></li>
+				<li><a class="tasks" href="http://collaborate.occupy.net/projects/12" target="_blank">Help out</a></li>
+				<li><a class="code" href="https://github.com/occupynet/vanilla2" target="_blank">Fork the code</a></li>
+			</ul>
 		</div>
 		<div class="content">
-			<p></p>
+			<p>A space for discussion, powered by <a target="_blank" href="http://www.vanillaforums.org/">Vanilla Forums.</a></p>
+			<p>Coordinate your project outside of email. Continue the dialogue and planning after or in between your calls. Forums an be a public or private, at your discretion, and can be embedded into any other site.</p>
 		</div>
 	</div>
 	
@@ -157,10 +193,16 @@
 			<img class="icon" src="img/icons/ideas.png">
 			<h3 class="title">Ideas</h3>
 			<h5 class="status">alpha</h5>
-			<a class="url" href="https://ideas.occupy.net">Launch</a>
+			<ul class="buttonList">
+				<li><a class="url" href="http://ideas.occupy.net" target="_blank">Launch site</a></li>
+				<li><a class="details" href="http://wiki.occupy.net/wiki/Occupy.net_Ideas" target="_blank">Get details</a></li>
+				<li><a class="tasks" href="https://collaborate.occupy.net/projects/11/dashboard" target="_blank">Help out</a></li>
+				<li><a class="code" href="https://github.com/occupynet/IdeasOccupyNet" target="_blank">Fork the code</a></li>
+			</ul>
 		</div>
 		<div class="content">
-			<p></p>
+			<p>A quick feedback platform.</p>
+			<p>Ask any question, and get responses. Find people interested in working on your project with you. Test out your idea, and see what others think.</p>
 		</div>
 	</div>
 	
@@ -169,10 +211,16 @@
 			<img class="icon" src="img/icons/lists.png">
 			<h3 class="title">Lists</h3>
 			<h5 class="status">beta</h5>
-			<a class="url" href="https://lists.occupy.net">Launch</a>
+			<ul class="buttonList">
+				<li><a class="url" href="http://lists.occupy.net" target="_blank">Launch site</a></li>
+				<li><a class="details" href="http://wiki.occupy.net/wiki/Occupy.net_Lists" target="_blank">Get details</a></li>
+				<li><a class="tasks" href="http://collaborate.occupy.net/projects/100/dashboard" target="_blank">Help out</a></li>
+				<li><a class="code" href="https://github.com/occupynet/Lists" target="_blank">Fork the code</a></li>
+			</ul>
 		</div>
 		<div class="content">
-			<p></p>
+			<p>Discussion lists for the #occupy movement, powered by <a href="http://sympa.org">Sympa.</a></p>
+			<p>Find out what's going on with various projects. Subscribe to various lists to stay informed.</p>
 		</div>
 	</div>
 	
@@ -181,10 +229,16 @@
 			<img class="icon" src="img/icons/news.png">
 			<h3 class="title">News</h3>
 			<h5 class="status">alpha</h5>
-			<a class="url" href="https://news.occupy.net">Launch</a>
+			<ul class="buttonList">
+				<li><a class="url" href="http://news.occupy.net" target="_blank">Launch site</a></li>
+				<li><a class="details" href="http://wiki.occupy.net/wiki/Occupy.net_News" target="_blank">Get details</a></li>
+				<li><a class="tasks" href="http://projects.occupy.net/projects/newswire" target="_blank">Help out</a></li>
+				<li><a class="code" href="https://github.com/occupynet/news" target="_blank">Fork the code</a></li>
+			</ul>
 		</div>
 		<div class="content">
-			<p></p>
+			<p>A news aggregation and curation tool. Powered by <a target="_blank" href="http://managingnews.com/">Managing News.</a></p>
+			<p>Get more attention for your project. Create a channel that is curated by your team and resourced by other people who will post the content around the internet.</p>
 		</div>
 	</div>
 	
@@ -193,10 +247,15 @@
 			<img class="icon" src="img/icons/classifieds.png">
 			<h3 class="title">Classifieds</h3>
 			<h5 class="status">beta</h5>
-			<a class="url" href="https://classifieds.occupy.net">Launch</a>
+			<ul class="buttonList">
+				<li><a class="url" href="http://classifieds.occupy.net" target="_blank">Launch site</a></li>
+				<li><a class="details" href="http://wiki.occupy.net/wiki/Occupy.net_Classifieds" target="_blank">Get details</a></li>
+				<li><a class="code" href="https://github.com/occupynet/jobberbase" target="_blank">Fork the code</a></li>
+			</ul>
 		</div>
 		<div class="content">
-			<p></p>
+			<p>A classifieds for movement-related needs, powered by <a href="http://www.jobberbase.com/">Jobberbase.</a></p>
+			<p>Find people or items needed for your project.</p>
 		</div>
 	</div>
 	
@@ -205,10 +264,16 @@
 			<img class="icon" src="img/icons/directory.png">
 			<h3 class="title">Directory</h3>
 			<h5 class="status">beta</h5>
-			<a class="url" href="https://directory.occupy.net">Launch</a>
+			<ul class="buttonList">
+				<li><a class="url" href="http://directory.occupy.net" target="_blank">Launch site</a></li>
+				<li><a class="details" href="http://wiki.occupy.net/wiki/Occupy.net_Directory" target="_blank">Get details</a></li>
+				<li><a class="tasks" href="http://projects.occupy.net/projects/fga-projectsite" target="_blank">Help out</a></li>
+				<li><a class="code" href="https://github.com/fga/fga-directory" target="_blank">Fork the code</a></li>
+			</ul>
 		</div>
 		<div class="content">
-			<p></p>
+			<p>A public listing of all known Occupation sites built by and for the #occupy movement, powered by <a href="http://drupal.org">Drupal.</a></p>
+			<p>Find other Occupied locations’ primary broadcast channels and social media, general assembly info. Visit new places. Use the directory as a service layer to build other apps.</p>
 		</div>
 	</div>
 	
@@ -219,7 +284,10 @@
 			<h5 class="status">alpha</h5>
 		</div>
 		<div class="content">
-			<p></p>
+				<p>Search the internet privately (and even securely), powered by <a target="_blank" href="http://duckduckgo.com/">DuckDuckGo.</a></p>
+				<form action="https://duckduckgo.com/" method="get" target="_blank" enctype="multipart/form-data" id="searchBox">
+				  <input type="text" name="q" placeholder="Search" id="searchInput"><input type="submit" value="" id="searchButton">
+				</form>
 		</div>
 	</div>
 	
@@ -320,6 +388,7 @@ and so on - an array of objects with "url" and "type" attributes
 <!-- feed reader -->
 <script type="text/javascript">
 
+
 $(window).load(function(){  
    // everything is loaded
 
@@ -327,6 +396,7 @@ $(window).load(function(){
 
    $('#loader').height(height).fadeOut(300);
 });  
+
 
 var $container = $('#container');
 var feeds = google.load("feeds", "1");
@@ -526,7 +596,7 @@ function activateTile () {
 
 <footer>
 	<span>Brought to you by <a href="http://tech.occupy.net" target="_blank">Occupy Tech</a></span>
-	<a href="https://github.com/occupynet/" target="_blank">Code</a>
+	<a href="https://github.com/occupynet/Occupy.net" target="_blank">Code</a>
 	<a href="http://forum.occupy.net" target="_blank">Help</a> 
 </footer>
 
