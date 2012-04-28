@@ -145,6 +145,7 @@ section {
   font-weight: normal;
   font-style: normal;
 }
+/* use these mixins to call the webfonts easily */
 .League {
   font-family: 'LeagueGothicRegular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
   text-transform: uppercase;
@@ -171,8 +172,8 @@ section {
 /*------ GLOBAL --------*/
 body {
   margin: 0;
-  background: #FFF;
-  color: #333;
+  background: #ffffff;
+  color: #333333;
   padding: 0 0 20px;
   font-family: 'PTSansRegular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
   font-weight: normal;
@@ -256,7 +257,7 @@ ol {
 blockquote {
   padding-left: 1.0em;
   margin-left: 1.0em;
-  border-left: 1px solid #333;
+  border-left: 1px solid #333333;
   font-family: 'PTSansItalic', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
   font-style: normal;
 }
@@ -296,6 +297,8 @@ a:active:hover,
 a:visited:hover {
   text-decoration: underline;
 }
+.btn,
+button,
 input[type="submit"],
 input[type="button"],
 input[type="reset"],
@@ -305,8 +308,8 @@ input[type="file"] {
   letter-spacing: 1px;
   font-weight: normal;
   font-size: 18px;
-  color: #FFF;
-  background: #333;
+  color: #ffffff;
+  background: #333333;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: normal;
@@ -319,11 +322,65 @@ input[type="file"] {
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
+.btn:hover,
+button:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="file"]:hover {
   background: #00aeef;
+}
+.url,
+.details,
+.code,
+.tasks {
+  font-family: 'LeagueGothicRegular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: normal;
+  font-size: 18px;
+  color: #ffffff;
+  background: #333333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: normal;
+  line-height: 1.3em;
+  border: 0;
+  padding: 3px 15px;
+  margin: 10px 10px 10px 0;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-family: 'LeagueGothicRegular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: normal;
+  background-color: #FFCC00;
+  color: #333333;
+  height: 21px;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 0 8px;
+  margin: 0 0 2px 0;
+  display: inline-block;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.url:hover,
+.details:hover,
+.code:hover,
+.tasks:hover {
+  background: #00aeef;
+}
+.url:hover,
+.details:hover,
+.code:hover,
+.tasks:hover {
+  background-color: #555;
+  color: #FFCC00;
+  text-decoration: none;
 }
 /*------ Recommended Isotope styles --------*/
 /**** Infinite Scroll ****/
@@ -404,7 +461,7 @@ body {
   height: 100%;
 }
 #container {
-  border: 1px solid #666;
+  border: 1px solid #666666;
   padding: 5px;
   margin-top: 5px;
   /* undo reset of box model, so isotope height is correct: */
@@ -437,7 +494,7 @@ footer span a {
   letter-spacing: 1px;
   font-weight: normal;
   background-color: #FFCC00;
-  color: #333;
+  color: #333333;
 }
 .btn:hover {
   background-color: #555;
@@ -465,11 +522,11 @@ footer span a {
   display: block;
   padding: 5px 10px;
   background-color: #FFCC00;
-  color: #333;
-  border-left: 2px solid #FFF;
+  color: #333333;
+  border-left: 2px solid #ffffff;
 }
 #options li a.selected {
-  background-color: #333;
+  background-color: #333333;
   text-shadow: none;
   color: #FFCC00;
 }
@@ -479,7 +536,7 @@ footer span a {
   text-decoration: none;
 }
 #options li a:active {
-  background-color: #333;
+  background-color: #333333;
   color: #FFCC00;
 }
 #options li:first-child a {
@@ -535,8 +592,8 @@ footer span a {
   float: left;
   overflow: hidden;
   position: relative;
-  background: #FFF;
-  color: #333;
+  background: #ffffff;
+  color: #333333;
 }
 .element * {
   margin: 0 10px;
@@ -545,7 +602,7 @@ footer span a {
   margin: 0;
 }
 .element:hover {
-  background: #26A6DD;
+  background: #00aeef;
   color: white;
   cursor: pointer;
 }
@@ -563,11 +620,11 @@ footer span a {
   float: left;
   overflow: hidden;
   position: relative;
-  background: #FFF;
-  color: #333;
+  background: #ffffff;
+  color: #333333;
   height: 110px;
   width: 110px;
-  background: #CCC;
+  background: #cccccc;
 }
 .project * {
   margin: 0 10px;
@@ -576,12 +633,18 @@ footer span a {
   margin: 0;
 }
 .project:hover {
-  background: #26A6DD;
+  background: #00aeef;
   color: white;
   cursor: pointer;
 }
 .project:hover * {
   color: white;
+}
+.project .icon {
+  margin: 7px 0;
+  float: right;
+  height: 40px;
+  width: 40px;
 }
 .project .title {
   clear: both;
@@ -591,12 +654,10 @@ footer span a {
   opacity: .3;
   font-size: 16px;
 }
-.project .icon {
-  margin: 7px;
-  float: right;
-  height: 40px;
-  width: 40px;
-}
+.project .url,
+.project .tasks,
+.project .details,
+.project .code,
 .project .content {
   display: none;
 }
@@ -615,8 +676,8 @@ footer span a {
   float: left;
   overflow: hidden;
   position: relative;
-  background: #FFF;
-  color: #333;
+  background: #ffffff;
+  color: #333333;
   height: 110px;
   width: 230px;
   background: #AAA;
@@ -628,7 +689,7 @@ footer span a {
   margin: 0;
 }
 .event:hover {
-  background: #26A6DD;
+  background: #00aeef;
   color: white;
   cursor: pointer;
 }
@@ -636,7 +697,7 @@ footer span a {
   color: white;
 }
 .event .title {
-  color: #FFF;
+  color: #ffffff;
   margin: 10px 10px 2px;
 }
 .classified {
@@ -644,11 +705,11 @@ footer span a {
   float: left;
   overflow: hidden;
   position: relative;
-  background: #FFF;
-  color: #333;
+  background: #ffffff;
+  color: #333333;
   height: 110px;
   width: 230px;
-  background: #FFF;
+  background: #ffffff;
   border: 1px dashed #BBB;
   padding: 10px;
 }
@@ -659,7 +720,7 @@ footer span a {
   margin: 0;
 }
 .classified:hover {
-  background: #26A6DD;
+  background: #00aeef;
   color: white;
   cursor: pointer;
 }
@@ -684,19 +745,19 @@ footer span a {
   content: "Help wanted! ";
 }
 .classified:hover .title {
-  color: #FFF;
+  color: #ffffff;
 }
 .forum {
   margin: 5px;
   float: left;
   overflow: hidden;
   position: relative;
-  background: #FFF;
-  color: #333;
+  background: #ffffff;
+  color: #333333;
   height: 110px;
   width: 230px;
-  background: #FFF;
-  border: 1px solid #999;
+  background: #ffffff;
+  border: 1px solid #999999;
 }
 .forum * {
   margin: 0 10px;
@@ -705,7 +766,7 @@ footer span a {
   margin: 0;
 }
 .forum:hover {
-  background: #26A6DD;
+  background: #00aeef;
   color: white;
   cursor: pointer;
 }
@@ -721,8 +782,8 @@ footer span a {
   float: left;
   overflow: hidden;
   position: relative;
-  background: #FFF;
-  color: #333;
+  background: #ffffff;
+  color: #333333;
   height: 110px;
   width: 110px;
   background: #FFCC00;
@@ -734,7 +795,7 @@ footer span a {
   margin: 0;
 }
 .campaign:hover {
-  background: #26A6DD;
+  background: #00aeef;
   color: white;
   cursor: pointer;
 }
@@ -750,7 +811,7 @@ footer span a {
   overflow: hidden;
 }
 .campaign .date {
-  color: #FFF;
+  color: #ffffff;
   font-family: 'LeagueGothicRegular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -768,11 +829,11 @@ footer span a {
   float: left;
   overflow: hidden;
   position: relative;
-  background: #FFF;
-  color: #333;
+  background: #ffffff;
+  color: #333333;
   height: 230px;
   width: 230px;
-  background: #333;
+  background: #333333;
 }
 .news * {
   margin: 0 10px;
@@ -781,7 +842,7 @@ footer span a {
   margin: 0;
 }
 .news:hover {
-  background: #26A6DD;
+  background: #00aeef;
   color: white;
   cursor: pointer;
 }
@@ -789,7 +850,7 @@ footer span a {
   color: white;
 }
 .news * {
-  color: #FFF;
+  color: #ffffff;
 }
 .news .title {
   margin-top: 10px;
@@ -810,7 +871,7 @@ footer span a {
   display: none;
 }
 .news a {
-  color: #FFF;
+  color: #ffffff;
 }
 .news iframe,
 .news img {
@@ -822,11 +883,11 @@ footer span a {
   float: left;
   overflow: hidden;
   position: relative;
-  background: #FFF;
-  color: #333;
+  background: #ffffff;
+  color: #333333;
   height: 230px;
   width: 230px;
-  background: #FFF;
+  background: #ffffff;
   border: 1px solid #BBB;
 }
 .welcome * {
@@ -836,7 +897,7 @@ footer span a {
   margin: 0;
 }
 .welcome:hover {
-  background: #26A6DD;
+  background: #00aeef;
   color: white;
   cursor: pointer;
 }
@@ -861,11 +922,11 @@ footer span a {
   float: left;
   overflow: hidden;
   position: relative;
-  background: #FFF;
-  color: #333;
+  background: #ffffff;
+  color: #333333;
   height: 230px;
   width: 230px;
-  background: #333;
+  background: #333333;
 }
 .photo * {
   margin: 0 10px;
@@ -874,7 +935,7 @@ footer span a {
   margin: 0;
 }
 .photo:hover {
-  background: #26A6DD;
+  background: #00aeef;
   color: white;
   cursor: pointer;
 }
@@ -901,8 +962,8 @@ footer span a {
   float: left;
   overflow: hidden;
   position: relative;
-  background: #FFF;
-  color: #333;
+  background: #ffffff;
+  color: #333333;
   height: 110px;
   width: 110px;
   background: #eeeeee;
@@ -914,7 +975,7 @@ footer span a {
   margin: 0;
 }
 .thumbnail:hover {
-  background: #26A6DD;
+  background: #00aeef;
   color: white;
   cursor: pointer;
 }
@@ -942,12 +1003,12 @@ footer span a {
   float: left;
   overflow: hidden;
   position: relative;
-  background: #FFF;
-  color: #333;
+  background: #ffffff;
+  color: #333333;
   height: 110px;
   width: 110px;
-  background: #FFF;
-  border: 1px solid #CCC;
+  background: #ffffff;
+  border: 1px solid #cccccc;
   padding: 10px;
 }
 .directory * {
@@ -957,7 +1018,7 @@ footer span a {
   margin: 0;
 }
 .directory:hover {
-  background: #26A6DD;
+  background: #00aeef;
   color: white;
   cursor: pointer;
 }
@@ -969,7 +1030,7 @@ footer span a {
   margin: 1px 0;
 }
 .directory:hover .title {
-  color: #FFF;
+  color: #ffffff;
 }
 .directory:before {
   content: "NEW:";
@@ -985,11 +1046,11 @@ footer span a {
   float: left;
   overflow: hidden;
   position: relative;
-  background: #FFF;
-  color: #333;
+  background: #ffffff;
+  color: #333333;
   height: 110px;
   width: 110px;
-  background: #666;
+  background: #666666;
 }
 .map * {
   margin: 0 10px;
@@ -998,7 +1059,7 @@ footer span a {
   margin: 0;
 }
 .map:hover {
-  background: #26A6DD;
+  background: #00aeef;
   color: white;
   cursor: pointer;
 }
@@ -1006,7 +1067,7 @@ footer span a {
   color: white;
 }
 .map .title {
-  color: #FFF;
+  color: #ffffff;
   margin: 10px;
   font-size: 21px;
   height: 84px;
@@ -1023,8 +1084,8 @@ footer span a {
   float: left;
   overflow: hidden;
   position: relative;
-  background: #FFF;
-  color: #333;
+  background: #ffffff;
+  color: #333333;
   height: 230px;
   width: 230px;
   background: #ffffff url(../img/topics/mayday.jpg) no-repeat bottom center;
@@ -1038,7 +1099,7 @@ footer span a {
   margin: 0;
 }
 .wiki:hover {
-  background: #26A6DD;
+  background: #00aeef;
   color: white;
   cursor: pointer;
 }
@@ -1056,11 +1117,11 @@ footer span a {
   float: left;
   overflow: hidden;
   position: relative;
-  background: #FFF;
-  color: #333;
+  background: #ffffff;
+  color: #333333;
   height: 230px;
   width: 230px;
-  background: #FFF;
+  background: #ffffff;
   border: 1px solid #BBB;
 }
 .info * {
@@ -1070,7 +1131,7 @@ footer span a {
   margin: 0;
 }
 .info:hover {
-  background: #26A6DD;
+  background: #00aeef;
   color: white;
   cursor: pointer;
 }
@@ -1085,61 +1146,42 @@ footer span a {
   opacity: .4;
 }
 /*------  SHADOW BOX --------*/
-.sb-display,
-.sb-display-inline {
-  display: none;
-}
 #layer {
-  background: #FFF;
-  padding: 10px;
+  background: #ffffff;
 }
 #layer * {
-  color: #333;
+  color: #333333;
 }
-#layer .sb-display {
-  display: block;
+#layer .specs {
+  float: left;
+  width: 150px;
+  margin: 20px;
+  zoom: 1;
 }
-#layer .sb-display-inline {
-  display: inline;
+#layer .specs .title {
+  margin: 5px;
+}
+#layer .specs .status {
+  opacity: .3;
+  font-size: 16px;
+  margin: 5px 5px 20px;
+}
+#layer .specs a {
+  margin: 0 4px 4px 0;
 }
 #layer .content {
   display: block;
-  width: 400px;
-  margin-left: 180px;
+  margin: 10px 10px 10px 0;
+  width: 490px;
+  height: 470px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
-#layer .launch {
-  font-family: 'LeagueGothicRegular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: normal;
-  background-color: #FFCC00;
-  color: #333;
-  font-size: 28px;
-  float: right;
-  line-height: 1.5;
-  padding: 0 10px;
+#layer .content p {
+  margin-bottom: 1.4em;
+  line-height: 1.4em;
 }
-#layer .launch:hover {
-  background-color: #555;
-  color: #FFCC00;
-  text-decoration: none;
-}
-#layer .icon {
-  float: left;
-}
-#layer .title {
-  margin-top: 0;
-}
-#layer .status {
-  margin-top: 0;
-}
-#layer .description {
-  margin-top: 10px;
-}
-#layer .description p {
-  margin-bottom: 10px;
-}
-#layer .description iframe {
+#layer .content iframe {
   width: 100%;
 }
 #sb-title-inner,
@@ -1148,7 +1190,7 @@ footer span a {
 div.sb-message {
   font-family: 'PTSansRegular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
   font-weight: normal;
-  color: #333;
+  color: #333333;
 }
 #sb-container {
   position: fixed;
@@ -1187,7 +1229,7 @@ div.sb-message {
 }
 #sb-player.html {
   height: 100%;
-  overflow: auto;
+  overflow: hidden;
 }
 #sb-body img {
   border: none;
@@ -1202,18 +1244,19 @@ div.sb-message {
   line-height: 24px;
   height: 24px;
   top: 50%;
-  margin-top: -12px;
+  margin-top: -18px;
   width: 100%;
   text-align: center;
+  text-transform: uppercase;
 }
 #sb-loading-inner span {
-  background: url(../shadowbox-3.0.3/loading.gif) no-repeat;
-  padding-left: 34px;
+  background: url(../img/ajax-loader.gif) no-repeat;
+  padding-left: 20px;
   display: inline-block;
 }
 #sb-body,
 #sb-loading {
-  background-color: #FFF;
+  background-color: #ffffff;
 }
 #sb-title,
 #sb-info {

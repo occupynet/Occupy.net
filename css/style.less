@@ -87,6 +87,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 }
 
+/* use these mixins to call the webfonts easily */
+
 .League {font-family: 'LeagueGothicRegular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: normal;}
 .PTSansRegular {font-family: 'PTSansRegular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif; font-weight: normal;}
 .PTSansBold {font-family: 'PTSansBold', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif; font-weight: normal;}
@@ -99,8 +101,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body {
   margin: 0;
-  background: #FFF;
-  color: #333;
+  background: @white;
+  color: @black;
   padding: 0 0 20px;
   .PTSansRegular;
   font-size: 13px;
@@ -134,7 +136,7 @@ ul, ol {
 blockquote {
   padding-left: 1.0em;
   margin-left: 1.0em;
-  border-left: 1px solid #333;
+  border-left: 1px solid @black;
   .PTSansItalic;
 }
 
@@ -179,11 +181,11 @@ a, a:active, a:visited  {
 	}
 }
 
-input[type="submit"], input[type="button"], input[type="reset"], input[type="file"] {
+.btn, button, input[type="submit"], input[type="button"], input[type="reset"], input[type="file"] {
 	.League;
 	font-size: 18px;
-	color: #FFF;
-	background: #333;
+	color: @white;
+	background: @black;
 	text-transform: uppercase; 
 	letter-spacing: 1px; 
 	font-weight: normal; 
@@ -195,11 +197,23 @@ input[type="submit"], input[type="button"], input[type="reset"], input[type="fil
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
-}
-input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="file"]:hover {
-	background: @cyan;
+  &:hover {
+  	background: @cyan;
+  }
 }
 
+.url, .details, .code, .tasks {
+	.btn;
+	height: 21px;
+	font-size: 14px;
+	line-height: 21px;
+	padding: 0 8px;
+	margin: 0 0 2px 0;
+	display: inline-block;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+}
 
 
 /*------ Recommended Isotope styles --------*/
@@ -300,7 +314,7 @@ html, body {
 }
 
 #container {
-  border: 1px solid #666;
+  border: 1px solid @gray1;
   padding: 5px;
   margin-top: 5px;
   /* undo reset of box model, so isotope height is correct: */
@@ -333,7 +347,7 @@ footer {
 .btn {
 	.League;
 	background-color: #FFCC00;
-	color: #333;
+	color: @black;
 	&:hover {
 		background-color: #555;
 		color: #FFCC00;
@@ -358,10 +372,10 @@ footer {
 			display: block;
 			padding: 5px 10px;
 			background-color: #FFCC00;
-			color: #333;
-			border-left:  2px solid #FFF;
+			color: @black;
+			border-left:  2px solid @white;
 			&.selected {
-				background-color: #333;
+				background-color: @black;
 				text-shadow: none;
 				color: #FFCC00;
 			}
@@ -371,7 +385,7 @@ footer {
 				text-decoration: none;
 			}
 			&:active {
-				background-color: #333;
+				background-color: @black;
 				color: #FFCC00;
 			}
 		}
@@ -439,8 +453,8 @@ footer {
 	float: left;
 	overflow: hidden;
 	position: relative;
-	background: #FFF;
-	color: #333;
+	background: @white;
+	color: @black;
 	* {
 		margin: 0 10px;
 	}
@@ -448,7 +462,7 @@ footer {
 		margin: 0;
 	}
 	&:hover {
-		background: #26A6DD; 
+		background: @cyan; 
 		color: white; 
 		cursor: pointer;
 	}
@@ -468,7 +482,13 @@ footer {
 	.element;
 	.height1;
 	.width1;
-	background: #CCC;
+	background: @gray3;
+	.icon {
+	  margin: 7px 0;
+	  float: right;
+	  height: 40px;
+	  width: 40px;
+	}
 	.title {
 	  	clear: both;
 	  	margin-bottom: 2px;
@@ -477,13 +497,7 @@ footer {
 		opacity: .3;
 		font-size: 16px;
 	}
-	.icon {
-	  margin: 7px;
-	  float: right;
-	  height: 40px;
-	  width: 40px;
-	}
-	.content {
+	.url, .tasks, .details, .code, .content {
 		display: none;
 	}
 }
@@ -506,7 +520,7 @@ footer {
 	.width2;
 	background: #AAA;
 	.title {
-		color: #FFF;
+		color: @white;
 		margin: 10px 10px 2px;
 	}	
 }
@@ -515,7 +529,7 @@ footer {
 	.element;
 	.height1;
 	.width2;
-	background: #FFF; 
+	background: @white; 
 	border: 1px dashed #BBB;
 	padding: 10px;
 	.title {
@@ -535,15 +549,15 @@ footer {
 		content: "Help wanted! ";
 	}
 	&:hover .title {
-		color: #FFF;
+		color: @white;
 	}
 }
 .forum {
 	.element;
 	.height1;
 	.width2;
-	background: #FFF; 
-	border: 1px solid #999;
+	background: @white; 
+	border: 1px solid @gray2;
 	.title {
 		margin-top: 10px;
 		margin-bottom: 2px;
@@ -565,7 +579,7 @@ footer {
 		overflow: hidden;
 	}
 	.date {
-		color: #FFF;
+		color: @white;
 		.League;
 		font-size: 16px;
 		line-height: 1em;
@@ -582,9 +596,9 @@ footer {
 	.element;
 	.height2;
 	.width2; 
-	background: #333;
+	background: @black;
 	* {
-		color: #FFF;	
+		color: @white;	
 	}
 	.title {
 		margin-top: 10px;
@@ -605,7 +619,7 @@ footer {
 		display: none;
 	}
 	a {
-		color: #FFF;
+		color: @white;
 	}
 	iframe, img {
 		width: 100%;
@@ -617,7 +631,7 @@ footer {
 	.element;
 	.height2;
 	.width2;
-	background: #FFF;
+	background: @white;
 	border: 1px solid #BBB;
 	.title {
 		.PTSansBoldItalic;
@@ -635,7 +649,7 @@ footer {
 	.element;
 	.height2;
 	.width2;
-	background: #333;
+	background: @black;
 	&:hover {
 		border: 4px solid @cyan;
 	}
@@ -676,15 +690,15 @@ footer {
 	.element;
 	.height1;
 	.width1;
-	background: #FFF;
-	border: 1px solid #CCC;
+	background: @white;
+	border: 1px solid @gray3;
 	padding: 10px;
 	.title {
 		color: #FC0;
 		margin: 1px 0;
 	}
 	&:hover .title {
-		color: #FFF;
+		color: @white;
 	}
 	&:before {
 		content: "NEW:";
@@ -698,9 +712,9 @@ footer {
 	.element;
 	.height1;
 	.width1;
-	background: #666;
+	background: @gray1;
 	.title {
-		color: #FFF;
+		color: @white;
 		margin: 10px;
 		font-size: 21px;
 		height: 84px;
@@ -731,7 +745,7 @@ footer {
 	.element;
 	.height2;
 	.width2;
-	background: #FFF;
+	background: @white;
 	border: 1px solid #BBB;
 	.title {
 		margin: 10px 10px 0;
@@ -745,52 +759,54 @@ footer {
 
 /*------  SHADOW BOX --------*/
 
-.sb-display,
-.sb-display-inline {display: none;}
-
 #layer {
-	background: #FFF;
-	padding: 10px;
-	* {color: #333;}
-
-	.sb-display {display: block;}
-	.sb-display-inline {display: inline;}
-	
+	background: @white;
+	* {
+		color: @black;
+	}
+	.specs {
+		float: left;
+		width: 150px;
+		margin: 20px;
+		.clearfix;
+		.icon {}
+		.title {
+			margin: 5px;
+		}
+		.status {
+			opacity: .3; 
+			font-size: 16px; 
+			margin: 5px 5px 20px;
+		}
+		a {
+			margin: 0 4px 4px 0;
+		}
+	}
 	.content {
 		display: block;
-		width: 400px;
-		margin-left: 180px;
-	}
-	.launch {
-		.btn;
-		font-size:28px;
-		float: right;
-		line-height:1.5;
-		padding: 0 10px;
-	}
-	.icon {float: left;}
-	.title {margin-top:0;}
-	.status {margin-top:0;}
-	.description {
-		margin-top:10px;
-		p {margin-bottom:10px;}
+		margin: 10px 10px 10px 0;
+		width: 490px;
+		height: 470px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		p {margin-bottom: 1.4em; line-height: 1.4em;}
 		iframe {width:100%;}
 	}
 }
 
-#sb-title-inner,#sb-info-inner,#sb-loading-inner,div.sb-message{font-family:'PTSansRegular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif; font-weight:normal; color:#333; }
+#sb-title-inner,#sb-info-inner,#sb-loading-inner,div.sb-message{font-family:'PTSansRegular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif; font-weight:normal; color:@black; }
 #sb-container{position:fixed; margin:0; padding:0; top:0; left:0; z-index:999; text-align:left; visibility:hidden; display:none; }
 #sb-overlay{position:relative; height:100%; width:100%; }
 #sb-wrapper{position:absolute; visibility:hidden; width:100px; }
 #sb-wrapper-inner{position:relative; overflow:hidden; height:100px; }
 #sb-body{position:relative; height:100%; }
 #sb-body-inner{position:absolute; height:100%; width:100%; }
-#sb-player.html{height:100%; overflow:auto; }
+#sb-player.html{height:100%; overflow:hidden; }
 #sb-body img{border:none; }
 #sb-loading{position:relative; height:100%; }
-#sb-loading-inner{position:absolute; font-size:14px; line-height:24px; height:24px; top:50%; margin-top:-12px; width:100%; text-align:center; }
-#sb-loading-inner span{background:url(../shadowbox-3.0.3/loading.gif) no-repeat; padding-left:34px; display:inline-block; }
-#sb-body,#sb-loading{background-color:#FFF; }
+#sb-loading-inner{position:absolute; font-size:14px; line-height:24px; height:24px; top:50%; margin-top:-18px; width:100%; text-align:center; text-transform: uppercase;}
+#sb-loading-inner span{background:url(../img/ajax-loader.gif) no-repeat; padding-left:20px; display:inline-block; }
+#sb-body,#sb-loading{background-color:@white; }
 #sb-title,#sb-info{position:relative; margin:0; padding:0; overflow:hidden; }
 #sb-title,#sb-title-inner{height:26px; line-height:26px; }
 #sb-title-inner{font-size:16px; }
