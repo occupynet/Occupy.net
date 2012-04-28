@@ -180,6 +180,13 @@ body {
   font-size: 13px;
   line-height: 1.3em;
 }
+hr {
+  background-color: #ccc;
+  border: none;
+  clear: both;
+  width: 100%;
+  height: 1px;
+}
 /*------ TYPOGRAPHY --------*/
 h1,
 h2,
@@ -279,6 +286,25 @@ blockquote {
   width: 350px;
   height: 350px;
   z-index: 100;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+.hor_list {
+  list-style: none;
+}
+.hor_list li {
+  float: left;
+  margin-right: 5px;
+}
+.hor_list li:last-child {
+  margin-right: 0;
 }
 /*------ LINKS + BUTTONS --------*/
 a,
@@ -451,6 +477,20 @@ input[type="file"]:hover {
 }
 /*------ End recommended Isotope styles --------*/
 /*------  PAGE STYLES --------*/
+#loader {
+  background-color: white;
+  display: block;
+  height: 10000px;
+  padding: 50px 0 0 68px;
+  position: fixed;
+  width: 10000px;
+  z-index: 1000;
+}
+/* this should be temporary! */
+#onav_wrapper {
+  position: relative;
+  z-index: 999;
+}
 /* required for containers to inherit vertical size from window */
 html,
 body {
