@@ -373,9 +373,9 @@ input[type="file"]:hover {
   padding: 0 8px;
   margin: 0 0 3px 0;
   display: inline-block;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 .buttonList a:hover {
   background: #00aeef;
@@ -452,13 +452,12 @@ input[type="file"]:hover {
 /*------ End recommended Isotope styles --------*/
 /*------  PAGE STYLES --------*/
 #loader {
-  background-color: white;
-  display: block;
-  height: 10000px;
-  padding: 50px 0 0 68px;
-  position: fixed;
-  width: 10000px;
-  z-index: 1000;
+  height: 110px;
+  width: 110px;
+  background: #ffffff;
+  color: #333333;
+  position: relative;
+  text-transform: uppercase;
 }
 /* this should be temporary! */
 #onav_wrapper {
