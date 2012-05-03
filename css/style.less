@@ -101,7 +101,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body {
   margin: 0;
-  background: @white;
+  background-color: @white;
   color: @black;
   padding: 0 0 20px;
   .PTSansRegular;
@@ -207,7 +207,7 @@ a, a:active, a:visited  {
 	.League;
 	font-size: 18px;
 	color: @white;
-	background: @black;
+	background-color: @black;
 	text-transform: uppercase; 
 	letter-spacing: 1px; 
 	font-weight: normal; 
@@ -220,33 +220,32 @@ a, a:active, a:visited  {
      -moz-border-radius: 4px;
           border-radius: 4px;
   &:hover {
-  	background: @cyan;
+  	background-color: @cyan;
   }
 }
 
 .buttonList {
 	list-style: none;
 	margin: 0;
-	a {
-		.League;
-		background-color: @occupy;
-		color: @black;
-		height: 21px;
-		font-size: 14px;
-		line-height: 21px;
-		padding: 0 8px;
-		margin: 0 0 3px 0;
-		display: inline-block;
-	  -webkit-border-radius: 3px;
-	     -moz-border-radius: 3px;
-	          border-radius: 3px;
-	  &:hover {
-	  	background: @cyan;
-	  	color: @white;
-	  	text-decoration: none;
-	  }
-	
-	}
+}
+.buttonList	a, .source {
+	.League;
+	background-color: @occupy;
+	color: @black;
+	height: 21px;
+	font-size: 14px;
+	line-height: 21px;
+	padding: 0 8px;
+	margin: 0 0 3px 0;
+	display: inline-block;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  &:hover {
+  	background-color: @cyan;
+  	color: @white;
+  	text-decoration: none;
+  }
 }
 
 /*------ Recommended Isotope styles --------*/
@@ -339,7 +338,7 @@ a, a:active, a:visited  {
 #loader {
 	.height1;
 	.width1;
-	background: @white;
+	background-color: @white;
 	color: @black;
 	position: relative;
 	text-transform: uppercase;
@@ -486,16 +485,22 @@ footer {
 	float: left;
 	overflow: hidden;
 	position: relative;
-	background: @white;
+	background-color: @white;
+	background-position: 90px 90px;
+	background-repeat: no-repeat;
 	color: @black;
-	* {
-		margin: 0 10px;
+	.title, 
+	.status, 
+	.date, 
+	.details {
+		margin-left: 10px;
+		margin-right: 10px;
 	}
-	* * {
-		margin: 0;
+	.source {
+		display: none;
 	}
 	&:hover {
-		background: @cyan; 
+		background-color: @cyan; 
 		color: white; 
 		cursor: pointer;
 	}
@@ -515,9 +520,9 @@ footer {
 	.element;
 	.height1;
 	.width1;
-	background: @gray3;
+	background-color: @gray3;
 	.icon {
-	  margin: 7px 0;
+	  margin: 7px;
 	  float: right;
 	  height: 40px;
 	  width: 40px;
@@ -529,13 +534,15 @@ footer {
 	.status {
 		opacity: .3;
 		font-size: 16px;
+		margin-top: 0;
 	}
-	.url, .tasks, .details, .code, .content {
+	.buttonList, .details {
 		display: none;
 	}
 }
 
 .event {
+	background-image: url(../img/icons/eventsSM.png);
 	.element;
 	.height1;
 	.width2;
@@ -546,11 +553,12 @@ footer {
 	}	
 }
 
-.classified {
+.classifieds {
+	background-image: url(../img/icons/classifiedsSM.png);
 	.element;
 	.height1;
 	.width2;
-	background: @white; 
+	background-color: @white; 
 	border: 1px dashed #BBB;
 	padding: 10px;
 	.title {
@@ -563,7 +571,7 @@ footer {
 		height: 64px;
 		overflow: hidden;
 	}
-	.date, .content {
+	.date, .details {
 		display: none;	
 	} 
 	&:before {
@@ -574,10 +582,11 @@ footer {
 	}
 }
 .forum {
+	background-image: url(../img/icons/forumSM.png);
 	.element;
 	.height1;
 	.width2;
-	background: @white; 
+	background-color: @white; 
 	border: 1px solid @gray2;
 	.title {
 		margin-top: 10px;
@@ -586,11 +595,12 @@ footer {
 }
 
 
-.campaign {
+.campaigns {
+	background-image: url(../img/icons/campaignsSM.png);
 	.element;
 	.height1;
 	.width1; 
-	background: #FFCC00;
+	background-color: #FFCC00;
 	.title {
 		margin-top: 10px;
 		margin-bottom: 2px;
@@ -604,20 +614,22 @@ footer {
 		.League;
 		font-size: 16px;
 		line-height: 1em;
+		margin-top: 0;
 		height: 32px;
 		overflow: hidden;
 	}
-	.content {
+	.details {
 		display: none;
 	}
 }
 
 
 .news {
+	background-image: url(../img/icons/newsSM.png);
 	.element;
 	.height2;
 	.width2; 
-	background: @black;
+	background-color: @black;
 	* {
 		color: @white;	
 	}
@@ -631,7 +643,7 @@ footer {
 		margin-top: 5px;
 		opacity: .5;
 	}
-	.content {
+	.details {
 		margin-top: 5px;
 		margin-bottom: 10px;
 	}
@@ -652,20 +664,20 @@ footer {
 	.element;
 	.height2;
 	.width2;
-	background: @white;
+	background-color: @white;
 	border: 1px solid #BBB;
 	.title {
 		.PTSansBoldItalic;
-		margin: 10px 0 8px;
+		margin: 10px 10px 8px;
 		font-size: 16px;
 	}
 	.text {
 		.PTSansItalic;
 		font-size: 15px;
 		line-height: 1.2em;
-		margin-bottom: 8px;
+		margin: 10px 10px 8px;
 	}
-	.content {
+	.details {
 		display: none;
 	}
 }
@@ -674,14 +686,14 @@ footer {
 	.element;
 	.height2;
 	.width2;
-	background: @black;
+	background-color: @black;
 	&:hover {
 		border: 4px solid @cyan;
 	}
-	* {
+	.details {
 		margin: 0;
 	}
-	.title, .date {
+	.title, .date, .source {
 		display: none;
 	}
 	iframe, img {
@@ -694,15 +706,15 @@ footer {
 	.element;
 	.height1;
 	.width1;
-	background: @gray4;
+	background-color: @gray4;
 	&:hover {
 		border: 0;
-		background: @cyan;
+		background-color: @cyan;
 	}
-	* {
+	.details {
 		margin: 0;
 	}
-	.title, .date {
+	.title, .date, .source {
 		display: none;
 	}
 	iframe, img {
@@ -712,10 +724,11 @@ footer {
 }
 
 .directory {
+	background-image: url(../img/icons/directorySM.png);
 	.element;
 	.height1;
 	.width1;
-	background: @white;
+	background-color: @white;
 	border: 1px solid @gray3;
 	padding: 10px;
 	.title {
@@ -728,16 +741,17 @@ footer {
 	&:before {
 		content: "NEW:";
 	}
-	p, .text, div, span {
+	.buttonList, .details, .date, .source {
 		display: none;
 	}	
 }
 
 .map {
+	background-image: url(../img/icons/mapSM.png);
 	.element;
 	.height1;
 	.width1;
-	background: @gray1;
+	background-color: @gray1;
 	.title {
 		color: @white;
 		margin: 10px;
@@ -745,13 +759,14 @@ footer {
 		height: 84px;
 		overflow: hidden;
 	}
-	p, .text, div, span {
+	.buttonList, .details {
 		display: none;
 	}	
 }
 
 
 .wiki {
+	background-image: url(../img/icons/wikiSM.png);
 	.element;
 	.height2;
 	.width2;
@@ -767,10 +782,11 @@ footer {
 }
 
 .info {
+	background-image: url(../img/icons/newsSM.png);
 	.element;
 	.height2;
 	.width2;
-	background: @white;
+	background-color: @white;
 	border: 1px solid #BBB;
 	.title {
 		margin: 10px 10px 0;
@@ -819,7 +835,7 @@ div.sb-message a:link,div.sb-message a:visited{color:#fff; text-decoration:under
 /*------  SHADOW BOX CONTENT --------*/
 
 #layer {
-	background: @white;
+	background-color: @white;
 	padding: 20px;
 	.specs {
 		float: left;
@@ -844,11 +860,14 @@ div.sb-message a:link,div.sb-message a:visited{color:#fff; text-decoration:under
 			margin: 0;
 			width: 100px;
 		}
+		.source {
+			margin-top: 20px;
+		}
 		.sb-hide {
 			display: none;
 		}
 	}
-	.content {
+	.details {
 		color: @black;
 		display: block;
 		margin-left: 160px;
@@ -882,17 +901,15 @@ div.sb-message a:link,div.sb-message a:visited{color:#fff; text-decoration:under
 
 /*------  CIVI FORM --------*/
 
-.civiLabel {
-	margin: 0;
-}
-
 
 #crm-container {
 	font-size: 14px;
+	padding: 10px 20px;
+	border: 1px dotted #BBB;
 	.crm-section {
-		margin-top: 5px;
+		margin-top: 10px;
 	}
-	#editrow-first_name, #editrow-last_name, #editrow-email-3, #editrow-city-3, #editrow-country-3, #editrow-state_province-3 {
+	#editrow-first_name, #editrow-last_name, #editrow-email-3 {
 		label {
 			float: left;
 			width: 100px;
@@ -900,20 +917,10 @@ div.sb-message a:link,div.sb-message a:visited{color:#fff; text-decoration:under
 			margin-right: 5px;
 		}
 	}
-	#editrow-custom_77 {
-		line-height: 1.5em;
-		.label {
-			.PTSansBold;
-		}
-		label {
-			margin-right: 10px;
-			white-space: nowrap;
-		}
-	}
 	#editrow-custom_76 {
 		.label {
 			.PTSansBold;
-			margin: 12px 0 3px;
+			margin: 20px 0 3px;
 		}	
 	}
 	textarea {
