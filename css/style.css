@@ -673,7 +673,6 @@ footer span a {
   display: none;
 }
 .event {
-  background-image: url(../img/icons/eventsSM.png);
   margin: 5px;
   float: left;
   overflow: hidden;
@@ -684,6 +683,7 @@ footer span a {
   color: #333333;
   height: 110px;
   width: 230px;
+  background-image: url(../img/icons/eventsSM.png);
   background: #AAA;
 }
 .event .title,
@@ -709,7 +709,6 @@ footer span a {
   margin: 10px 10px 2px;
 }
 .classifieds {
-  background-image: url(../img/icons/classifiedsSM.png);
   margin: 5px;
   float: left;
   overflow: hidden;
@@ -720,6 +719,8 @@ footer span a {
   color: #333333;
   height: 110px;
   width: 230px;
+  background-image: url(../img/icons/classifiedsSM.png);
+  background-position: 206px 90px;
   background-color: #ffffff;
   border: 1px dashed #BBB;
   padding: 10px;
@@ -763,7 +764,6 @@ footer span a {
   color: #ffffff;
 }
 .forum {
-  background-image: url(../img/icons/forumSM.png);
   margin: 5px;
   float: left;
   overflow: hidden;
@@ -774,6 +774,8 @@ footer span a {
   color: #333333;
   height: 110px;
   width: 230px;
+  background-image: url(../img/icons/forumSM.png);
+  background-position: 210px 100px;
   background-color: #ffffff;
   border: 1px solid #999999;
 }
@@ -800,7 +802,6 @@ footer span a {
   margin-bottom: 2px;
 }
 .campaigns {
-  background-image: url(../img/icons/campaignsSM.png);
   margin: 5px;
   float: left;
   overflow: hidden;
@@ -811,6 +812,7 @@ footer span a {
   color: #333333;
   height: 110px;
   width: 110px;
+  background-image: url(../img/icons/campaignsSM.png);
   background-color: #FFCC00;
 }
 .campaigns .title,
@@ -855,7 +857,6 @@ footer span a {
   display: none;
 }
 .news {
-  background-image: url(../img/icons/newsSM.png);
   margin: 5px;
   float: left;
   overflow: hidden;
@@ -866,6 +867,8 @@ footer span a {
   color: #333333;
   height: 230px;
   width: 230px;
+  background-image: url(../img/icons/newsSM.png);
+  background-position: 210px 210px;
   background-color: #333333;
 }
 .news .title,
@@ -975,7 +978,8 @@ footer span a {
   color: #333333;
   height: 230px;
   width: 230px;
-  background-color: #333333;
+  background-color: #ffffff;
+  border: 1px solid #BBB;
 }
 .photo .title,
 .photo .status,
@@ -996,7 +1000,7 @@ footer span a {
   color: white;
 }
 .photo:hover {
-  border: 4px solid #00aeef;
+  border-color: #00aeef;
 }
 .photo .details {
   margin: 0;
@@ -1008,8 +1012,14 @@ footer span a {
 }
 .photo iframe,
 .photo img {
-  height: 100%;
-  width: auto;
+  width: 100%;
+  height: auto;
+}
+.photo p {
+  margin: 5px 10px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
 }
 .thumbnail {
   margin: 5px;
@@ -1060,7 +1070,6 @@ footer span a {
   height: auto;
 }
 .directory {
-  background-image: url(../img/icons/directorySM.png);
   margin: 5px;
   float: left;
   overflow: hidden;
@@ -1071,6 +1080,7 @@ footer span a {
   color: #333333;
   height: 110px;
   width: 110px;
+  background-image: url(../img/icons/directorySM.png);
   background-color: #ffffff;
   border: 1px solid #cccccc;
   padding: 10px;
@@ -1110,7 +1120,6 @@ footer span a {
   display: none;
 }
 .map {
-  background-image: url(../img/icons/mapSM.png);
   margin: 5px;
   float: left;
   overflow: hidden;
@@ -1121,6 +1130,7 @@ footer span a {
   color: #333333;
   height: 110px;
   width: 110px;
+  background-image: url(../img/icons/mapSM.png);
   background-color: #666666;
 }
 .map .title,
@@ -1144,7 +1154,11 @@ footer span a {
 .map .title {
   color: #ffffff;
   margin: 10px;
-  font-size: 21px;
+  font-size: 14px;
+  font-family: 'PTSansRegular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+  font-weight: normal;
+  letter-spacing: 0;
+  text-transform: none;
   height: 84px;
   overflow: hidden;
 }
@@ -1153,7 +1167,6 @@ footer span a {
   display: none;
 }
 .wiki {
-  background-image: url(../img/icons/wikiSM.png);
   margin: 5px;
   float: left;
   overflow: hidden;
@@ -1164,6 +1177,8 @@ footer span a {
   color: #333333;
   height: 230px;
   width: 230px;
+  background-image: url(../img/icons/wikiSM.png);
+  background-position: 210px 210px;
   background: #ffffff url(../img/topics/mayday.jpg) no-repeat bottom center;
   border: 1px solid #BBB;
   padding: 10px;
@@ -1189,11 +1204,15 @@ footer span a {
 .wiki:before {
   content: "Learn more about ";
 }
-.wiki * {
+.wiki .title {
   margin: 0;
 }
+.wiki .date,
+.wiki .source,
+.wiki .details {
+  display: none;
+}
 .info {
-  background-image: url(../img/icons/newsSM.png);
   margin: 5px;
   float: left;
   overflow: hidden;
@@ -1204,6 +1223,8 @@ footer span a {
   color: #333333;
   height: 230px;
   width: 230px;
+  background-image: url(../img/icons/newsSM.png);
+  background-position: 210px 210px;
   background-color: #ffffff;
   border: 1px solid #BBB;
 }

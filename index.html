@@ -45,16 +45,16 @@
 	  <ul id="sort" class="option-set clearfix" data-option-key="sortBy">
 	    <li><a href="#date" data-option-value="date" class="selected">date</a></li>
 	    <li><a href="#alphabetical" data-option-value="alphabetical">name</a></li>
-	    <li><a href="#mixed" data-option-value="random">random</a></li>
+	    <li><a href="#mixed" data-option-value="random">mixed</a></li>
 	  </ul>
 	</div>
 	<div class="option-combo">
 	  <h3>Show:</h3>
 	  <ul id="filter" class="option-set clearfix" data-option-key="filter">
 	    <li><a href="#show-all" data-option-value="*" class="selected">all</a></li>
-	    <li><a href="#knowledge" data-option-value=".wiki, .info, .welcome">knowledge</a></li>
-	    <li><a href="#news" data-option-value=".news, .photo, .directory, .map">news</a></li>
-	    <li><a href="#opportunities" data-option-value=".event, .campaign, .classified">opportunities</a></li>
+	    <li><a href="#knowledge" data-option-value=".wiki, .info, .welcome, .photo">knowledge</a></li>
+	    <li><a href="#news" data-option-value=".news, .thumbnail, .directory, .map">news</a></li>
+	    <li><a href="#opportunities" data-option-value=".events, .campaigns, .classifieds">opportunities</a></li>
 	    <li><a href="#tools" data-option-value=".project">tools</a></li>
 	  </ul>
 	</div>
@@ -133,7 +133,7 @@
 		</div>	
 	</div>
 	
-	<div class="welcome" data-number="20">
+	<div class="welcome" data-number="2">
 		<div class="specs">
 			<p class="title sb-hide">What is Occupy?</p>
 			<p class="text sb-hide">It's more than just peaceful assemblies. When we occupy a space, or a topic, we spotlight it. We encourage people to investigate, understand, act, and change something.</p>
@@ -205,7 +205,7 @@
 	</div>
 
 	  
-	<div class="project" data-number="2">
+	<div class="project" data-number="3">
 		<div class="specs">
 			<img class="icon" src="img/icons/wiki.png">
 			<h3 class="title">Wiki</h3>
@@ -221,7 +221,7 @@
 		</div>
 	</div>
 	
-	<div class="project" data-number="6">
+	<div class="project" data-number="3">
 		<div class="specs">
 			<img class="icon" src="img/icons/map.png">
 			<h3 class="title">Map</h3>
@@ -257,7 +257,7 @@
 	</div>
 	
 <!-- not ready for launch
-	<div class="project" data-number="9">
+	<div class="project" data-number="3">
 		<div class="specs">
 			<img class="icon" src="img/icons/events.png">
 			<h3 class="title">Events</h3>
@@ -273,7 +273,7 @@
 	</div>
 -->
 	
-	<div class="project" data-number="8">
+	<div class="project" data-number="3">
 		<div class="specs">
 			<img class="icon" src="img/icons/campaigns.png">
 			<h3 class="title">Campaigns</h3>
@@ -288,7 +288,7 @@
 		</div>
 	</div>
 	
-	<div class="project" data-number="10">
+	<div class="project" data-number="3">
 		<div class="specs">
 			<img class="icon" src="img/icons/forum.png">
 			<h3 class="title">Forum</h3>
@@ -305,7 +305,7 @@
 		</div>
 	</div>
 	
-	<div class="project" data-number="12">
+	<div class="project" data-number="3">
 		<div class="specs">
 			<img class="icon" src="img/icons/ideas.png">
 			<h3 class="title">Ideas</h3>
@@ -322,7 +322,7 @@
 		</div>
 	</div>
 	
-	<div class="project" data-number="11">
+	<div class="project" data-number="3">
 		<div class="specs">
 			<img class="icon" src="img/icons/lists.png">
 			<h3 class="title">Lists</h3>
@@ -340,7 +340,7 @@
 	</div>
 	
 <!-- not ready for launch
-	<div class="project" data-number="5">
+	<div class="project" data-number="3">
 		<div class="specs">
 			<img class="icon" src="img/icons/news.png">
 			<h3 class="title">News</h3>
@@ -358,7 +358,7 @@
 	</div>
 -->
 	
-	<div class="project"  data-number="7">
+	<div class="project"  data-number="3">
 		<div class="specs">
 			<img class="icon" src="img/icons/classifieds.png">
 			<h3 class="title">Classifieds</h3>
@@ -374,7 +374,7 @@
 		</div>
 	</div>
 	
-	<div class="project" data-number="4">
+	<div class="project" data-number="3">
 		<div class="specs">
 			<img class="icon" src="img/icons/directory.png">
 			<h3 class="title">Directory</h3>
@@ -392,7 +392,7 @@
 	</div>
 	
 <!-- not ready for launch
-	<div class="project" data-number="21" data-full="inline1">
+	<div class="project" data-number="3" data-full="inline1">
 		<div class="specs">
 			<img class="icon" src="img/icons/search.png">
 			<h3 class="title">Search</h3>
@@ -425,6 +425,18 @@
 and so on - an array of objects with "url" and "type" attributes  
   -->
   <div class="feed">
+    <div class="url">http://classifieds.occupy.net/index.php?page=search&sFeed</div>
+    <div class="type">classifieds</div>
+    <div class="num">10</div>
+    <div class="days">3000</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://wiki.occupy.net/wiki/Special:NewsFeed?feed=rss&categories=Featured</div>
+    <div class="type">wiki</div>
+    <div class="num">1</div>
+    <div class="days">300</div>
+  </div>
+  <div class="feed">
     <div class="url">http://newswire.occupy.net/channel/368/rss.xml</div>
     <div class="type">news</div>
     <div class="num">5</div>
@@ -437,23 +449,31 @@ and so on - an array of objects with "url" and "type" attributes
     <div class="days">30</div>
   </div>
   <div class="feed">
-    <div class="url">http://classifieds.occupy.net/index.php?page=search&sFeed</div>
-    <div class="type">classifieds</div>
-    <div class="num">5</div>
-    <div class="days">30</div>
-  </div>
-  <div class="feed">
     <div class="url">http://wearethe99percent.tumblr.com/rss</div>
     <div class="type">photo</div>
     <div class="num">5</div>
     <div class="days">30</div>
   </div>
   <div class="feed">
-    <div class="url">http://feeds.feedburner.com/OccupyDesign</div>
-    <div class="type">thumbnail</div>
-    <div class="num">5</div>
-    <div class="days">30</div>
+    <div class="url">http://occupybigpicture.tumblr.com/rss</div>
+    <div class="type">photo</div>
+    <div class="num">10</div>
+    <div class="days">300</div>
   </div>
+  <div class="feed">
+    <div class="url">http://occupylittlepicture.tumblr.com/rss</div>
+    <div class="type">thumbnail</div>
+    <div class="num">10</div>
+    <div class="days">300</div>
+  </div>
+	<!-- no way to link to source
+  <div class="feed">
+    <div class="url">http://feeds.feedburner.com/OccupyDesign</div>
+    <div class="type">photo</div>
+    <div class="num">5</div>
+    <div class="days">300</div>
+  </div>
+  -->
   <!-- error in feed
   <div class="feed">
     <div class="url">http://occuprint.org/feed</div>
@@ -466,19 +486,13 @@ and so on - an array of objects with "url" and "type" attributes
     <div class="url">http://howtocamp.takethesquare.net/feed/</div>
     <div class="type">info</div>
     <div class="num">5</div>
-    <div class="days">30</div>
-  </div>
-  <div class="feed">
-    <div class="url">http://wiki.occupy.net/wiki/Special:NewsFeed?feed=rss&categories=Featured</div>
-    <div class="type">wiki</div>
-    <div class="num">5</div>
-    <div class="days">30</div>
+    <div class="days">3000</div>
   </div>
   <div class="feed">
     <div class="url">http://directory.occupy.net/occupations/added.rss</div>
     <div class="type">directory</div>
     <div class="num">5</div>
-    <div class="days">7</div>
+    <div class="days">30</div>
   </div>
   <div class="feed">
     <div class="url">http://map.occupy.net/feed/</div>
@@ -490,7 +504,7 @@ and so on - an array of objects with "url" and "type" attributes
     <div class="url">http://campaigns.occupy.net/feed/</div>
     <div class="type">campaigns</div>
     <div class="num">5</div>
-    <div class="days">30</div>
+    <div class="days">300</div>
   </div>
 </div>
 
@@ -528,6 +542,7 @@ google.setOnLoadCallback(function() {
 
     //extract url from html
     var url = $(e).find(".url").html();
+    url = url.replace("&amp;","&");
     var feed = new google.feeds.Feed(url);
     
     //extract number of posts, days to show from html    
@@ -625,11 +640,12 @@ $(document).ready(function(){
       columnWidth: 120
     },
     getSortData: {
-      number: function( $elem ) {
-        var number = $elem.hasClass('element') ? 
-          $elem.find('.date').text() :
-          $elem.attr('data-number');
-        return parseInt( number, 10 );
+      date: function( $elem ) {		
+        if ($elem.find('.date').length != 0) {
+          return -1*Date.parse($elem.find('.date').text());
+        } else {
+          return Number.NEGATIVE_INFINITY;
+        }
       },
       alphabetical: function( $elem ) {
         var name = $elem.find('.title'),

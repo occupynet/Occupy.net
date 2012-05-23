@@ -542,10 +542,10 @@ footer {
 }
 
 .event {
-	background-image: url(../img/icons/eventsSM.png);
 	.element;
 	.height1;
 	.width2;
+	background-image: url(../img/icons/eventsSM.png);
 	background: #AAA;
 	.title {
 		color: @white;
@@ -554,10 +554,11 @@ footer {
 }
 
 .classifieds {
-	background-image: url(../img/icons/classifiedsSM.png);
 	.element;
 	.height1;
 	.width2;
+	background-image: url(../img/icons/classifiedsSM.png);
+	background-position: 206px 90px;
 	background-color: @white; 
 	border: 1px dashed #BBB;
 	padding: 10px;
@@ -582,10 +583,11 @@ footer {
 	}
 }
 .forum {
-	background-image: url(../img/icons/forumSM.png);
 	.element;
 	.height1;
 	.width2;
+	background-image: url(../img/icons/forumSM.png);
+	background-position: 210px 100px;
 	background-color: @white; 
 	border: 1px solid @gray2;
 	.title {
@@ -596,10 +598,10 @@ footer {
 
 
 .campaigns {
-	background-image: url(../img/icons/campaignsSM.png);
 	.element;
 	.height1;
 	.width1; 
+	background-image: url(../img/icons/campaignsSM.png);
 	background-color: #FFCC00;
 	.title {
 		margin-top: 10px;
@@ -625,10 +627,11 @@ footer {
 
 
 .news {
-	background-image: url(../img/icons/newsSM.png);
 	.element;
 	.height2;
 	.width2; 
+	background-image: url(../img/icons/newsSM.png);
+	background-position: 210px 210px;
 	background-color: @black;
 	* {
 		color: @white;	
@@ -686,9 +689,10 @@ footer {
 	.element;
 	.height2;
 	.width2;
-	background-color: @black;
+	background-color: @white;
+	border: 1px solid #BBB;
 	&:hover {
-		border: 4px solid @cyan;
+		border-color: @cyan;
 	}
 	.details {
 		margin: 0;
@@ -697,9 +701,15 @@ footer {
 		display: none;
 	}
 	iframe, img {
-		height: 100%;
-		width: auto;
+		width: 100%;
+		height: auto;
 	}	
+	p {
+		margin: 5px 10px;
+		text-transform: uppercase;
+		font-size: 12px;
+		letter-spacing: 1px;
+	}
 }
 
 .thumbnail {
@@ -724,10 +734,10 @@ footer {
 }
 
 .directory {
-	background-image: url(../img/icons/directorySM.png);
 	.element;
 	.height1;
 	.width1;
+	background-image: url(../img/icons/directorySM.png);
 	background-color: @white;
 	border: 1px solid @gray3;
 	padding: 10px;
@@ -747,15 +757,18 @@ footer {
 }
 
 .map {
-	background-image: url(../img/icons/mapSM.png);
 	.element;
 	.height1;
 	.width1;
+	background-image: url(../img/icons/mapSM.png);
 	background-color: @gray1;
 	.title {
 		color: @white;
 		margin: 10px;
-		font-size: 21px;
+		font-size: 14px;
+		.PTSansRegular;
+		letter-spacing: 0;
+		text-transform: none;
 		height: 84px;
 		overflow: hidden;
 	}
@@ -766,26 +779,31 @@ footer {
 
 
 .wiki {
-	background-image: url(../img/icons/wikiSM.png);
 	.element;
 	.height2;
 	.width2;
+	background-image: url(../img/icons/wikiSM.png);
+	background-position: 210px 210px;
 	background: #FFF url(../img/topics/mayday.jpg) no-repeat bottom center;
 	border: 1px solid #BBB;
 	padding: 10px;
 	&:before {
 		content: "Learn more about ";
 	}
-	* {
+	.title {
 		margin: 0;
+	}
+	.date, .source, .details {
+		display: none;
 	}
 }
 
 .info {
-	background-image: url(../img/icons/newsSM.png);
 	.element;
 	.height2;
 	.width2;
+	background-image: url(../img/icons/newsSM.png);
+	background-position: 210px 210px;
 	background-color: @white;
 	border: 1px solid #BBB;
 	.title {
