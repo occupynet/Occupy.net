@@ -224,11 +224,7 @@ a, a:active, a:visited  {
   }
 }
 
-.buttonList {
-	list-style: none;
-	margin: 0;
-}
-.buttonList	a, .source {
+.source {
 	.League;
 	background-color: @occupy;
 	color: @black;
@@ -247,6 +243,15 @@ a, a:active, a:visited  {
   	text-decoration: none;
   }
 }
+
+.buttonList {
+	list-style: none;
+	margin: 0;
+	a {
+		.source;
+	}
+}
+
 
 /*------ Recommended Isotope styles --------*/
 

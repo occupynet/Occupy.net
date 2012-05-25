@@ -356,11 +356,6 @@ input[type="reset"]:hover,
 input[type="file"]:hover {
   background-color: #00aeef;
 }
-.buttonList {
-  list-style: none;
-  margin: 0;
-}
-.buttonLista,
 .source {
   font-family: 'LeagueGothicRegular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
   text-transform: uppercase;
@@ -378,8 +373,33 @@ input[type="file"]:hover {
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-.buttonLista:hover,
 .source:hover {
+  background-color: #00aeef;
+  color: #ffffff;
+  text-decoration: none;
+}
+.buttonList {
+  list-style: none;
+  margin: 0;
+}
+.buttonList a {
+  font-family: 'LeagueGothicRegular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: normal;
+  background-color: #ffcc00;
+  color: #333333;
+  height: 21px;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 0 8px;
+  margin: 0 0 3px 0;
+  display: inline-block;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.buttonList a:hover {
   background-color: #00aeef;
   color: #ffffff;
   text-decoration: none;
