@@ -1,3 +1,5 @@
+/*------ DON'T EDIT THE .CSS FILE, EDIT THE .LESS SOURCE --------*/
+
 /*------ RESET --------*/
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, textarea, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
@@ -7,11 +9,13 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  /* make IE8+ match webkit box model: */
+  /* make IE8+ match webkit box model */
   -moz-box-sizing: border-box; 
   -webkit-box-sizing: border-box; 
   -ms-box-sizing: border-box; 
-  box-sizing: border-box; 
+  box-sizing: border-box;
+  /* and IE6+7 too */
+  *behavior: url('../js/boxsizing.htc'); 
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -24,6 +28,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .clearfix { zoom: 1; }
 
 
+/*------ FIX TOP NAV ERROR --------*/
+
+#onav_wrapper, #onav_bar {
+	height: 30px;
+	overflow: hidden;
+	background: black;
+	margin: 0;
+	padding: 0;
+}
+#onav_bar li {
+	line-height: 25px; 
+	*display: inline;
+	zoom: 1;
+	height: 30px;
+}
+#onav_bar a {
+	color: #AAA;
+}
+.onav_icon {
+	float: left;
+	margin-top: 5px!important;	
+}
 
 /*------ LOAD WEB FONTS --------*/
 
@@ -340,17 +366,8 @@ a, a:active, a:visited  {
 
 /*------  PAGE STYLES --------*/
 
-#loader {
-	.height1;
-	.width1;
-	background-color: @white;
-	color: @black;
-	position: relative;
-	text-transform: uppercase;
-}
 
 /* this should be temporary! */
-
 #onav_wrapper { position: relative; z-index:999; }
 
 /* required for containers to inherit vertical size from window */
@@ -521,6 +538,19 @@ footer {
 	}
 }
 
+.loader {
+	.element;
+	.height1;
+	.width1;
+	background-color: @white;
+	color: @black;
+	text-transform: uppercase;
+	padding: 10px 3px;
+	img{float: left;}
+}
+
+.hidden {display: none;}
+
 .project {
 	.element;
 	.height1;
@@ -535,6 +565,7 @@ footer {
 	.title {
 	  	clear: both;
 	  	margin-bottom: 2px;
+	  	margin-top: 0;
 	}
 	.status {
 		opacity: .3;
@@ -587,6 +618,42 @@ footer {
 		color: @white;
 	}
 }
+
+.success {
+	.element;
+	.height1;
+	.width2;
+	color: #999;
+	background-image: url(../img/icons/newsSM.png);
+	background-position: 206px 90px;
+	background-color: @white; 
+	border: 1px solid @occupy;
+	padding: 10px;
+	.title {
+		font-family: 'PTSansBold';
+		letter-spacing: 0;
+		font-size: 18px;
+		line-height: 1.2em;
+		text-transform: none;
+		margin: 2px 0 2px;
+		height: 64px;
+		overflow: hidden;
+		color: @occupy;
+	}
+	.date, .details {
+		display: none;	
+	} 
+	&:before {
+		content: "Accomplished!";
+	}
+	&:hover {
+		border-color: @cyan;
+	}
+	&:hover .title {
+		color: @white;
+	}
+}
+
 .forum {
 	.element;
 	.height1;
@@ -643,8 +710,6 @@ footer {
 	}
 	.title {
 		margin-top: 10px;
-		max-height: 2em;
-		overflow: hidden;
 		width: 200px;
 	}
 	.date {
@@ -663,8 +728,9 @@ footer {
 		color: @white;
 	}
 	iframe, img {
-		width: 100%;
+		width: 210px;
 		height: auto;
+		margin-top: 5px;
 	}
 }
 
@@ -817,6 +883,10 @@ footer {
 	.date {
 		margin: 5px 10px;
 		opacity: .4;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
 	}	
 }
 
@@ -908,6 +978,9 @@ div.sb-message a:link,div.sb-message a:visited{color:#fff; text-decoration:under
 		a {
 			text-decoration: underline;
 			&:hover {color: @cyan;}
+		}
+		.screenshot {
+			border: 1px solid #DDD;
 		}
 	}
 	

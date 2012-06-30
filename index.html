@@ -52,9 +52,8 @@
 	  <h3>Show:</h3>
 	  <ul id="filter" class="option-set clearfix" data-option-key="filter">
 	    <li><a href="#show-all" data-option-value="*" class="selected">all</a></li>
-	    <li><a href="#knowledge" data-option-value=".wiki, .info, .welcome, .photo">knowledge</a></li>
-	    <li><a href="#news" data-option-value=".news, .thumbnail, .directory, .map">news</a></li>
-	    <li><a href="#opportunities" data-option-value=".events, .campaigns, .classifieds">opportunities</a></li>
+	    <li><a href="#news" data-option-value=".wiki, .info, .news, .photo, .thumbnail, .directory, .map, .success">info</a></li>
+	    <li><a href="#opportunities" data-option-value=".welcome, .events, .campaigns, .classifieds">opportunities</a></li>
 	    <li><a href="#tools" data-option-value=".project">tools</a></li>
 	  </ul>
 	</div>
@@ -218,6 +217,7 @@
 		</div>
 		<div class="details">
 			<p>A collaboratively authored knowledge resource you can easily edit. Use it to collect resources for your community and document best practices. Powered by <a href="http://www.mediawiki.org/wiki/MediaWiki" target="_blank">MediaWiki.</a></p>
+			<a class="url" href="http://wiki.occupy.net" target="_blank"><img src="img/screenshots/wiki.jpg" class="screenshot" height="304" width="500" alt="Occupy Wiki"></a>
 		</div>
 	</div>
 	
@@ -285,6 +285,7 @@
 		</div>
 		<div class="details">
 			<p>An easy to use website builder with templates specifically designed for actions and campaigns. Use a campaign site for to spread a message, collect emails and promote events. Powered by <a href="http://wordpress.org">Wordpress.</a></p>
+			<iframe width="500" height="281" src="http://www.youtube.com/embed/lcwQAthgNNQ?rel=0" frameborder="0" allowfullscreen></iframe>
 		</div>
 	</div>
 	
@@ -302,9 +303,48 @@
 		</div>
 		<div class="details">
 			<p>An easy to use forum that you can embed on your own website. Use it to discuss various issues, coordinate your projects and dialog with other occupiers. Powered by <a target="_blank" href="http://www.vanillaforums.org/">Vanilla Forums.</a></p>
+			<iframe src="http://player.vimeo.com/video/31502992" width="500" height="269" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+		</div>
+	</div>
+
+	
+	<div class="project"  data-number="3">
+		<div class="specs">
+			<img class="icon" src="img/icons/classifieds.png">
+			<h3 class="title">Classifieds</h3>
+			<h5 class="status">beta</h5>
+			<ul class="buttonList">
+				<li><a class="url" href="http://classifieds.occupy.net" target="_blank">Launch site</a></li>
+				<li><a class="docs" href="http://wiki.occupy.net/wiki/Occupy.net_Classifieds" target="_blank">Get details</a></li>
+				<li><a class="code" href="https://github.com/occupynet/jobberbase" target="_blank">Fork the code</a></li>
+			</ul>
+		</div>
+		<div class="details">
+			<p>A classifieds system with email notification and a variety of occupy specific categories. Use it to post offers and wants, recruit volunteers, and share opportunities. Powered by <a href="http://osclass.org">OSClass.</a></p>
+			<a class="url" href="http://classifieds.occupy.net" target="_blank"><img src="img/screenshots/classifieds.jpg" class="screenshot" height="304" width="500" alt="Occupy Classifieds"></a>
 		</div>
 	</div>
 	
+	<div class="project" data-number="3">
+		<div class="specs">
+			<img class="icon" src="img/icons/directory.png">
+			<h3 class="title">Directory</h3>
+			<h5 class="status">beta</h5>
+			<ul class="buttonList">
+				<li><a class="url" href="http://directory.occupy.net" target="_blank">Launch site</a></li>
+				<li><a class="docs" href="http://wiki.occupy.net/wiki/Occupy.net_Directory" target="_blank">Get details</a></li>
+				<li><a class="tasks" href="http://projects.occupy.net/projects/fga-projectsite" target="_blank">Help out</a></li>
+				<li><a class="code" href="https://github.com/fga/fga-directory" target="_blank">Fork the code</a></li>
+			</ul>
+		</div>
+		<div class="details">
+			<p>A public listing of all known occupation sites, built as a semantic service layer for web developers. Use it to find locations, websites and profiles of occupations around the world. Powered by <a href="http://drupal.org">Drupal.</a></p>
+			<a class="url" href="http://directory.occupy.net" target="_blank"><img src="img/screenshots/directory.jpg" class="screenshot" height="304" width="500" alt="Occupy Directory"></a>
+		</div>
+	</div>
+
+
+<!-- not ready for launch
 	<div class="project" data-number="3">
 		<div class="specs">
 			<img class="icon" src="img/icons/ideas.png">
@@ -319,9 +359,12 @@
 		</div>
 		<div class="details">
 			<p>A question and answer platform with a simple voting tool. Use it to to get and give answers, vote on the best exchanges and building consensus around an idea. Powered by <a target="_blank" href="http://www.question2answer.org/">Question2Answer.</a></p>
+			<a class="url" href="http://ideas.occupy.net" target="_blank"><img src="img/screenshots/ideas.jpg" class="screenshot" height="304" width="500" alt="Occupy Ideas"></a>
 		</div>
 	</div>
-	
+-->
+
+<!-- pay per list; omit for now
 	<div class="project" data-number="3">
 		<div class="specs">
 			<img class="icon" src="img/icons/lists.png">
@@ -336,8 +379,10 @@
 		</div>
 		<div class="details">
 			<p>A highly configurable announcement and listserve management tool. Use it instead of proprietary "groups" systems to create newsletters, communicate with a team and discuss issues. Powered by <a href="http://sympa.org">Sympa.</a></p>
+			<a class="url" href="http://lists.occupy.net" target="_blank"><img src="img/screenshots/lists.jpg" class="screenshot" height="304" width="500" alt="Occupy Lists"></a>
 		</div>
 	</div>
+-->
 	
 <!-- not ready for launch
 	<div class="project" data-number="3">
@@ -358,39 +403,7 @@
 	</div>
 -->
 	
-	<div class="project"  data-number="3">
-		<div class="specs">
-			<img class="icon" src="img/icons/classifieds.png">
-			<h3 class="title">Classifieds</h3>
-			<h5 class="status">beta</h5>
-			<ul class="buttonList">
-				<li><a class="url" href="http://classifieds.occupy.net" target="_blank">Launch site</a></li>
-				<li><a class="docs" href="http://wiki.occupy.net/wiki/Occupy.net_Classifieds" target="_blank">Get details</a></li>
-				<li><a class="code" href="https://github.com/occupynet/jobberbase" target="_blank">Fork the code</a></li>
-			</ul>
-		</div>
-		<div class="details">
-			<p>A classifieds system with email notification and a variety of occupy specific categories. Use it to post offers and wants, recruit volunteers, and share opportunities. Powered by <a href="http://osclass.org">OSClass.</a></p>
-		</div>
-	</div>
-	
-	<div class="project" data-number="3">
-		<div class="specs">
-			<img class="icon" src="img/icons/directory.png">
-			<h3 class="title">Directory</h3>
-			<h5 class="status">beta</h5>
-			<ul class="buttonList">
-				<li><a class="url" href="http://directory.occupy.net" target="_blank">Launch site</a></li>
-				<li><a class="docs" href="http://wiki.occupy.net/wiki/Occupy.net_Directory" target="_blank">Get details</a></li>
-				<li><a class="tasks" href="http://projects.occupy.net/projects/fga-projectsite" target="_blank">Help out</a></li>
-				<li><a class="code" href="https://github.com/fga/fga-directory" target="_blank">Fork the code</a></li>
-			</ul>
-		</div>
-		<div class="details">
-			<p>A public listing of all known occupation sites, built as a semantic service layer for web developers. Use it to find locations, websites and profiles of occupations around the world. Powered by <a href="http://drupal.org">Drupal.</a></p>
-		</div>
-	</div>
-	
+		
 <!-- not ready for launch
 	<div class="project" data-number="3" data-full="inline1">
 		<div class="specs">
@@ -406,6 +419,10 @@
 		</div>
 	</div>
 -->
+
+	<div class="loader" data-number="3">
+		<img src="img/ajax-loader.gif" alt="ajax-loader" width="16" height="16" /> Loading...
+	</div>
 	
 </div> <!-- end #container -->
 
@@ -428,7 +445,13 @@ and so on - an array of objects with "url" and "type" attributes
     <div class="url">http://classifieds.occupy.net/index.php?page=search&sFeed</div>
     <div class="type">classifieds</div>
     <div class="num">10</div>
-    <div class="days">3000</div>
+    <div class="days">300</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://campaigns.occupy.net/feed/</div>
+    <div class="type">campaigns</div>
+    <div class="num">5</div>
+    <div class="days">300</div>
   </div>
   <div class="feed">
     <div class="url">http://wiki.occupy.net/wiki/Special:NewsFeed?feed=rss&categories=Featured</div>
@@ -437,41 +460,74 @@ and so on - an array of objects with "url" and "type" attributes
     <div class="days">300</div>
   </div>
   <div class="feed">
+  	<!-- national gathering feed -->
+    <div class="url">http://owscurators.floing.org/?feed=rss2&cat=22</div>
+    <div class="type">news</div>
+    <div class="num">10</div>
+    <div class="days">90</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://occupiedmedia.us/category/analysis/feed/</div>
+    <div class="type">news</div>
+    <div class="num">10</div>
+    <div class="days">90</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://occupiedmedia.us/category/features/feed/</div>
+    <div class="type">news</div>
+    <div class="num">10</div>
+    <div class="days">90</div>
+  </div>
+  <div class="feed">
     <div class="url">http://newswire.occupy.net/channel/368/rss.xml</div>
     <div class="type">news</div>
     <div class="num">5</div>
     <div class="days">30</div>
   </div>
   <div class="feed">
-    <div class="url">http://feeds.feedburner.com/interoccupy</div>
-    <div class="type">news</div>
-    <div class="num">5</div>
-    <div class="days">30</div>
+    <div class="url">http://occupydidwhat.tumblr.com/rss</div>
+    <div class="type">success</div>
+    <div class="num">10</div>
+    <div class="days">90</div>
+  </div>
+  <div class="feed">
+    <div class="url">https://tech.occupy.net/feed/</div>
+    <div class="type">info</div>
+    <div class="num">10</div>
+    <div class="days">90</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://interoccupy.org/category/resources/feed/</div>
+    <div class="type">info</div>
+    <div class="num">10</div>
+    <div class="days">90</div>
   </div>
   <div class="feed">
     <div class="url">http://wearethe99percent.tumblr.com/rss</div>
     <div class="type">photo</div>
-    <div class="num">5</div>
-    <div class="days">30</div>
+    <div class="num">15</div>
+    <div class="days">60</div>
   </div>
   <div class="feed">
     <div class="url">http://occupybigpicture.tumblr.com/rss</div>
     <div class="type">photo</div>
-    <div class="num">10</div>
+    <div class="num">15</div>
     <div class="days">300</div>
   </div>
   <div class="feed">
     <div class="url">http://occupydetails.tumblr.com/rss</div>
     <div class="type">thumbnail</div>
-    <div class="num">10</div>
+    <div class="num">15</div>
     <div class="days">300</div>
   </div>
+  <!-- photos linking incorrectly
   <div class="feed">
     <div class="url">http://occupydesign.org/gallery/feed</div>
     <div class="type">photo</div>
     <div class="num">5</div>
     <div class="days">300</div>
   </div>
+  -->
   <!-- error in feed
   <div class="feed">
     <div class="url">http://occuprint.org/feed</div>
@@ -487,23 +543,23 @@ and so on - an array of objects with "url" and "type" attributes
     <div class="days">3000</div>
   </div>
   <div class="feed">
-    <div class="url">http://directory.occupy.net/occupations/added.rss</div>
-    <div class="type">directory</div>
+    <div class="url">http://www.occupytheory.org/feed/rss.html</div>
+    <div class="type">news</div>
     <div class="num">5</div>
     <div class="days">30</div>
   </div>
   <div class="feed">
+    <div class="url">http://directory.occupy.net/occupations/added.rss</div>
+    <div class="type">directory</div>
+    <div class="num">5</div>
+    <div class="days">60</div>
+  </div>
+  <div class="feed">
     <div class="url">http://map.occupy.net/feed/</div>
     <div class="type">map</div>
-    <div class="num">15</div>
-    <div class="days">7</div>
+    <div class="num">30</div>
+    <div class="days">30</div>
   </div>  
-  <div class="feed">
-    <div class="url">http://campaigns.occupy.net/feed/</div>
-    <div class="type">campaigns</div>
-    <div class="num">10</div>
-    <div class="days">300</div>
-  </div>
 </div>
 
 
@@ -516,16 +572,6 @@ and so on - an array of objects with "url" and "type" attributes
 
 <!-- feed reader -->
 <script type="text/javascript">
-
-/* not working?
-$(window).load(function(){  
-   // everything is loaded
-
-   var height = $(window).height();
-
-   $('#loader').height(height).fadeOut(300);
-});  
-*/
 
 var $container = $('#container');
 var feeds = google.load("feeds", "1");
@@ -540,6 +586,7 @@ google.setOnLoadCallback(function() {
 
     //extract url from html
     var url = $(e).find(".url").html();
+    //fix double encoding bug by reverting one ampersand
     url = url.replace("&amp;","&");
     var feed = new google.feeds.Feed(url);
     
@@ -615,8 +662,7 @@ google.setOnLoadCallback(function() {
 	        $(divInDOM).click( activateTile );
 	      };
 	    };
-	    $container.isotope('insert',$(".feed-item"))
-    
+	    $container.isotope('insert',$(".feed-item"))    
   	
 	  
 	  });
@@ -654,7 +700,6 @@ $(document).ready(function(){
     sortBy: 'date'
   });
 
-
   var $optionSets = $('#options .option-set'),
       $optionLinks = $optionSets.find('a');
 
@@ -686,8 +731,12 @@ $(document).ready(function(){
 
     return false;
   });
-
   
+    $('.loader').addClass('hidden');
+
+	// disable direct links on images in photo squares
+	$('.details_photo a').click(function(){ return false; });
+
 })
 
 </script>
