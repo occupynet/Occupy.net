@@ -1,293 +1,811 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Occupy.net - A collection of tools for activists worldwide</title>
-
-	<!-- Framework CSS -->
-	<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen, projection">
-	<link rel="stylesheet" href="css/occupy_screen.css" type="text/css" media="screen, projection">
-	<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
-	<!--[if lt IE 8]><link rel="stylesheet" href="../blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
-
-	<!-- load jQuery -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  
+  <meta charset="utf-8" />
+  <title>The Occupy Network</title>
+  
+  <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="stylesheet" href="css/style.css" />
+  
+	<meta property="og:title" content="The Occupy Network"/>
+	<meta property="og:site_name" content="Occupy.net"/>
+	<meta property="og:description" content="Occupy.net provides people with software tools that align with the values of the #occupy movement. All of the tools offered here are free/libre/open source: part of the global information commons, maintained by communities, not corporations."/>
+	<meta property="og:image" content="http://occupy.net/img/occupy-network.png"/>
+	<meta property="og:url" content="http://occupy.net"/>
+	<meta property="og:type" content="website"/>  
 	
-	<!-- page-specific styles -->
-	<style>
-	#searchBox {width: 210px; font-size: 11px; color: #000;}
-	#searchBox input {font-size: 12px;}
-	#searchInput {margin: 0; width: 160px; height: 30px; padding: 0 7px; float: left;}
-	#searchButton {background:url(img/occupy_search_button.png) no-repeat left top; border:none; cursor:pointer; height:32px; vertical-align:top; width:33px;}
-	#searchButton:hover {background-position:left bottom;}
-	</style>
+  <!-- scripts at bottom of page -->
 
 </head>
-<body>
-<iframe src="nav/occupynet.html" style="width:100%; height:36px; border:0;"></iframe>
-<div id="title">
-	<div class="logo">
-		<h1 id="subLogo">Occupy<span class="black domain">.net</span></h1>
-		<h5 id="tagline">A collection of tools for activists worldwide</h5>
+<body class="homepage">
+
+<!-- 
+<div id="loader">
+	<img src="img/ajax-loader.gif">
+	<div class="option-logo">
+		<h1>the <span class="occupy">occupy</span> network</h1>
 	</div>
-	<div class="container">
-		<div class="intro">
-			<p class="span-12">Occupy.net provides people with software tools that align with the values of the #occupy movement. All of the tools offered through Occupy.net are <a href="http://wiki.occupy.net/index.php?title=Free/libre/opensource&amp;action=edit&amp;redlink=1" target="_blank">free / libre / open source</a>, which means they're part of the global information commons and are maintained by communities, not corporations.</p>
-			<p class="span-12 last">A distributed team of designers, developers and technologists maintain these tools so activists don't have to compromise their values when they use the internet. If you'd like to help provide a complete set of FLO tools to this project, please tell us about yourself by filling out <a href="http://wiki.occupy.net/index.php?title=This_form&amp;action=edit&amp;redlink=1" target="_blank">this form.</a></p>
+	<hr class="clear">
+	Loading...
+</div>
+-->
+ 
+<script type="text/javascript" src="http://nav.occupy.net/occupynet_nav.js"></script>
+
+<section id="content">
+
+
+<section id="options" class="clearfix">
+	<div class="option-logo">
+		<h1>the <span class="occupy">occupy.net</span>work</h1>
+	</div>
+	<div class="option-combo">
+	  <h3>Sort by:</h3>
+	  <ul id="sort" class="option-set clearfix" data-option-key="sortBy">
+	    <li><a href="#date" data-option-value="date" class="selected">date</a></li>
+	    <li><a href="#alphabetical" data-option-value="alphabetical">name</a></li>
+	    <li><a href="#mixed" data-option-value="random">mixed</a></li>
+	  </ul>
+	</div>
+	<div class="option-combo">
+	  <h3>Show:</h3>
+	  <ul id="filter" class="option-set clearfix" data-option-key="filter">
+	    <li><a href="#show-all" data-option-value="*" class="selected">all</a></li>
+	    <li><a href="#news" data-option-value=".wiki, .info, .news, .photo, .thumbnail, .directory, .map, .success">info</a></li>
+	    <li><a href="#opportunities" data-option-value=".welcome, .events, .campaigns, .classifieds">opportunities</a></li>
+	    <li><a href="#tools" data-option-value=".project">tools</a></li>
+	  </ul>
+	</div>
+</section>
+
+
+<div id="container" class="clearfix">
+	
+	<div class="welcome" data-number="1">
+		<div class="specs">
+			<p class="title sb-hide">Welcome!</p>
+			<p class="text sb-hide">Occupy.net provides people with software tools that align with the values of the #occupy movement. All of the tools offered here are free/libre/open source: part of the global information commons, maintained by communities, not corporations.</p>
+			<p class="text">Would you like to help?</p>
 		</div>
-		<div class="products">
-			<ul class="productsList">
-				<li>
-					<h2 class="product_name"><a href="http://map.occupy.net">Map</a><span class="product_status alpha">alpha</span></h2>
-					<div class="product_details">
-						<h3 class="product_url">MAP.OCCUPY.NET</h3>
-						<p class="product_text">A collection of user-driven interactive maps. Powered by <a target="_blank" href="http://ushahidi.com/">Ushahidi.</a></p>
-						<p class="product_nav">
-							<a href="http://map.occupy.net" target="_blank">Launch</a>
-							<a href="http://wiki.occupy.net/wiki/Occupy.net_Maps" target="_blank">Details</a>
-							<a href="http://collaborate.occupy.net/projects/7/dashboard">Tasks</a>
-							<a href="https://github.com/occupynet/OccupyMap" target="_blank">Code</a>
-						</p>
+		<div class="details">
+			<!-- START OF CIVI VOLUNTEER FORM -->
+			<form  action="http://crm.occupy.net/civicrm/profile/create?gid=23&amp;reset=1" method="post" name="Edit" id="Edit" >
+			<div>
+				<input name="postURL" type="hidden" value="" />
+				<input name="cancelURL" type="hidden" value="http://crm.occupy.net/civicrm/profile?reset=1&amp;gid=23" />
+				<input name="add_to_group" type="hidden" value="19" />
+				<input name="_qf_default" type="hidden" value="Edit:cancel" />
+			</div>
+			<script type="text/javascript" src="http://occupy.li/sites/all/modules/civicrm/js/Common.js"></script>
+			<div id="crm-container" lang="en" xml:lang="en">
+				<div class="messages help"><p>Fill out this form to receive email updates from #Occupy and learn how you can be part of the Global Commons.</p></div>
+				<div class="form-layout-compressed">
+					<div id="editrow-first_name" class="crm-section editrow_first_name-section form-item">
+						<div class="label">
+							<label for="first_name">  First Name<span class="crm-marker" title="This field is required.">*</span></label>
+						</div>
+						<div class="edit-value content">
+							<input maxlength="64" size="30" name="first_name" type="text" id="first_name" class="form-text big required" />
+						</div>
+						<div class="clear"></div>
 					</div>
-				</li>
-				<li>
-					<h2 class="product_name"><a href="http://wiki.occupy.net">Wiki</a><span class="product_status alpha">alpha</span></h2>
-					<div class="product_details">
-						<h3 class="product_url">WIKI.OCCUPY.NET</h3>
-						<p class="product_text">A collaboratively authored knowledge resource. Powered by <a target="_blank" href="http://www.mediawiki.org/wiki/MediaWiki">MediaWiki.</a></p>
-						<p class="product_nav">
-							<a href="http://wiki.occupy.net" target="_blank">Launch</a>
-							<a href="http://wiki.occupy.net/wiki/Occupy.net_Wiki" target="_blank">Details</a>
-							<a href="http://collaborate.occupy.net/projects/9">Tasks</a>
-						</p>
+					<div id="editrow-last_name" class="crm-section editrow_last_name-section form-item">
+						<div class="label">
+							<label for="last_name">Last Name</label>
+						</div>
+						<div class="edit-value content">
+							<input maxlength="64" size="30" name="last_name" type="text" id="last_name" class="form-text big" />
+						</div>
+						<div class="clear"></div>
 					</div>
-				</li>
-				<li>
-					<h2 class="product_name"><a href="http://news.occupy.net">News</a><span class="product_status alpha">alpha</span></h2>
-					<div class="product_details">
-						<h3 class="product_url">NEWS.OCCUPY.NET </h3>
-						<p class="product_text">A news aggregation and curation tool. Powered by <a target="_blank" href="http://managingnews.com/">Managing News.</a></p>
-						<p class="product_nav">
-							<a href="http://news.occupy.net" target="_blank">Launch</a>
-							<a href="http://wiki.occupy.net/wiki/Occupy.net_News" target="_blank">Details</a>
-							<a href="http://collaborate.occupy.net/projects/6">Tasks</a>
-							<a href="https://github.com/occupynet/newswire" target="_blank">Code</a>
-						</p>
+					<div id="editrow-email-3" class="crm-section editrow_email-3-section form-item">
+						<div class="label">
+						<label for="email-3">  Email<span class="crm-marker" title="This field is required.">*</span></label>
+						</div>
+						<div class="edit-value content">
+							<input maxlength="64" size="30" name="email-3" type="text" id="email-3" class="form-text big required" />
+						</div>
+						<div class="clear"></div>
 					</div>
-				</li>
-				<li>
-					<h2 class="product_name"><a href="http://collaborate.occupy.net" style="letter-spacing: 1px;">Collaborate</a><span class="product_status alpha">alpha</span></h2>
-					<div class="product_details">
-						<h3 class="product_url">COLLABORATE.OCCUPY.NET</h3>
-						<p class="product_text">A project management and collective decision-making tool. Powered by <a target="_blank" href="http://bettermeans.org/front/">BetterMeans.</a></p>
-						<p class="product_nav">
-							<a href="http://collaborate.occupy.net" target="_blank">Launch</a>
-							<a href="http://collaborate.occupy.net/projects/10">Tasks</a>
-							<a href="https://github.com/occupynet/bettermeans" target="_blank">Code</a>
-						</p>
+					<div id="editrow-custom_76" class="crm-section editrow_custom_76-section form-item">
+						<div class="label">
+							<label for="custom_76">Please briefly describe why and how you would like to get involved in the Occupy movement</label>
+						</div>
+						<div class="edit-value content">
+							<textarea rows="4" cols="60" name="custom_76" id="custom_76" class="form-textarea"></textarea>
+						</div>
+						<div class="clear"></div>
+					</div>					
+				</div><!-- end form-layout-compressed for last profile --> 
+				<div class="crm-submit-buttons">
+					<span class="crm-button crm-button-type-next crm-button_qf_Edit_next"><input class="form-submit default" accesskey="S" name="_qf_Edit_next" value="Submit" type="submit" id="_qf_Edit_next" /></span>
+				</div>			
+			</div> 			
+			</form>			
+			<script type="text/javascript" >
+			cj( function( ) {
+			    cj("#Edit").validate({ 'errorClass': 'crm-error'});
+			});
+			</script><script type="text/javascript">jQuery.noConflict(true);</script>
+			<!-- END OF CIVI VOLUNTEER FORM -->
+		</div>	
+	</div>
+	
+	<div class="welcome" data-number="2">
+		<div class="specs">
+			<p class="title sb-hide">What is Occupy?</p>
+			<p class="text sb-hide">It's more than just peaceful assemblies. When we occupy a space, or a topic, we spotlight it. We encourage people to investigate, understand, act, and change something.</p>
+			<p class="text">What do you want to occupy?</p>
+		</div>
+		<div class="details">
+			<!-- START OF CIVI VOLUNTEER FORM -->
+			<form  action="http://crm.occupy.net/civicrm/profile/create?gid=23&amp;reset=1" method="post" name="Edit" id="Edit" >
+			<div>
+				<input name="postURL" type="hidden" value="" />
+				<input name="cancelURL" type="hidden" value="http://crm.occupy.net/civicrm/profile?reset=1&amp;gid=23" />
+				<input name="add_to_group" type="hidden" value="19" />
+				<input name="_qf_default" type="hidden" value="Edit:cancel" />
+			</div>
+			<script type="text/javascript" src="http://occupy.li/sites/all/modules/civicrm/js/Common.js"></script>
+			<div id="crm-container" lang="en" xml:lang="en">
+				<div class="messages help"><p>Fill out this form to receive email updates from #Occupy and learn how you can be part of the Global Commons.</p></div>
+				<div class="form-layout-compressed">
+					<div id="editrow-first_name" class="crm-section editrow_first_name-section form-item">
+						<div class="label">
+							<label for="first_name">  First Name<span class="crm-marker" title="This field is required.">*</span></label>
+						</div>
+						<div class="edit-value content">
+							<input maxlength="64" size="30" name="first_name" type="text" id="first_name" class="form-text big required" />
+						</div>
+						<div class="clear"></div>
 					</div>
-				</li>
-				<li>
-					<h2 class="product_name"><a href="http://notes.occupy.net">Notes</a><span class="product_status alpha">alpha</span></h2>
-					<div class="product_details">
-						<h3 class="product_url">NOTES.OCCUPY.NET </h3>
-						<p class="product_text">A group document editing tool. Powered by <a target="_blank" href="http://etherpad.org/">Etherpad.</a></p>
-						<p class="product_nav">
-							<a href="http://notes.occupy.net" target="_blank">Launch</a>
-							<a href="https://github.com/occupynet/etherpad-lite" target="_blank">Code</a>
-						</p>
+					<div id="editrow-last_name" class="crm-section editrow_last_name-section form-item">
+						<div class="label">
+							<label for="last_name">Last Name</label>
+						</div>
+						<div class="edit-value content">
+							<input maxlength="64" size="30" name="last_name" type="text" id="last_name" class="form-text big" />
+						</div>
+						<div class="clear"></div>
 					</div>
-				</li>
-				<li>
-					<h2 class="product_name"><a href="http://projects.occupy.net">Projects</a><span class="product_status alpha">alpha</span></h2>
-					<div class="product_details">
-						<h3 class="product_url">PROJECTS.OCCUPY.NET</h3>
-						<p class="product_text">A project management system optimized for software development. Powered by <a target="_blank" href="http://redmine.org/">Redmine.</a></p>
-						<p class="product_nav">
-							<a href="http://projects.occupy.net" target="_blank">Launch</a>
-							<a href="http://projects.occupy.net/projects/redmine/issues" target="_blank">Tasks</a>
-						</p>
+					<div id="editrow-email-3" class="crm-section editrow_email-3-section form-item">
+						<div class="label">
+						<label for="email-3">  Email<span class="crm-marker" title="This field is required.">*</span></label>
+						</div>
+						<div class="edit-value content">
+							<input maxlength="64" size="30" name="email-3" type="text" id="email-3" class="form-text big required" />
+						</div>
+						<div class="clear"></div>
 					</div>
-				</li>
-				<li class="unbind">
-					<h2 class="product_name"><a class="product_name">Search</a><span class="product_status alpha">alpha</span></h2>
-					<div class="product_details">
-						<p class="product_text">Search the internet privately (and even securely). Powered by <a target="_blank" href="http://duckduckgo.com/">DuckDuckGo.</a></p>
-						<form action="https://duckduckgo.com/" method="get" target="_blank" enctype="multipart/form-data" id="searchBox">
-						  <input type="text" name="q" placeholder="Search" id="searchInput"><input type="submit" value="" id="searchButton">
-						</form>
-					</div>
-				</li>
-				<li>
-					<h2 class="product_name"><a href="http://schedule.occupy.net">Schedule</a><span class="product_status alpha">alpha</span></h2>
-					<div class="product_details">
-						<h3 class="product_url">SCHEDULE.OCCUPY.NET</h3>
-						<p class="product_text">A group scheduling and coordination tool. Powered by <a target="_blank" href="https://dudle.inf.tu-dresden.de/">Dudle.</a></p>
-						<p class="product_nav">
-							<a href="http://schedule.occupy.net" target="_blank">Launch</a>
-							<a href="http://collaborate.occupy.net/projects/16" target="_blank">Tasks</a>
-						</p>
-					</div>
-				</li>
-				<li>
-					<h2 class="product_name"><a href="http://directory.occupy.net">Directory</a><span class="product_status beta">Beta</span></h2>
-					<div class="product_details">
-						<h3 class="product_url">DIRECTORY.OCCUPY.NET</h3>
-						<p class="product_text">Listing all known Occupations and their communications channels. Powered by <a target="_blank" href="http://drupal.org/">Drupal.</a></p>
-						<p class="product_nav">
-							<a href="http://directory.occupy.net" target="_blank">Launch</a>
-							<a href="http://projects.occupy.net/projects/fga/wiki/Occupation_Directory" target="_blank">Details</a>
-							<a href="http://projects.occupy.net/projects/fga-projectsite/issues?query_id=25" target="_blank">Tasks</a>
-              <!-- <a href="https://github.com/OccupyWallStreet/fga-directory" target="_blank">Code</a> -->
-						</p>
-					</div>
-				</li>
-				<li>
-					<h2 class="product_name"><a href="http://classifieds.occupy.net">Classifieds</a><span class="product_status alpha">alpha</span></h2>
-					<div class="product_details">
-						<h3 class="product_url">CLASSIFIEDS.OCCUPY.NET</h3>
-						<p class="product_text">A reciprocal exchange space for the #Occupy movement, get involved!. Powered by <a target="_blank" href="http://www.jobberbase.com/">Jobberbase.</a></p>
-						<p class="product_nav">
-							<a href="http://classifieds.occupy.net" target="_blank">Launch</a>
-							<a href="http://collaborate.occupy.net/projects/86/dashboard" target="_blank">Tasks</a>
-						</p>
-					</div>
-				</li>
-				<li>
-					<h2 class="product_name"><a href="http://ideas.occupy.net">Ideas</a><span class="product_status alpha">alpha</span></h2>
-					<div class="product_details">
-						<h3 class="product_url">IDEAS.OCCUPY.NET</h3>
-						<p class="product_text">Where you can ask questions and receive answers from other members of the community. Powered by <a target="_blank" href="http://question2answer.org/"> Question2Answer.</a></p>
-						<p class="product_nav">
-							<a href="http://ideas.occupy.net" target="_blank">Launch</a>
-							<a href="http://collaborate.occupy.net/projects/11/dashboard" target="_blank">Tasks</a>
-						</p>
-					</div>
-				</li>				
-        			 <li>
-          				<h2 class="product_name"><a>Forum</a><span class="product_status idea">Idea</span></h2>
-          				<div class="product_details">
-            				<h3 class="product_url">FORUM.OCCUPY.NET</h3>
-            				<p class="product_text">A space for discussion. Powered by <a target="_blank" href="http://www.vanillaforums.org/">Vanilla Forums.</a></p>
-            				<p class="product_nav">
-              					<a href="http://forum.occupy.net" target="_blank">Launch</a>
-              					<a href="http://wiki.occupy.net/wiki/Occupy.net_Forums" target="_blank">Details</a>
-              					<a href="http://collaborate.occupy.net/projects/12" target="_blank">Tasks</a>
-              					<a href="https://github.com/occupynet/vanilla-multisite-plugin" target="_blank">Code</a>
-            				</p>
-          				</div>
-        			</li> 
-				<li>
-					<h2 class="product_name inactive"><a>Chat</a><span class="product_status idea">Idea</span></h2>
-					<div class="product_details">
-						<h3 class="product_url">CHAT.OCCUPY.NET</h3>
-						<p class="product_text">(coming soon) Instant messaging.</p>
-						<p class="product_nav">
-							<a href="http://wiki.occupy.net/index.php?title=Occupy.net_Chat" target="_blank">Details</a>
-						</p>
-					</div>
-				</li>
-				<li>
-					<h2 class="product_name inactive"><a>Lists</a><span class="product_status idea">Idea</span></h2>
-					<div class="product_details">
-						<h3 class="product_url">LISTS.OCCUPY.NET</h3>
-						<p class="product_text">(coming soon) A dual interface (email/web) listserve.</p>
-						<p class="product_nav">
-							<a href="http://wiki.occupy.net/wiki/Occupy.net_Lists" target="_blank">Details</a>
-						</p>
-					</div>
-				</li>
-				<li>
-					<h2 class="product_name inactive"><a>Social</a><span class="product_status idea">Idea</span></h2>
-					<div class="product_details">
-						<h3 class="product_url">SOCIAL.OCCUPY.NET</h3>
-						<p class="product_text">(coming soon) A federated social network.</p>
-						<p class="product_nav">
-							<a href="http://wiki.occupy.net/wiki/Occupy.net_Social" target="_blank">Details</a>
-						</p>
-					</div>
-				</li>
+					<div id="editrow-custom_76" class="crm-section editrow_custom_76-section form-item">
+						<div class="label">
+							<label for="custom_76">Please briefly describe why and how you would like to get involved in the Occupy movement</label>
+						</div>
+						<div class="edit-value content">
+							<textarea rows="4" cols="60" name="custom_76" id="custom_76" class="form-textarea"></textarea>
+						</div>
+						<div class="clear"></div>
+					</div>					
+				</div><!-- end form-layout-compressed for last profile --> 
+				<div class="crm-submit-buttons">
+					<span class="crm-button crm-button-type-next crm-button_qf_Edit_next"><input class="form-submit default" accesskey="S" name="_qf_Edit_next" value="Submit" type="submit" id="_qf_Edit_next" /></span>
+				</div>			
+			</div> 			
+			</form>			
+			<script type="text/javascript" >
+			cj( function( ) {
+			    cj("#Edit").validate({ 'errorClass': 'crm-error'});
+			});
+			</script>
+			<script type="text/javascript">jQuery.noConflict(true);</script>
+			<!-- END OF CIVI VOLUNTEER FORM -->
+		</div>	
+	</div>
+
+	  
+	<div class="project" data-number="3">
+		<div class="specs">
+			<img class="icon" src="img/icons/wiki.png">
+			<h3 class="title">Wiki</h3>
+			<h5 class="status">alpha</h5>
+			<ul class="buttonList">
+				<li><a class="url" href="https://wiki.occupy.net" target="_blank">Launch site</a></li>
+				<li><a class="docs" href="http://wiki.occupy.net/wiki/Occupy.net_Wiki" target="_blank">Get details</a></li>
+				<li><a class="tasks" href="http://collaborate.occupy.net/projects/9" target="_blank">Help out</a></li>
 			</ul>
 		</div>
-
+		<div class="details">
+			<p>A collaboratively authored knowledge resource you can easily edit. Use it to collect resources for your community and document best practices. Powered by <a href="http://www.mediawiki.org/wiki/MediaWiki" target="_blank">MediaWiki.</a></p>
+			<a class="url" href="http://wiki.occupy.net" target="_blank"><img src="img/screenshots/wiki.jpg" class="screenshot" height="304" width="500" alt="Occupy Wiki"></a>
+		</div>
 	</div>
-</div>
-<div id="footer">
-	<div class="footer_nav">
-	<a href="http://tech.occupy.net" target="_blank">Blog</a> - <a href="http://forum.occupy.net/index.php?p=/" target="_blank">Help</a> - <a href="https://github.com/occupynet/" target="_blank">Code</a> - <a href="http://tech.occupy.net/contact/" target="_blank">Contact</a> - <a href="http://tech.occupy.net/about/" target="_blank">About</a> <span class="right">Brought to you by <a href="http://tech.occupy.net/" target="_blank">Occupy Tech</a></span>
+	
+	<div class="project" data-number="3">
+		<div class="specs">
+			<img class="icon" src="img/icons/map.png">
+			<h3 class="title">Map</h3>
+			<h5 class="status">beta</h5>
+			<ul class="buttonList">
+				<li><a class="url" href="http://map.occupy.net" target="_blank">Launch site</a></li>
+				<li><a class="docs" href="http://wiki.occupy.net/wiki/Occupy.net_Maps" target="_blank">Get details</a></li>
+				<li><a class="tasks" href="https://www.pivotaltracker.com/projects/417395" target="_blank">Help out</a></li>
+				<li><a class="code" href="https://github.com/occupynet/OccupyMap" target="_blank">Fork the code</a></li>
+			</ul>
+		</div>
+		<div class="details">
+			<p>A crowdsourced history of the movement news that exists in both time and space. Use it with your phone or computer to post reports, photos and videos by adding #occupymap. Powered by <a href="http://ushahidi.com/" target="_blank">Ushahidi.</a></p>			
+			<iframe width="500" height="339" src="http://www.youtube.com/embed/_nVcJyvXrfA?rel=0" frameborder="0" allowfullscreen></iframe>
+		</div>
 	</div>
+	
+	<div class="project" data-number="3">
+		<div class="specs">
+			<img class="icon" src="img/icons/notes.png">
+			<h3 class="title">Notes</h3>
+			<h5 class="status">beta</h5>
+			<ul class="buttonList">
+				<li><a class="url" href="https://notes.occupy.net" target="_blank">Launch site</a></li>
+				<li><a class="docs" href="http://wiki.occupy.net/wiki/Occupy.net_Notes" target="_blank">Get details</a></li>
+				<li><a class="code" href="https://github.com/occupynet/etherpad-lite" target="_blank">Fork the code</a></li>
+			</ul>
+		</div>
+		<div class="details">
+			<p>A super light weight group document editing tool. Use it to take minutes, write notes, author documents, etc. Powered by <a target="_blank" href="http://etherpad.org/">Etherpad.</a></p>
+			<iframe width="500" height="339" src="http://www.youtube.com/embed/B69sx77dXIg?rel=0" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+	
+<!-- not ready for launch
+	<div class="project" data-number="3">
+		<div class="specs">
+			<img class="icon" src="img/icons/events.png">
+			<h3 class="title">Events</h3>
+			<h5 class="status">alpha</h5>
+			<ul class="buttonList">
+				<li><a class="url" href="http://events.occupy.net" target="_blank">Launch site</a></li>
+				<li><a class="docs" href="http://wiki.occupy.net/wiki/Occupy.net_Events" target="_blank">Get details</a></li>
+			</ul>
+		</div>
+		<div class="details">
+			<p>A calendar and directory of events pertaining to Occupy. Have your event posted to the calendar, and raise awareness for your events.</p>
+		</div>
+	</div>
+-->
+	
+	<div class="project" data-number="3">
+		<div class="specs">
+			<img class="icon" src="img/icons/campaigns.png">
+			<h3 class="title">Campaigns</h3>
+			<h5 class="status">beta</h5>
+			<ul class="buttonList">
+				<li><a class="url" href="http://campaigns.occupy.net" target="_blank">Launch site</a></li>
+				<li><a class="docs" href="http://wiki.occupy.net/wiki/Occupy.net_Campaigns" target="_blank">Get details</a></li>
+			</ul>
+		</div>
+		<div class="details">
+			<p>An easy to use website builder with templates specifically designed for actions and campaigns. Use a campaign site for to spread a message, collect emails and promote events. Powered by <a href="http://wordpress.org">Wordpress.</a></p>
+			<iframe width="500" height="281" src="http://www.youtube.com/embed/lcwQAthgNNQ?rel=0" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+	
+	<div class="project" data-number="3">
+		<div class="specs">
+			<img class="icon" src="img/icons/forum.png">
+			<h3 class="title">Forum</h3>
+			<h5 class="status">alpha</h5>
+			<ul class="buttonList">
+				<li><a class="url" href="http://forum.occupy.net" target="_blank">Launch site</a></li>
+				<li><a class="docs" href="http://wiki.occupy.net/wiki/Occupy.net_Forums" target="_blank">Get details</a></li>
+				<li><a class="tasks" href="http://collaborate.occupy.net/projects/12" target="_blank">Help out</a></li>
+				<li><a class="code" href="https://github.com/occupynet/vanilla2" target="_blank">Fork the code</a></li>
+			</ul>
+		</div>
+		<div class="details">
+			<p>An easy to use forum that you can embed on your own website. Use it to discuss various issues, coordinate your projects and dialog with other occupiers. Powered by <a target="_blank" href="http://www.vanillaforums.org/">Vanilla Forums.</a></p>
+			<iframe src="http://player.vimeo.com/video/31502992" width="500" height="269" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+		</div>
+	</div>
+
+	
+	<div class="project"  data-number="3">
+		<div class="specs">
+			<img class="icon" src="img/icons/classifieds.png">
+			<h3 class="title">Classifieds</h3>
+			<h5 class="status">beta</h5>
+			<ul class="buttonList">
+				<li><a class="url" href="http://classifieds.occupy.net" target="_blank">Launch site</a></li>
+				<li><a class="docs" href="http://wiki.occupy.net/wiki/Occupy.net_Classifieds" target="_blank">Get details</a></li>
+				<li><a class="code" href="https://github.com/occupynet/jobberbase" target="_blank">Fork the code</a></li>
+			</ul>
+		</div>
+		<div class="details">
+			<p>A classifieds system with email notification and a variety of occupy specific categories. Use it to post offers and wants, recruit volunteers, and share opportunities. Powered by <a href="http://osclass.org">OSClass.</a></p>
+			<a class="url" href="http://classifieds.occupy.net" target="_blank"><img src="img/screenshots/classifieds.jpg" class="screenshot" height="304" width="500" alt="Occupy Classifieds"></a>
+		</div>
+	</div>
+	
+	<div class="project" data-number="3">
+		<div class="specs">
+			<img class="icon" src="img/icons/directory.png">
+			<h3 class="title">Directory</h3>
+			<h5 class="status">beta</h5>
+			<ul class="buttonList">
+				<li><a class="url" href="http://directory.occupy.net" target="_blank">Launch site</a></li>
+				<li><a class="docs" href="http://wiki.occupy.net/wiki/Occupy.net_Directory" target="_blank">Get details</a></li>
+				<li><a class="tasks" href="http://projects.occupy.net/projects/fga-projectsite" target="_blank">Help out</a></li>
+				<li><a class="code" href="https://github.com/fga/fga-directory" target="_blank">Fork the code</a></li>
+			</ul>
+		</div>
+		<div class="details">
+			<p>A public listing of all known occupation sites, built as a semantic service layer for web developers. Use it to find locations, websites and profiles of occupations around the world. Powered by <a href="http://drupal.org">Drupal.</a></p>
+			<a class="url" href="http://directory.occupy.net" target="_blank"><img src="img/screenshots/directory.jpg" class="screenshot" height="304" width="500" alt="Occupy Directory"></a>
+		</div>
+	</div>
+
+
+<!-- not ready for launch
+	<div class="project" data-number="3">
+		<div class="specs">
+			<img class="icon" src="img/icons/ideas.png">
+			<h3 class="title">Ideas</h3>
+			<h5 class="status">alpha</h5>
+			<ul class="buttonList">
+				<li><a class="url" href="http://ideas.occupy.net" target="_blank">Launch site</a></li>
+				<li><a class="docs" href="http://wiki.occupy.net/wiki/Occupy.net_Ideas" target="_blank">Get details</a></li>
+				<li><a class="tasks" href="https://collaborate.occupy.net/projects/11/dashboard" target="_blank">Help out</a></li>
+				<li><a class="code" href="https://github.com/occupynet/IdeasOccupyNet" target="_blank">Fork the code</a></li>
+			</ul>
+		</div>
+		<div class="details">
+			<p>A question and answer platform with a simple voting tool. Use it to to get and give answers, vote on the best exchanges and building consensus around an idea. Powered by <a target="_blank" href="http://www.question2answer.org/">Question2Answer.</a></p>
+			<a class="url" href="http://ideas.occupy.net" target="_blank"><img src="img/screenshots/ideas.jpg" class="screenshot" height="304" width="500" alt="Occupy Ideas"></a>
+		</div>
+	</div>
+-->
+
+<!-- pay per list; omit for now
+	<div class="project" data-number="3">
+		<div class="specs">
+			<img class="icon" src="img/icons/lists.png">
+			<h3 class="title">Lists</h3>
+			<h5 class="status">beta</h5>
+			<ul class="buttonList">
+				<li><a class="url" href="http://lists.occupy.net" target="_blank">Launch site</a></li>
+				<li><a class="docs" href="http://wiki.occupy.net/wiki/Occupy.net_Lists" target="_blank">Get details</a></li>
+				<li><a class="tasks" href="http://collaborate.occupy.net/projects/100/dashboard" target="_blank">Help out</a></li>
+				<li><a class="code" href="https://github.com/occupynet/Lists" target="_blank">Fork the code</a></li>
+			</ul>
+		</div>
+		<div class="details">
+			<p>A highly configurable announcement and listserve management tool. Use it instead of proprietary "groups" systems to create newsletters, communicate with a team and discuss issues. Powered by <a href="http://sympa.org">Sympa.</a></p>
+			<a class="url" href="http://lists.occupy.net" target="_blank"><img src="img/screenshots/lists.jpg" class="screenshot" height="304" width="500" alt="Occupy Lists"></a>
+		</div>
+	</div>
+-->
+	
+<!-- not ready for launch
+	<div class="project" data-number="3">
+		<div class="specs">
+			<img class="icon" src="img/icons/news.png">
+			<h3 class="title">News</h3>
+			<h5 class="status">alpha</h5>
+			<ul class="buttonList">
+				<li><a class="url" href="http://news.occupy.net" target="_blank">Launch site</a></li>
+				<li><a class="docs" href="http://wiki.occupy.net/wiki/Occupy.net_News" target="_blank">Get details</a></li>
+				<li><a class="tasks" href="http://projects.occupy.net/projects/newswire" target="_blank">Help out</a></li>
+				<li><a class="code" href="https://github.com/occupynet/news" target="_blank">Fork the code</a></li>
+			</ul>
+		</div>
+		<div class="details">
+			<p>A news aggregation and curation tool. Get more attention for your project. Create a channel that is curated by your team and resourced by other people who will post the content around the internet. Powered by <a target="_blank" href="http://managingnews.com/">Managing News.</a></p>
+		</div>
+	</div>
+-->
+	
+		
+<!-- not ready for launch
+	<div class="project" data-number="3" data-full="inline1">
+		<div class="specs">
+			<img class="icon" src="img/icons/search.png">
+			<h3 class="title">Search</h3>
+			<h5 class="status">alpha</h5>
+		</div>
+		<div class="details">
+				<p>Search the internet privately (and even securely), powered by <a target="_blank" href="http://duckduckgo.com/">DuckDuckGo.</a></p>
+				<form action="https://duckduckgo.com/" method="get" target="_blank" enctype="multipart/form-data" id="searchBox">
+				  <input type="text" name="q" placeholder="Search" id="searchInput"><input type="submit" value="" id="searchButton">
+				</form>
+		</div>
+	</div>
+-->
+
+	<div class="loader" data-number="3">
+		<img src="img/ajax-loader.gif" alt="ajax-loader" width="16" height="16" /> Loading...
+	</div>
+	
+</div> <!-- end #container -->
+
+
+<div id="feeds" style="display:none">
+  <!--use semantic markup to define your feeds as data 
+  jquery $("#feeds").find(".feed") turns this html into
+  var feeds  = [{
+    'url': 'http://feeds....',
+    'type': 'news',
+  },
+  {
+    'url': 'http://map.occupy.net',
+    'type': 'map',
+  }
+  ]
+and so on - an array of objects with "url" and "type" attributes  
+  -->
+  <div class="feed">
+    <div class="url">http://classifieds.occupy.net/index.php?page=search&sFeed</div>
+    <div class="type">classifieds</div>
+    <div class="num">10</div>
+    <div class="days">300</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://campaigns.occupy.net/feed/</div>
+    <div class="type">campaigns</div>
+    <div class="num">5</div>
+    <div class="days">300</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://wiki.occupy.net/wiki/Special:NewsFeed?feed=rss&categories=Featured</div>
+    <div class="type">wiki</div>
+    <div class="num">1</div>
+    <div class="days">300</div>
+  </div>
+  <div class="feed">
+  	<!-- national gathering feed -->
+    <div class="url">http://owscurators.floing.org/?feed=rss2&cat=22</div>
+    <div class="type">news</div>
+    <div class="num">10</div>
+    <div class="days">90</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://occupiedmedia.us/category/analysis/feed/</div>
+    <div class="type">news</div>
+    <div class="num">10</div>
+    <div class="days">90</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://occupiedmedia.us/category/features/feed/</div>
+    <div class="type">news</div>
+    <div class="num">10</div>
+    <div class="days">90</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://newswire.occupy.net/channel/368/rss.xml</div>
+    <div class="type">news</div>
+    <div class="num">5</div>
+    <div class="days">30</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://occupydidwhat.tumblr.com/rss</div>
+    <div class="type">success</div>
+    <div class="num">10</div>
+    <div class="days">90</div>
+  </div>
+  <div class="feed">
+    <div class="url">https://tech.occupy.net/feed/</div>
+    <div class="type">info</div>
+    <div class="num">10</div>
+    <div class="days">90</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://interoccupy.net/blog/category/movement-wide/feed/</div>
+    <div class="type">info</div>
+    <div class="num">10</div>
+    <div class="days">90</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://wearethe99percent.tumblr.com/rss</div>
+    <div class="type">photo</div>
+    <div class="num">15</div>
+    <div class="days">60</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://occupybigpicture.tumblr.com/rss</div>
+    <div class="type">photo</div>
+    <div class="num">15</div>
+    <div class="days">300</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://occupydetails.tumblr.com/rss</div>
+    <div class="type">thumbnail</div>
+    <div class="num">15</div>
+    <div class="days">300</div>
+  </div>
+  <!-- photos linking incorrectly
+  <div class="feed">
+    <div class="url">http://occupydesign.org/gallery/feed</div>
+    <div class="type">photo</div>
+    <div class="num">5</div>
+    <div class="days">300</div>
+  </div>
+  -->
+  <!-- error in feed
+  <div class="feed">
+    <div class="url">http://occuprint.org/feed</div>
+    <div class="type">thumbnail</div>
+    <div class="num">5</div>
+    <div class="days">7</div>
+  </div>
+  -->
+  <div class="feed">
+    <div class="url">http://howtocamp.takethesquare.net/feed/</div>
+    <div class="type">info</div>
+    <div class="num">5</div>
+    <div class="days">3000</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://www.occupytheory.org/feed/rss.html</div>
+    <div class="type">news</div>
+    <div class="num">5</div>
+    <div class="days">30</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://directory.occupy.net/occupations/added.rss</div>
+    <div class="type">directory</div>
+    <div class="num">5</div>
+    <div class="days">60</div>
+  </div>
+  <div class="feed">
+    <div class="url">http://map.occupy.net/feed/</div>
+    <div class="type">map</div>
+    <div class="num">30</div>
+    <div class="days">30</div>
+  </div>  
 </div>
 
-<!-- vertical columns for covers -->
-<script src="js/jquery.masonry.min.js"></script>
-<script>
-	
-$(document).ready(function() {
-	
-    var defaultSize = [230, 165]; // expanded box size: [width , height]
-    $('.productsList').masonry({
-        singleMode: false,
-        columnWidth: 230,
-		gutterWidth: 10,
-        resizeable: true,
-        itemSelector: 'li',
-		isAnimated: true
-    });
 
-    $('.productsList li').click(function () {
-        if ($(this).is('.expanded')) {
-            restoreBoxes();
-        } else {
-            var size = ($(this).attr('data-size')) ? $(this).attr('data-size').split(',') : defaultSize;
-            $(this)
-            // save original box size
-            .data('size', [$(this).width(), $(this).height()]).animate({
-                width: size[0],
-                height: size[1]
-            }, function () {
-                // show hidden content when box has expanded completely
-                $(this).find('.product_details').fadeIn('fast');
-                $(this).find('.hideable').fadeOut('fast');
-                $('.productsList').masonry();
-            });
-            restoreBoxes();
-            $(this).addClass('expanded');
-        }
 
-        function restoreBoxes() {
-            var len = $('.expanded').length - 1;
-            $('.expanded').each(function (i) {
-                var box = $(this).data('size');
-                $(this).find('.hideable').fadeIn('fast');
-                $(this).find('.product_details').fadeOut('fast');
-                $(this).animate({
-                    width: (box[0] || 100),
-                    height: (box[1] || 'auto')
-                }, function () {
-                    if (i >= len) {
-                        $('.productsList').masonry();
-                    }
-                }).removeClass('expanded');
-            })
-        }
-    });
-        
-});
+<!-- jquery -->
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src="https://www.google.com/jsapi"></script>
+<script src="js/jquery.isotope.min.js"></script>
 
-</script>
+
+<!-- feed reader -->
 <script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-25680260-3']);
-  _gaq.push(['_setDomainName', '.occupy.net']);
-  _gaq.push(['_trackPageview']);
+var $container = $('#container');
+var feeds = google.load("feeds", "1");
+google.setOnLoadCallback(function() {
+  // First, set up click on tile => Shadowbox for pre-existing static tiles
+  $('.isotope-item').click( activateTile );
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+  $(function() {
+
+    //grab your data from the html (semantic markup)
+    $("#feeds").find(".feed").each(function(j,e){
+
+    //extract url from html
+    var url = $(e).find(".url").html();
+    //fix double encoding bug by reverting one ampersand
+    url = url.replace("&amp;","&");
+    var feed = new google.feeds.Feed(url);
+    
+    //extract number of posts, days to show from html    
+    var num = $(e).find(".num").html();
+    var days = $(e).find(".days").html();
+    var nDays = parseInt(days);
+    
+    //extract type from html
+    var type = $(e).find(".type").html();
+    
+    feed.setNumEntries(num);
+    feed.load(function(result) {
+	    if (!result.error) {
+	      var container = document.getElementById("container");
+	      for (var i = 0; i < result.feed.entries.length; i++) {
+	        var entry = result.feed.entries[i];
+	
+	        var entryDate = new Date(entry.publishedDate);
+		
+	        // Check to see if feed item is outside of date range.
+	        if (typeof(days) != 'null' && nDays > 0) {
+					  var now = new Date;
+					  var tsDelta = now - entryDate;
+					  var daysAgo = Math.floor(tsDelta / (1000*60*60*24));
+			
+					  if (daysAgo > nDays) {
+					    break;
+					  } /* end if */			
+					} /* end if */
+	        
+	        // Construct new <div> element for this item.
+	        var div = document.createElement("div");
+	        $(div).addClass(type);
+	        $(div).addClass("feed-item");
+	        
+	        // Insert <div class="specs"></div>
+	        var specs = div.appendChild(document.createElement("div"));
+	        specs.className = "specs";
+
+	        // Insert <h3 class="title">...</h3> into .specs
+	        var title = specs.appendChild(document.createElement("h3"));
+	        title.className = "title";
+	        title.appendChild(document.createTextNode(entry.title));
+	
+	        // Insert <p class="date">...</p> into .specs
+	        var date = specs.appendChild(document.createElement("p"));
+	        $(date).addClass("date");
+	        
+	        // Clean up date format
+					var pubDate = entryDate.toLocaleDateString();
+	        date.appendChild(document.createTextNode(pubDate));
+	
+	        // Insert <a class="source">…</a> into .specs
+	        var source = specs.appendChild(document.createElement("a"));
+	        $(source).addClass("source");
+	        $(source).attr("href", entry.link);
+	        $(source).attr("target", "_blank");
+	        source.appendChild(document.createTextNode("View post"));
+
+	        // Insert <div class="details">...</div> into parent div
+	        // This needs to be a <div> because the item content may include
+	        // block-level HTML tags, and hence cannot fit inside a <p>
+	        var details = div.appendChild(document.createElement("div"));
+	        details.className = "";
+	        details.className = "details details_" + type;
+	        details.innerHTML = entry.content;
+	        
+	        // Insert the whole thing into the container
+	        var divInDOM = container.appendChild(div);
+	        
+	        // Clicking this sends the tile to the Shadowbox
+	        $(divInDOM).click( activateTile );
+	      };
+	    };
+	    $container.isotope('insert',$(".feed-item"))    
+  	
+	  
+	  });
+    
+  })
+
+	  	  
+
+	  //endfor
+  });
+});
+
+
+//ISOTOPE 
+
+$(document).ready(function(){
+  $container.isotope({
+    masonry: {
+      columnWidth: 120
+    },
+    getSortData: {
+      date: function( $elem ) {		
+        if ($elem.find('.date').length != 0) {
+          return -1*Date.parse($elem.find('.date').text());
+        } else {
+          return Number.NEGATIVE_INFINITY;
+        }
+      },
+      alphabetical: function( $elem ) {
+        var name = $elem.find('.title'),
+            itemText = name.length ? name : $elem;
+        return itemText.text();
+      }
+    },
+    sortBy: 'date'
+  });
+
+  var $optionSets = $('#options .option-set'),
+      $optionLinks = $optionSets.find('a');
+
+  $optionLinks.click(function(){
+    var $this = $(this);
+    // don't proceed if already selected
+    if ( $this.hasClass('selected') ) {
+      return false;
+    }
+    //toggle "selected classes"
+    var $optionSet = $this.parents('.option-set');
+    $optionSet.find('.selected').removeClass('selected');
+    $this.addClass('selected');
+
+    // make option object dynamically, i.e. { filter: '.my-filter-class' }
+    var options = {},
+      key = $optionSet.attr('data-option-key'),
+      value = $this.attr('data-option-value');
+    // parse 'false' as false boolean
+    value = value === 'false' ? false : value;
+    options[ key ] = value;
+    if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
+      // changes in layout modes need extra logic
+      changeLayoutMode( $this, options )
+    } else {
+      // otherwise, apply new options
+      $container.isotope( options );
+    }
+
+    return false;
+  });
+  
+    $('.loader').addClass('hidden');
+
+	// disable direct links on images in photo squares
+	$('.details_photo a').click(function(){ return false; });
+
+})
 
 </script>
+
+
+
+<!-- shadowbox -->
+
+<script src="shadowbox-3.0.3/shadowbox.js"></script>
+<script>
+
+Shadowbox.init({
+    skipSetup: true
+});
+
+function activateTile () {
+	var tile = $(this);
+	
+	// By default, we will display the contents of this <div> in the
+	// lightbox.
+	var player = 'html'; // Default
+	var content = '<div id="layer">' + tile.html() + '</div>'; // Default
+	
+	// We can use HTML classes to determine what exactly we should be
+	// feeding to Shadowbox.
+
+	// if (tile.is('.photo')) {
+	//	content = ...
+	//	player = ...
+	// } else if (tile.is('.info')) {
+	// 	...
+	// } else if (tile.is('.project')) {
+	//	...
+	// } /* if */
+	
+	Shadowbox.open({
+	content: content,
+	player: player,
+	height: 500,
+	width: 700
+	});
+}
+
+</script>
+
+
+
+<footer>
+	<span>Brought to you by <a href="http://tech.occupy.net" target="_blank">Occupy Tech</a></span>
+	<a href="https://github.com/occupynet/Occupy.net" target="_blank">Code</a>
+	<a href="http://forum.occupy.net" target="_blank">Help</a> 
+</footer>
+
+</section> <!-- #content -->
+  
+  
+<!-- Piwik --> 
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://analytics.occupy.net/" : "http://analytics.occupy.net/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://analytics.occupy.net/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+
 </body>
 </html>
